@@ -1,0 +1,6 @@
+extends Node
+
+# Supabase Configuration
+# IMPORTANT: Copy this file to Config.gd and add your real credentials
+const SUPABASE_URL = "YOUR_SUPABASE_URL_HERE"  # e.g., "https://xxxxx.supabase.co"
+const SUPABASE_KEY = "YOUR_SUPABASE_ANON_KEY_HERE"  # Your anon/public key (starts with eyJ...)

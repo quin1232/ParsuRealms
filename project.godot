@@ -21,6 +21,7 @@ FadeLayer="*res://Scene/fade.tscn"
 Global="*res://Global/Global.gd"
 GlobalTracking="*res://Global/GlobalTracking.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Database="*res://Global/Database.gd"
 
 [dialogic]
 

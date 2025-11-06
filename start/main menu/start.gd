@@ -18,6 +18,10 @@ func _ready() -> void:
 
 func fade_and_change_scene() -> void:
 	# This stops the function from running again if it's already fading.
+	Global.is_guest = true
+	Global.is_logged_in = false
+	Global.player_username = "Guest"
+	Global.player_email = ""
 	if _transitioning:
 		return
 	_transitioning = true

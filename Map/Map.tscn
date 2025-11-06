@@ -784,6 +784,7 @@ scale = Vector2(1.27318, 1.7812506)
 texture = SubResource("CompressedTexture2D_s8uph")
 
 [node name="Misson" parent="CanvasLayer2" instance=ExtResource("30_s8ygv")]
+visible = false
 
 [node name="Core Values" parent="CanvasLayer2" instance=ExtResource("31_xecfs")]
 visible = false

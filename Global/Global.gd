@@ -3,6 +3,12 @@ extends Node
 ## Emitted whenever the saved player transform changes
 signal spawn_changed(new_transform: Transform3D)
 
+## User Authentication Data
+var player_email: String = ""
+var player_username: String = ""
+var is_guest: bool = false
+var is_logged_in: bool = false
+
 ## Saved spawn data
 var has_spawn: bool = false
 var spawn_pos: Vector3 = Vector3.ZERO
