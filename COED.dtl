@@ -1,0 +1,184 @@
+Welcome to the College of Education, where future teachers are molded with wisdom and patience.
+Locate the College of Education.
+[signal arg="arrow"]
+label arrow
+if {IsArrowClick} == true:
+	Look Mr. Celestial at the COED building.
+	label COEDArrived
+	if {COEDArrived} == true:
+		if :
+		You arived at COED Building.
+		label TalktoTeacher
+		if {TalktoTeacher} == true:
+			"Mr Celestial": Great! You found the CoEd Building!!
+			"Mr Celestial": You must be the student assigned to assist me today.
+			"Mr Celestial": Today is Examination Day here at the College of Education.
+			"Mr Celestial": However, I seem to be missing a few important materials we need before we can begin.
+			"Mr Celestial": Without them, the exam cannot start on time!
+			
+			"Mr Celestial": Here’s what we need to find\:
+			"Mr Celestial": A Clock and the Answer Sheets Stack.
+			"Mr Celestial": Search for the missing exam materials.
+			
+			"Mr Celestial": Oh, I think one of the items found at canteen.
+			"Mr Celestial": And another another misplace here at the COED building. Check around carefully!
+			[signal arg="questpanel"]
+			if {IsfoundBox} == true:
+				label Box
+				You found the file box.
+				[signal arg="open"]
+			if {bool} == true:
+				label clock
+				"Mr Celestial": Great you found the clock.
+if {CollectComplete} == true:
+	label Talk2
+	"Mr Celestial": Oh, wonderful! You found everything we need for the exam.
+	"Mr Celestial": But before we begin, I want to see how ready you truly are.
+	"Mr Celestial": As a future educator, knowledge and character go hand in hand.
+	"Mr Celestial": I have a few quick questions to test your understanding of what it means to be part of the College of Education.
+	label Q1
+	What is the main mission of the College of Education?
+	- To train future teachers and educators
+		jump Q2
+	- To produce engineers and architects
+		Wrong answer! Please try again.
+		jump Q1
+	- To manage business enterprises
+		Wrong answer! Please try again.
+		jump Q1
+	- To develop medical professionals
+		Wrong answer! Please try again.
+		jump Q1
+	
+	label Q2
+	Which degree prepares students to teach in basic education?
+	- Bachelor of Elementary Education
+		jump Q3
+	- Bachelor of Science in Accountancy
+		Wrong answer! Please try again.
+		jump Q2
+	- Bachelor of Arts in Communication
+		Wrong answer! Please try again.
+		jump Q2
+	- Bachelor of Science in Psychology
+		Wrong answer! Please try again.
+		jump Q2
+	
+	label Q3
+	What is the purpose of the practice teaching or internship program?
+	- To give students hands-on teaching experience
+		jump Q4
+	- To allow students to earn extra income
+		Wrong answer! Please try again.
+		jump Q3
+	- To replace classroom learning
+		Wrong answer! Please try again.
+		jump Q3
+	- To conduct research only
+		Wrong answer! Please try again.
+		jump Q3
+	
+	label Q4
+	What exam must Education graduates pass to become licensed teachers in the Philippines?
+	- Licensure Examination for Teachers (LET)
+		jump Q5
+	- Civil Service Exam
+		Wrong answer! Please try again.
+		jump Q4
+	- Board Exam for Nurses
+		Wrong answer! Please try again.
+		jump Q4
+	- National Achievement Test
+		Wrong answer! Please try again.
+		jump Q4
+	
+	label Q5
+	What teaching method emphasizes learning through projects and experiences?
+	- Project-Based Learning
+		jump Q6
+	- Lecture Method
+		Wrong answer! Please try again.
+		jump Q5
+	- Rote Memorization
+		Wrong answer! Please try again.
+		jump Q5
+	- Dictation Method
+		Wrong answer! Please try again.
+		jump Q5
+	
+	label Q6
+	How does the College of Education encourage community involvement?
+	- Through outreach and extension programs
+		jump Q7
+	- By limiting classroom activities
+		Wrong answer! Please try again.
+		jump Q6
+	- By focusing only on exams
+		Wrong answer! Please try again.
+		jump Q6
+	- By avoiding social work
+		Wrong answer! Please try again.
+		jump Q6
+	
+	label Q7
+	What does educational psychology help teachers understand?
+	- How students learn and behave
+		jump Q8
+	- How to manage school funds
+		Wrong answer! Please try again.
+		jump Q7
+	- How to design buildings
+		Wrong answer! Please try again.
+		jump Q7
+	- How to grade exams faster
+		Wrong answer! Please try again.
+		jump Q7
+	
+	label Q8
+	Which of the following is a specialization under Bachelor of Secondary Education?
+	- Mathematics
+		jump Q9
+	- Civil Engineering
+		Wrong answer! Please try again.
+		jump Q8
+	- Architecture
+		Wrong answer! Please try again.
+		jump Q8
+	- Culinary Arts
+		Wrong answer! Please try again.
+		jump Q8
+	
+	label Q9
+	What is the role of technology in modern education?
+	- To enhance teaching and learning through digital tools
+		jump Q10
+	- To replace teachers completely
+		Wrong answer! Please try again.
+		jump Q9
+	- To discourage collaboration
+		Wrong answer! Please try again.
+		jump Q9
+	- To limit access to information
+		Wrong answer! Please try again.
+		jump Q9
+	
+	label Q10
+	Why is classroom management an essential skill for teachers?
+	- It helps maintain an organized and effective learning environment
+		[signal arg="correct"]
+		set {COEDquestComplete} = true
+		"Mr Celestial": Excellent work! You’ve answered all questions correctly.
+		"Mr Celestial": Your dedication to learning truly reflects the spirit of a great educator.
+		"Mr Celestial": As your reward, I present to you this Book history of ParSU.
+		"Mr Celestial": Within its pages lies the journey of our beloved university — how it began, struggled, and grew into a home for knowledge.
+		"Mr Celestial": Read it well, for it will remind you of the roots of education and the importance of perseverance.
+		[signal arg="COEDComplete"]
+	- It focuses on decorating classrooms
+		Wrong answer! Please try again.
+		jump Q10
+	- It is used only during exams
+		Wrong answer! Please try again.
+		jump Q10
+	- It replaces lesson planning
+		Wrong answer! Please try again.
+		jump Q10

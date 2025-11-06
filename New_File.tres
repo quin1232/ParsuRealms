@@ -1,0 +1,85 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=21 format=3 uid="uid://d211cdqqpn5yy"]
+
+[ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_osq4n"]
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_66oua"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="3_png2y"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="4_vy8qd"]
+[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="5_5iril"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="7_ssl1t"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="9_f6qbe"]
+[ext_resource type="PackedScene" uid="uid://cj20iqmpm717s" path="res://CenteredChoices/CenteredChoices/custom_centered_choices.tscn" id="10_66oua"]
+[ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="10_jb06d"]
+[ext_resource type="PackedScene" uid="uid://bodnvwq2xv648" path="res://VisualNovelTextbox/custom_visual_novel_textbox.tscn" id="10_osq4n"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="11_exc24"]
+
+[sub_resource type="Resource" id="Resource_osq4n"]
+script = ExtResource("2_66oua")
+scene = ExtResource("1_osq4n")
+
+[sub_resource type="Resource" id="Resource_66oua"]
+script = ExtResource("2_66oua")
+scene = ExtResource("3_png2y")
+
+[sub_resource type="Resource" id="Resource_png2y"]
+script = ExtResource("2_66oua")
+scene = ExtResource("4_vy8qd")
+
+[sub_resource type="Resource" id="Resource_vy8qd"]
+script = ExtResource("2_66oua")
+scene = ExtResource("5_5iril")
+
+[sub_resource type="Resource" id="Resource_5iril"]
+script = ExtResource("2_66oua")
+scene = ExtResource("10_osq4n")
+overrides = {
+"box_color_custom": "Color(0, 0, 0, 0.83137256)",
+"box_color_use_global": "false",
+"box_margin_bottom": "40.0",
+"box_size": "Vector2(550, 110)",
+"name_label_alignment": "1",
+"name_label_box_modulate": "Color(0, 0, 0, 0.6745098)",
+"name_label_box_use_global_color": "false",
+"name_label_custom_color": "Color(1, 1, 0, 1)",
+"name_label_font": "\"res://Fonts/zh-cn.ttf\"",
+"name_label_use_global_color": "false",
+"normal_font": "\"res://Fonts/zh-cn.ttf\"",
+"text_alignment": "1",
+"text_use_global_font": "false"
+}
+
+[sub_resource type="Resource" id="Resource_w82i6"]
+script = ExtResource("2_66oua")
+scene = ExtResource("7_ssl1t")
+
+[sub_resource type="Resource" id="Resource_ssl1t"]
+script = ExtResource("2_66oua")
+scene = ExtResource("10_66oua")
+overrides = {
+"font_custom": "\"res://Fonts/zh-cn.ttf\"",
+"font_use_global": "false"
+}
+
+[sub_resource type="Resource" id="Resource_i4ogq"]
+script = ExtResource("2_66oua")
+scene = ExtResource("9_f6qbe")
+
+[sub_resource type="Resource" id="Resource_f6qbe"]
+script = ExtResource("2_66oua")
+scene = ExtResource("10_jb06d")
+
+[resource]
+script = ExtResource("11_exc24")
+name = "New_File"
+layer_list = Array[String](["10", "11", "12", "14", "16", "17", "13", "15"])
+layer_info = {
+"": SubResource("Resource_osq4n"),
+"10": SubResource("Resource_66oua"),
+"11": SubResource("Resource_png2y"),
+"12": SubResource("Resource_vy8qd"),
+"13": SubResource("Resource_5iril"),
+"14": SubResource("Resource_w82i6"),
+"15": SubResource("Resource_ssl1t"),
+"16": SubResource("Resource_i4ogq"),
+"17": SubResource("Resource_f6qbe")
+}
+metadata/_latest_layer = "15"

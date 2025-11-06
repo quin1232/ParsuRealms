@@ -1,0 +1,206 @@
+[gd_scene load_steps=21 format=3 uid="uid://c51hwenkuwn78"]
+
+[ext_resource type="Script" uid="uid://b45u5a67mfnyx" path="res://Scene/select_colleges.gd" id="1_0tmx1"]
+[ext_resource type="PackedScene" uid="uid://dru404jjhn52a" path="res://assets/parsu.tscn" id="1_bvhd1"]
+[ext_resource type="Texture2D" uid="uid://bo1jjwfu27q3q" path="res://UI/Select Colleges.png" id="2_v104x"]
+[ext_resource type="Texture2D" uid="uid://btiaorgnpwqq1" path="res://UI/COLLEGES/COED(3).png" id="2_vlkqk"]
+[ext_resource type="Texture2D" uid="uid://c5nn56d1fnkb2" path="res://UI/COLLEGES/c1.png" id="3_ibsj5"]
+[ext_resource type="Script" uid="uid://deq3nplmh8ife" path="res://Scene/colleges.gd" id="4_ibsj5"]
+[ext_resource type="Texture2D" uid="uid://c8i2l2qfca1xy" path="res://UI/COLLEGES/CEC(1).png" id="4_ls1d2"]
+[ext_resource type="Texture2D" uid="uid://da2khqbt8ivrv" path="res://UI/COLLEGES/COS(2).png" id="5_wsh4q"]
+[ext_resource type="Texture2D" uid="uid://c01ey2tlqnt4w" path="res://UI/COLLEGES/cec1.png" id="6_4cx4d"]
+[ext_resource type="Texture2D" uid="uid://dn3ioas05f45i" path="res://UI/COLLEGES/CAH(3).png" id="6_vlkqk"]
+[ext_resource type="Texture2D" uid="uid://c7vaepsl7xjhq" path="res://UI/COLLEGES/CBM(1).png" id="7_guwcl"]
+[ext_resource type="Texture2D" uid="uid://bqb1ld0ca17f5" path="res://UI/COLLEGES/cos2.png" id="8_0fe1y"]
+[ext_resource type="PackedScene" uid="uid://dim0hpapvtkkk" path="res://Scene/CBM.tscn" id="8_ls1d2"]
+[ext_resource type="Texture2D" uid="uid://bsleac2ccd74a" path="res://UI/COLLEGES/cah1.png" id="10_btrip"]
+[ext_resource type="Texture2D" uid="uid://cj05r6jaxrwnb" path="res://UI/COLLEGES/cbm1.png" id="12_4cx4d"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="14_4cx4d"]
+[ext_resource type="AudioStream" uid="uid://ck54nuwepm5dd" path="res://Sound Effects/Intro.mp3" id="17_basyk"]
+[ext_resource type="AudioStream" uid="uid://bynomm1othkwn" path="res://Sound Effects/Click.mp3" id="18_ir2vs"]
+[ext_resource type="AudioStream" uid="uid://02kvqfaxycer" path="res://Sound Effects/Select.mp3" id="19_qemsw"]
+[ext_resource type="AudioStream" uid="uid://cuiktxi0bho6n" path="res://Sound Effects/Select2.mp3" id="20_tlw4x"]
+
+[node name="Select Colleges" type="Node3D"]
+script = ExtResource("1_0tmx1")
+metadata/_edit_vertical_guides_ = [961.0]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_right = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0067708334
+anchor_top = 0.0009259259
+anchor_right = 1.0098002
+anchor_bottom = 1.0235709
+offset_right = -5.8164063
+offset_bottom = -24.456543
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0030293, 1.022645)
+color = Color(0, 0, 0, 0.331)
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3806178
+anchor_top = 0.24084243
+anchor_right = 0.62645113
+anchor_bottom = 0.87192214
+theme_override_constants/separation = 26
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton2" type="TextureButton" parent="Control/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(472, 115)
+layout_mode = 2
+texture_normal = ExtResource("2_vlkqk")
+texture_focused = ExtResource("3_ibsj5")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_ibsj5")
+
+[node name="TextureButton" type="TextureButton" parent="Control/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(472, 115)
+layout_mode = 2
+texture_normal = ExtResource("4_ls1d2")
+texture_focused = ExtResource("6_4cx4d")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_ibsj5")
+scene_index = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton3" type="TextureButton" parent="Control/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(472, 115)
+layout_mode = 2
+texture_normal = ExtResource("5_wsh4q")
+texture_focused = ExtResource("8_0fe1y")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_ibsj5")
+scene_index = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton4" type="TextureButton" parent="Control/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(472, 115)
+layout_mode = 2
+texture_normal = ExtResource("6_vlkqk")
+texture_pressed = ExtResource("10_btrip")
+texture_focused = ExtResource("10_btrip")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_ibsj5")
+scene_index = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton5" type="TextureButton" parent="Control/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(472, 115)
+layout_mode = 2
+texture_normal = ExtResource("7_guwcl")
+texture_focused = ExtResource("12_4cx4d")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_ibsj5")
+loading_scene = ExtResource("8_ls1d2")
+scene_index = 4
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.24270834
+anchor_top = 0.108333334
+anchor_right = 0.77408004
+anchor_bottom = 0.21666667
+offset_right = -52.639893
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0799987, 1)
+theme_override_colors/font_color = Color(0.97088104, 0.7889775, 0, 1)
+theme_override_colors/font_outline_color = Color(0.4368023, 0.254197, 0.021217335, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("14_4cx4d")
+theme_override_font_sizes/font_size = 91
+text = "SELECT  COLLEGES"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50572914
+anchor_top = 0.26340738
+anchor_right = 0.50572914
+anchor_bottom = 0.26340738
+offset_left = -504.0
+offset_top = -50.48001
+offset_right = 26286.043
+offset_bottom = 744.81104
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.03979083, 0.1269975)
+texture = ExtResource("2_v104x")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="parsu" parent="." instance=ExtResource("1_bvhd1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.9457092, 2.224823, 0.7034912)
+
+[node name="Sky3D" parent="parsu" index="0"]
+current_time = 7.822
+
+[node name="SunLight" parent="parsu/Sky3D" index="0"]
+transform = Transform3D(0, -0.47726274, 0.8787607, 0.58876085, 0.7103087, 0.3857749, -0.8083073, 0.5173799, 0.2809936, 0.87876064, 0.38577494, 0.28099364)
+light_color = Color(0.995431, 0.8910292, 0.83871406, 1)
+
+[node name="MoonLight" parent="parsu/Sky3D" index="1"]
+transform = Transform3D(0, -0.6905753, 0.7232605, -0.15711953, 0.7142773, 0.6819981, -0.9875796, -0.11363835, -0.108502865, 0.7232605, 0.6819981, -0.108502746)
+
+[node name="Skydome" parent="parsu/Sky3D" index="2"]
+sun_altitude = -67.30811282090056
+sun_azimuth = -107.73221858417583
+moon_azimuth = -81.46813998604685
+deep_space_euler = Vector3(1.2915425, 3.1415925, 1.4920646)
+
+[node name="TimeOfDay" parent="parsu/Sky3D" index="3"]
+total_hours = 7.822
+
+[node name="DAY TO GO" parent="parsu/Root Node" index="27"]
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="parsu"]
+transform = Transform3D(-0.00223906, 0.222649, 0.974896, 0.00537089, 0.974887, -0.222635, -0.999983, 0.00473757, -0.00337866, 23.0224, 4.54149, -18.4467)
+
+[node name="SoundEffects" type="Node" parent="."]
+
+[node name="Intro" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("17_basyk")
+volume_db = 11.555
+
+[node name="Click" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("18_ir2vs")
+volume_db = 18.641
+
+[node name="Select" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("19_qemsw")
+volume_db = 19.961
+
+[node name="Select2" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("20_tlw4x")
+volume_db = 13.903
+
+[editable path="parsu"]
+[editable path="parsu/Sketchfab_Scene"]
+[editable path="parsu/Sketchfab_Scene2"]

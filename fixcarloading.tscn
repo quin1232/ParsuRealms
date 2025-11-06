@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfov3hprx4v8h"]
+
+[ext_resource type="Script" uid="uid://ddssqisxp0rr7" path="res://fixcarloading.gd" id="1_gs56y"]
+[ext_resource type="FontFile" uid="uid://3pxb8cfk2kfb" path="res://Fonts/AdventureRequest-j8W9.ttf" id="2_t8mv6"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="3_jvibi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48ap8"]
+bg_color = Color(0.054902, 0.141176, 0.227451, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1nl6"]
+bg_color = Color(0.917647, 0.580392, 0.00784314, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+
+[sub_resource type="Theme" id="Theme_t8mv6"]
+ProgressBar/fonts/font = ExtResource("2_t8mv6")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_48ap8")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_h1nl6")
+
+[sub_resource type="Theme" id="Theme_jvibi"]
+Label/fonts/font = ExtResource("2_t8mv6")
+
+[node name="fixcarloading" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gs56y")
+total_duration = 5.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.044)
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4078125
+anchor_top = 0.4143704
+anchor_right = 0.5832917
+anchor_bottom = 0.45277777
+offset_top = -0.52002
+offset_right = 0.0799561
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_t8mv6")
+theme_override_fonts/font = ExtResource("3_jvibi")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="ProgressBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18575801
+anchor_top = -2.2399993
+anchor_right = 0.8016182
+anchor_bottom = -0.35107192
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_jvibi")
+theme_override_fonts/font = ExtResource("3_jvibi")
+theme_override_font_sizes/font_size = 30
+text = "rfrfrfrf"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true

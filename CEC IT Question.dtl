@@ -1,0 +1,75 @@
+Engineer: Good job! You found the toolbox.
+[signal arg="open"]
+label ITquest
+
+if {ITquest} == true:
+    Which number system uses only digits 0 and 1?
+    - Decimal
+        Wrong answer! Please try again.
+        jump ITquest   # go back to same question
+    - Hexadecimal
+        Wrong answer! Please try again.
+        jump ITquest
+    - Octal
+        Wrong answer! Please try again.
+        jump ITquest
+    - Binary
+        jump Q2
+    
+    label Q2
+    Which part of the computer is considered the “brain”?
+    - Hard Drive
+        Wrong answer! Please try again.
+        jump Q2
+    - CPU
+        jump Q3
+    - RAM
+        Wrong answer! Please try again.
+        jump Q2
+    - Monitor
+        Wrong answer! Please try again.
+        jump Q2
+    
+    label Q3
+    What does “IP” stand for in networking?
+    - Internal Processing
+        Wrong answer! Please try again.
+        jump Q3
+    - Internet Protocol
+        jump Q4
+    - Instant Program
+        Wrong answer! Please try again.
+        jump Q3
+    - Information Package
+        Wrong answer! Please try again.
+        jump Q3
+    
+    label Q4
+    Which of the following is a valid image file extension?
+    - .exe
+        Wrong answer! Please try again.
+        jump Q4
+    - .jpg
+        jump Q5
+    - .mp3
+        Wrong answer! Please try again.
+        jump Q4
+    - .docx
+        Wrong answer! Please try again.
+        jump Q4
+    
+    label Q5
+    Which device is used to connect multiple computers in a LAN?
+    - Router
+        Wrong answer! Please try again.
+        jump Q5
+    - Switch
+        [signal arg="correctanswer"]
+        set {Quest2complete} = true
+        Engineer: Perfect! You’ve solved the questions.
+    - Firewall
+        Wrong answer! Please try again.
+        jump Q5
+    - Modem
+        Wrong answer! Please try again.
+        jump Q5

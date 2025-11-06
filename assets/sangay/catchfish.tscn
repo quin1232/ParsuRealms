@@ -1,0 +1,100 @@
+[gd_scene load_steps=5 format=3 uid="uid://brwh7tjr4ic8r"]
+
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="1_2xjs0"]
+[ext_resource type="Script" uid="uid://b00mb786f1w02" path="res://assets/sangay/catchfish.gd" id="1_nkkqa"]
+[ext_resource type="Texture2D" uid="uid://bfhmwya2klvpe" path="res://assets/sangay/fish/carp.png" id="2_nkkqa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkkqa"]
+bg_color = Color(0.12941177, 0.24313726, 0.35686275, 0.7254902)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.99607843, 0.79607844, 0.14117648, 1)
+
+[node name="Catch fish" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nkkqa")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14010416
+anchor_top = 0.09537037
+anchor_right = 0.84583336
+anchor_bottom = 0.90092593
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nkkqa")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23690037
+anchor_top = 0.11781609
+anchor_right = 0.7630996
+anchor_bottom = 0.8821839
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 19
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xjs0")
+theme_override_font_sizes/font_size = 51
+text = "Great Catch!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xjs0")
+theme_override_font_sizes/font_size = 76
+text = "What fish is this?"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+texture = ExtResource("2_nkkqa")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xjs0")
+theme_override_font_sizes/font_size = 36
+text = "Carp"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xjs0")
+theme_override_font_sizes/font_size = 36
+text = "Eel"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2xjs0")
+theme_override_font_sizes/font_size = 36
+text = "Milk Fish"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

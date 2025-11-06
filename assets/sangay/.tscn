@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://d08mhjxq7yqvu"]
+
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="1_oigxb"]
+[ext_resource type="Texture2D" uid="uid://bfhmwya2klvpe" path="res://assets/sangay/fish/carp.png" id="2_7pdtq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14010416
+anchor_top = 0.09537037
+anchor_right = 0.84583336
+anchor_bottom = 0.90092593
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23542435
+anchor_top = 0.12528735
+anchor_right = 0.76927865
+anchor_bottom = 0.2734355
+theme_override_fonts/font = ExtResource("1_oigxb")
+theme_override_font_sizes/font_size = 76
+text = "What fish is this?"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32767528
+anchor_top = 0.0908046
+anchor_right = 0.73431736
+anchor_bottom = 0.6643678
+texture = ExtResource("2_7pdtq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36457565
+anchor_top = 0.62528735
+anchor_right = 0.6024293
+anchor_bottom = 0.7
+theme_override_fonts/font = ExtResource("1_oigxb")
+theme_override_font_sizes/font_size = 36
+text = "Carp"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36383763
+anchor_top = 0.7264368
+anchor_right = 0.60169125
+anchor_bottom = 0.8011494
+theme_override_fonts/font = ExtResource("1_oigxb")
+theme_override_font_sizes/font_size = 36
+text = "Eel"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36678967
+anchor_top = 0.8195402
+anchor_right = 0.6046433
+anchor_bottom = 0.8942529
+theme_override_fonts/font = ExtResource("1_oigxb")
+theme_override_font_sizes/font_size = 36
+text = "Milk Fish"
+metadata/_edit_use_anchors_ = true

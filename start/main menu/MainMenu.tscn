@@ -1,0 +1,329 @@
+[gd_scene load_steps=17 format=3 uid="uid://bpee1eb1cfvs7"]
+
+[ext_resource type="Script" uid="uid://d3xb8rkg6u3va" path="res://start/main menu/start.gd" id="1_crsv3"]
+[ext_resource type="Shader" uid="uid://cxb733jawm8pg" path="res://shaders/logoparsurealms.gdshader" id="2_2lmab"]
+[ext_resource type="Texture2D" uid="uid://bi50t17gu348x" path="res://UI/Paaasrrsu'.png" id="2_tubxo"]
+[ext_resource type="Script" uid="uid://d0t4edbjivgjd" path="res://start/main menu/texture_rect.gd" id="4_yk04w"]
+[ext_resource type="Texture2D" uid="uid://cgpp1ksyaxs3a" path="res://cars/Screenshot from 2025-11-02 22-38-13.png" id="5_1bim0"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="5_i71yj"]
+[ext_resource type="Theme" uid="uid://knfruq2otccd" path="res://start/main menu/MainMenu.tres" id="6_aeeeo"]
+[ext_resource type="Texture2D" uid="uid://b1wsnhu5e8423" path="res://UI/Register.png" id="7_1bim0"]
+[ext_resource type="Texture2D" uid="uid://bn8qw583uisu6" path="res://UI/llogin.png" id="8_fse7g"]
+[ext_resource type="Texture2D" uid="uid://dmgixoiu7gry" path="res://UI/buttoguest.png" id="9_ertl8"]
+[ext_resource type="Script" uid="uid://yxb6b08p7xvj" path="res://start/main menu/registers.gd" id="9_hkhi8"]
+[ext_resource type="Texture2D" uid="uid://ynts32a4xe72" path="res://UI/reg.png" id="9_jh33o"]
+[ext_resource type="Script" uid="uid://ds4g8x6oehp2s" path="res://start/main menu/login.gd" id="11_fse7g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yk04w"]
+shader = ExtResource("2_2lmab")
+shader_parameter/speed = 0.327
+shader_parameter/angle_deg = -24.87
+shader_parameter/width = 0.132
+shader_parameter/softness = 0.463
+shader_parameter/intensity = 0.999
+shader_parameter/shine_color = Color(1, 1, 1, 0)
+shader_parameter/additive = true
+shader_parameter/repeats = 1.0
+shader_parameter/progress = -1.0
+shader_parameter/alpha_cutoff = 0.001
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7p0sg"]
+bg_color = Color(0.12941177, 0.24313726, 0.35686275, 0.7254902)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.87058824, 0.50980395, 0.011764706, 1)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_yyse5"]
+Panel/styles/panel = SubResource("StyleBoxFlat_7p0sg")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_crsv3")
+metadata/_edit_vertical_guides_ = [960.0]
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 1
+material = SubResource("ShaderMaterial_yk04w")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2890625
+anchor_top = 0.025
+anchor_right = 0.71093744
+anchor_bottom = 0.525
+mouse_filter = 2
+texture = ExtResource("2_tubxo")
+expand_mode = 1
+script = ExtResource("4_yk04w")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.090625
+anchor_top = -0.18333334
+anchor_right = 1.0703125
+anchor_bottom = 1.1537037
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.077)
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 207.0
+offset_right = 2116.0
+offset_bottom = 1285.0
+texture = ExtResource("5_1bim0")
+
+[node name="login" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.33697918
+anchor_top = 0.06666667
+anchor_right = 0.665625
+anchor_bottom = 0.92685187
+pivot_offset = Vector2(1410, 508)
+theme = SubResource("Theme_yyse5")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="login"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15607607
+anchor_top = 0.21257487
+anchor_right = 0.8368653
+anchor_bottom = 0.6566527
+offset_right = -57.18628
+offset_bottom = -48.54828
+scale = Vector2(1.12, 1.12)
+theme = ExtResource("6_aeeeo")
+theme_override_constants/separation = 14
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="login/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="login/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_i71yj")
+theme_override_font_sizes/font_size = 31
+text = "LOGIN"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="login/VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.172833, 0.17283255, 0.17283264, 1)
+theme_override_colors/font_selected_color = Color(0.13682577, 0.13682574, 0.13682571, 1)
+theme_override_colors/font_placeholder_color = Color(0.35531357, 0.35531357, 0.3553135, 1)
+theme_override_colors/caret_color = Color(0.19793698, 0.19793728, 0.1979377, 1)
+theme_override_fonts/font = ExtResource("5_i71yj")
+placeholder_text = "Email"
+virtual_keyboard_type = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit2" type="LineEdit" parent="login/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_placeholder_color = Color(0.35686275, 0.35686275, 0.35686275, 1)
+theme_override_fonts/font = ExtResource("5_i71yj")
+placeholder_text = "Password"
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="login/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton2" type="TextureButton" parent="login/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+texture_normal = ExtResource("8_fse7g")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="login/VBoxContainer/VBoxContainer2/TextureButton2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.430866
+anchor_top = 0.19818328
+anchor_right = 0.6055972
+anchor_bottom = 0.66485
+theme_override_fonts/font = ExtResource("5_i71yj")
+theme_override_font_sizes/font_size = 22
+text = "Login"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton3" type="TextureButton" parent="login/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(6.825, 60)
+layout_mode = 2
+texture_normal = ExtResource("9_jh33o")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("9_hkhi8")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="login/VBoxContainer/VBoxContainer2/TextureButton3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.39006338
+anchor_top = 0.1922307
+anchor_right = 0.6588806
+anchor_bottom = 0.6588974
+theme_override_fonts/font = ExtResource("5_i71yj")
+theme_override_font_sizes/font_size = 22
+text = "Register"
+metadata/_edit_use_anchors_ = true
+
+[node name="guest" type="TextureButton" parent="login/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+texture_normal = ExtResource("9_ertl8")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="login/VBoxContainer/VBoxContainer2/guest"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28205642
+anchor_top = 0.2904456
+anchor_right = 0.7471102
+anchor_bottom = 0.75711226
+offset_right = 1.5258789e-05
+theme_override_fonts/font = ExtResource("5_i71yj")
+theme_override_font_sizes/font_size = 22
+text = "Login as Guest"
+metadata/_edit_use_anchors_ = true
+
+[node name="login2" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3375
+anchor_top = 0.06759259
+anchor_right = 0.66510415
+anchor_bottom = 0.925
+theme = SubResource("Theme_yyse5")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="login2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14626391
+anchor_top = 0.2462203
+anchor_right = 0.8187599
+anchor_bottom = 0.70302373
+theme = ExtResource("6_aeeeo")
+theme_override_constants/separation = 14
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="login2/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="login2/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_i71yj")
+theme_override_font_sizes/font_size = 26
+text = "REGISTER"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="login2/VBoxContainer2"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_placeholder_color = Color(0.35531357, 0.35531357, 0.3553135, 1)
+theme_override_fonts/font = ExtResource("5_i71yj")
+placeholder_text = "Email"
+virtual_keyboard_type = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit2" type="LineEdit" parent="login2/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_placeholder_color = Color(0.35686275, 0.35686275, 0.35686275, 1)
+theme_override_fonts/font = ExtResource("5_i71yj")
+placeholder_text = "Password"
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit3" type="LineEdit" parent="login2/VBoxContainer2"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+theme_override_colors/font_placeholder_color = Color(0.35686275, 0.35686275, 0.35686275, 1)
+theme_override_fonts/font = ExtResource("5_i71yj")
+placeholder_text = "Confim Password"
+metadata/_edit_use_anchors_ = true
+
+[node name="lohin" type="TextureButton" parent="login2"]
+custom_minimum_size = Vector2(0.86, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3674615
+anchor_top = 0.8280006
+anchor_right = 0.6263901
+anchor_bottom = 0.8941693
+texture_normal = ExtResource("8_fse7g")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("11_fse7g")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="login2/lohin"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3349755
+anchor_top = 0.285149
+anchor_right = 0.7369182
+anchor_bottom = 0.7287142
+theme_override_fonts/font = ExtResource("5_i71yj")
+theme_override_font_sizes/font_size = 22
+text = "Login"
+metadata/_edit_use_anchors_ = true
+
+[node name="rig" type="TextureButton" parent="login2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34577796
+anchor_top = 0.7408101
+anchor_right = 0.6467983
+anchor_bottom = 0.8154412
+texture_normal = ExtResource("7_1bim0")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="login2/rig"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.29237285
+anchor_top = 0.294952
+anchor_right = 0.79661024
+anchor_bottom = 0.6882215
+theme_override_fonts/font = ExtResource("5_i71yj")
+theme_override_font_sizes/font_size = 22
+text = "Register"
+metadata/_edit_use_anchors_ = true

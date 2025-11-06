@@ -1,0 +1,4 @@
+if {CollectComplete} == true:
+	label CollectComplete
+	Engineer: Excellent! You’ve collected all the required parts!
+	Engineer: Now, head to the broken car near the Engineering Building.

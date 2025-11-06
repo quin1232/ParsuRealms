@@ -1,0 +1,617 @@
+[gd_scene load_steps=11 format=4 uid="uid://srcjfacpl5q4"]
+
+[ext_resource type="PackedScene" uid="uid://dpaf283c78ujy" path="res://assets/gate1.glb" id="1_6dmw0"]
+[ext_resource type="Texture2D" uid="uid://b4sr1fjasf2p4" path="res://assets/parsu_Image_45.jpg" id="2_p11d5"]
+[ext_resource type="Texture2D" uid="uid://vml7iwutk0lh" path="res://assets/San Jose/Sanjose_Image_8.jpg" id="3_0rbns"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ekst7"]
+albedo_texture = ExtResource("2_p11d5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_04gcx"]
+albedo_texture = ExtResource("3_0rbns")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8j6wy"]
+albedo_texture = ExtResource("3_0rbns")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lwcmk"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7ps1f"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 372,
+"index_data": PackedByteArray("AAAPAAIAAAARAA8AKgACAA8AEQAqAA8AEAAAAAIAEAARAAAAEAACABIAAgArABIAKgArAAIAKQAQABIAKQASACsAKAAQACkAKAApACsAKAArACUAFQAoACUAKwAsACUAFQAlACwALQAoABUALQAVACwALQAQACgAKwAuACwAKgAuACsALQAsACcALAAuACcAJgAtACcAJgAnAC4ACQAtACYACQAmAC4ALwAtAAkALwAQAC0ACQAuAA0ADAAJAA0ALwAJAAwADAANAAQALgAEAA0ALwAMAAQALgAwAAQALwAEACQABAAwACQAIwAvACQAIwAkADAAMQAvACMAMQAjADAAMQAwAA4AIgAxAA4ALgAyADAAMAAzAA4AIgAOADMAMAAyADMANAAxACIANAAvADEANAAiADMAKgAyAC4ANAAzACEAMwAyACEABQA0ACEABQAhADIACwAvADQANQA0AAUACwA0ADUANQAFADIACwAQAC8ANQAyAB4AIAA1AB4ACwA1ACAAIAAeABQAMgAUAB4ACwAgABQAMgA2ABQACwAUAAYAFAA2AAYAHwALAAYAHwAGADYANwALAB8ANwAfADYANwA2AB0AHAA3AB0AMgA4ADYANgA5AB0AHAAdADkANgA4ADkAOgA3ABwAOgALADcAOgAcADkAOQA4ABYAOgA5ABYACgA6ABYACgAWADgABwALADoAOwA6AAoABwA6ADsAOwAKADgAEAALAAcABwA7AAMAAwA7ABsAOwA4ABsAAwAbAAgAOAAIABsABwADAAgAOAA8AAgABwAIAAEACAA8AAEAGgAHAAEAGgABADwAEAAHAD0APgAHABoAPQAHAD4APgAaADwAEAA9ABEAPgA8ABkAEwA+ABkAPQA+ABMAEwAZAD8APQATAD8APAA/ABkAEQA9ABcAPQA/ABgAFwA9ABgAEQAXACoAFwAYACoAPwAqABgAPAAqAD8AOAAqADwAMgAqADgA"),
+"lods": [0.027112171, PackedByteArray("AAAPAAIAEAAAAAIAAAARAA8AEAARAAAAEQAXAA8AEQATABcAEAATABEAFwAYAA8AFwATABgAEwAZABgAGQAPABgAEwAaABkAGgABABkAEwAHABoAGgAHAAEAEAAHABMACAAZAAEABwAIAAEAGwAZAAgAGwAPABkABwADAAgAAwAbAAgABwAKAAMAAwAKABsACgAWABsABwAcAAoACgAcABYAHQAbABYAHAAdABYAHgAPABsAHgAbAB0AHAAfAB0ABwALABwAHAALAB8AEAALAAcAHwAGAB0AHwALAAYAFAAdAAYAHgAdABQACwAUAAYAIAAeABQACwAgABQACwAFACAAIAAFAB4ABQAhAB4ACwAiAAUABQAiACEADgAeACEAIgAOACEACwAMACIACwAQAAwAIgAjAA4AIgAMACMAIwAkAA4AIwAMACQABAAOACQADAAEACQADQAeAA4ADQAOAAQADAANAAQADwAeAA0ADAAJAA0ADwANACUADwAlAAIACQAmAA0ADAAVAAkACQAVACYAJgAnAA0AJgAVACcAJQANACcAFQAlACcAAgAlABIADAAQABUAEAACABIAFQAoACUAFQAQACgAKAApACUAKQASACUAKAAQACkAKQAQABIA"), 0.17900768, PackedByteArray("AAAPAAIAEAAAAAIAAAARAA8AEAARAAAADwASAAIAEAACABIAEQATAA8AEAATABEAEwABAA8AEwAHAAEAEAAHABMACAAPAAEABwAIAAEAEAALAAcAFAAPAAgADwANABIADwAUAA0AFQAQABIAFQASAA0ADAAQABUACwAQAAwACQAVAA0ADAAVAAkADAAJAA0ADAANAAQADQAOAAQADAAEAA4ADQAUAA4ABQAMAA4ABQAOABQACwAMAAUACwAFABQACwAUAAYAFAAIAAYACgALAAYABwALAAoABwAKAAgACgAGABYABgAIABYACgAWAAgA"), 0.37519163, PackedByteArray("AAAHAAIABwAIAAIACQAAAAIABwAKAAgACgAGAAgABgACAAgABwALAAoAAAALAAcACgALAAYADAAAAAkACwAAAAwACQACAA0AAgAGAA0ADAAJAA0ACwAFAAYACwAMAAUABQAOAAYADQAGAA4ABQAMAA4ADAANAA4A"), 1.6741308, PackedByteArray("AAABAAIAAAADAAEAAAACAAQAAAAFAAMABQAAAAQAAgAGAAQABQAEAAYABgACAAEAAwAFAAYAAwAGAAEA")],
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 64,
+"vertex_data": PackedByteArray("/38AAAAAAACJ/f//BmcAAP9///8AAAAA//8AAP9/AAAAAP///38AAANPAABA9gAA+Jj//4n9AACJ/QAABmcAAP//////fwAAdQIAAAZnAABA9gAA+7AAAPiYAACJ/QAAAAAAAP9/AAB1Av//BmcAAJIV//8cxwAA+Jj//3UCAAAGZwAAdQIAAPiYAAB1AgAABmf//3UCAACB2gAAfSUAAP9//////wAAfSUAAH0lAABs6v//HMcAAPuwAAC+CQAAHMf//5IVAABs6v//4jgAAED2AAADTwAAif3///iYAACB2gAAgdoAABzH//9s6gAABmf//4n9AAD7sAAAQPYAAP9/AAD//wAA4jj//2zqAAB9JQAAgdoAAL4JAAD7sAAAdQL///iYAADiOP//khUAAL4JAAADTwAAkhX//+I4AADiOAAAkhUAAANPAAC+CQAA+7D//74JAAADT///vgkAAH0l//99JQAAkhUAAOI4AAC+Cf//A08AAHUCAAD4mAAAvgn///uwAACSFQAAHMcAAANP//9A9gAAfSX//4HaAADiOAAAbOoAAAZnAACJ/QAA+7D//0D2AAAcxwAAbOoAAED2///7sAAAgdr//4HaAABs6gAAHMcAAIn9AAD4mAAAQPb//wNPAAAcxwAAkhUAAGzqAADiOAAAgdr//30lAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vny4f"]
+resource_name = "gate1_Cylinder_005"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("////f//HAAD//wAA/7//f/+HAAD/b/9//z8AAAAA/38AAAAA/z+OgvxLQfyPAv+/QXwCtP+/joJ8qML4b/3/v//H/3//vwAA/6//f/+H/3//VwAA/z//f/83AAD/N/9/vQMCtOoMIeJwff+/QfwCtPvLQfzC+ILXjoL/v72DArT/9wAA//f/f//f/3//pwAA/38AAP8f/3//BwAA/wf/f/xLvYMDNL2D/z9v/RVzIeICtL2D+8u9g3DrjZSNlI2U/+//f//nAAD/1wAA/8//f/+3AAD/n/9//5cAAP+P/3//f/9//3cAAP9nAAD/X/9//0//f/9HAAD/L/9//ycAAP8XAAD/F/9//w//f90d6YzqDN2dFXPdnSFi6YxBfPvLAzRB/L0D+8vdHRTzIWIU84LXPIfC+HyocOtw64LXwvj/v2/9jZRw6zyHgtc8h3yo3Z3pjHyoPIf/9/9//+8AAP/3AAD/7/9//+8AAP/n/3//5/9//98AAP/nAAD/3/9//98AAP/X/3//1/9//88AAP/XAAD/z/9//88AAP/H/3//vwAA/8cAAP+//3//twAA/7f/f/+3/3//rwAA/6//f/+nAAD/rwAA/6f/f/+n/3//nwAA/5//f/+XAAD/nwAA/5f/f/+X/3//jwAA/4//f/+HAAD/jwAA/4f/f/9//3//fwAA/3f/f/93/3//bwAA/3cAAP9v/3//bwAA/2f/f/9n/3//XwAA/2cAAP9f/3//XwAA/1f/f/9X/3//TwAA/1cAAP9P/3//TwAA/0f/f/9H/3//RwAA/z//f/83AAD/PwAA/zf/f/8vAAD/L/9//ycAAP8vAAD/J/9//yf/f/8fAAD/H/9//xcAAP8fAAD/F/9//w8AAP8P/3+CVzyHfCg8h44UjZQ8B3yoPAeC13wowviOFHDrglfC+MJ4gtdxa3DrcWuNlMJ4fKj/BwAA/w8AAP8H/38h4umMFPPdnUH8+8sU8yHiIeIU8wK0QfzdnRTzvYP7y+mMIeLpjN2d"),
+"format": 34896613399,
+"index_count": 372,
+"index_data": PackedByteArray("AAAgAAIAAAAhACAAVgBXAFgAVgAwAFcAWQAxAFoAWQBbADEAXABdAF4AXAAiAF0AXwAyAGAAXwBhADIAYgBjAGQAYgAzAGMAZQABAGYAZQAQAAEAZwBoAGkAZwBqAGgAAwBrABEAAwBsAGsAbQBuADQAbQBvAG4AEgBwAHEAEgByAHAAcwB0ACMAcwB1AHQANQB2AHcANQB4AHYAeQB6ADYAeQB7AHoANwB8AH0ANwB+AHwAEwAkAAQAEwA4ACQAfwA5AIAAfwCBADkAggCDAIQAggAFAIMAhQA6AIYAhQCHADoAiACJAIoAiAA7AIkAiwAUAIwAiwCNABQAjgCPAJAAjgA8AI8AkQA9AJIAkQCTAD0AlAAGAJUAlAAVAAYAlgCXAJgAlgCZAJcAFwCaABYAFwCbAJoAPgCcAJ0APgCeAJwAnwCgAD8AnwChAKAAJQCiAKMAJQCkAKIAQQClAEAAQQCmAKUApwAJACgACQCoACkApwCoAAkAqACpAEMAqACqAKkAqQCqAEQApwCqAKgAqgALABgAqgCrAAsACwCrAEkAqgCsAKsApwCsAKoAqwCtABkAqwCsAK0ArQCsAEoArAAqAEgArACuACoAKgCuAAoArACnAK8ArACvAK4ArgCwAEsArgCvALAAsACvACsAsQCnAEYAsgCnALEArwCnALIAsgCxAEUArwCyABoAGgCyAAwArwAaAEcAQgCzALQAQgC1ALMAJwAIACYAJwAHAAgALAAtAA0ALQC2AEwALAC2AC0AtgC3AC4AtgAbALcAtwAbAE0ALAAbALYAGwC4AA8AGwC5ALgAuAC5AB0AGwAcALkALAAcABsAuQC6AE4AuQAcALoAugAcAE8AHAC7AFAAHAC8ALsAuwC8AA4AHAAsAL0AHAC9ALwAvAC+AFEAvAC9AL4AvgC9AFIAVAAsAFUAvwAsAFQAvQAsAL8AvwBUAC8AvQC/AB8AHwC/AFMAvQAfAB4A"),
+"lods": [0.027112171, PackedByteArray("AAAgAAIAAAAhACAAIQAwACAAMAAxACAAMAAiADEAIgAyADEAIgAzADIAMwABADIAMwAQAAEAEAARAAEAEAADABEAAwA0ABEAAwASADQAEgAjADQAEgA1ACMANQA2ACMANQA3ADYANwAEADYANwATAAQAEwAkAAQAEwA4ACQAOAA5ACQAOAAFADkABQA6ADkABQA7ADoAOwAUADoAOwA8ABQAPAA9ABQAPAAVAD0AFQAGAD0AFQAWAAYAFQAXABYAFwA+ABYAPgA/ABYAPgAlAD8AJQBAAD8AJQBBAEAAQQBCAEAAQgAmAEAAQgAnACYAJwAIACYAJwAHAAgACQBDACkAKABDAAkAQwAYAEQAKAAYAEMARQAoAEYAGgBFAAwARwBFABoARwAoAEUAKABIABgASAAoAEcAGABIABkAGAAZAAsACwAZAEkAGQBIAEoASABHAEsASwBHACsASABLACoAKgBLAAoALAAtAA0ALQAuAEwALAAuAC0ALgAbAE0ALAAbAC4AGwAdAA8AGwBOAB0AGwAcAE4ATgAcAE8ALAAcABsAHAAOAFAAHABRAA4AHAAeAFEAHAAsAB4AUQAeAFIAHgAsAC8AHgAvAB8AHwAvAFMALwAsAFQAVAAsAFUA"), 0.17900768, PackedByteArray("AAAgAAIAAAAhACAAIQAiACAAIgABACAAIgAQAAEAEAARAAEAEAASABEAEgAjABEAEgAEACMAEgATAAQAEwAkAAQAEwAFACQABQAUACQABQAVABQAFQAGABQAFQAWAAYAFQAXABYAFwAlABYAJQAmABYAJQAnACYAJwAIACYAJwAHAAgAKAApAAkAKAAYACkAGAAZAAsAGAAqABkAKAAqABgAKgAoABoAGgAoAAwAKgAaAAoACgAaACsALAAtAA0ALAAuAC0ALAAbAC4ALAAcABsAGwAcAB0AHAAsAB4AHAAeAA4AHgAsAC8AHgAvAB8A"), 0.37519163, PackedByteArray("AAAQAAIAEAARAAIAEAASABEAEgAEABEAEgATAAQAEwAFAAQABQAUAAQABQAVABQAFQAWABQAFQAXABYAFwAIABYAFwAHAAgAGAAKABkACQAKABgACgAJABoAGwAcAB0ADQAcABsAHAANAB4AHgANAB8AHAAeAA4A"), 1.6741308, PackedByteArray("AAABAAIAAAADAAEAAwAEAAEAAwAFAAQABQAGAAQABQAHAAYABwAIAAYACQAKAAsACgAJAAwADQAOAA8A")],
+"material": SubResource("StandardMaterial3D_lwcmk"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 192,
+"vertex_data": PackedByteArray("/38AAAAA//uJ/f//Bmf/y/9///8AAP/7//8AAP9//7v4mP//if3/gwNPAABA9v+LAAD///9//7v/fwAAAAD/+/9///8AAP/7/3///wAA/7/4mP//if3/vwAA////f/+/if3//wZn/7//fwAAAAD/PwNPAABA9v8///8AAP9//z+J/QAABmf/y///////f/+7QPYAAPuw/6v4mAAAif3/g5IV//8cx/+jAAAAAP9//7t1Av//Bmf/y3UCAAAGZ//LdQL//wZn/7+SFf//HMf/v///////f/+/if0AAAZn/z/4mAAAif3/P0D2AAD7sP8/AAAAAP9//z91AgAABmf/P/iY//91Av/7+JgAAHUC//uB2gAAfSX+42zq//8cx/+j/3///////4N9JQAAfSX+4wZn//91Av/7BmcAAHUC//v4mP//dQL/vwZn//91Av+//3///////79s6v//HMf/vwZnAAB1Av8/+JgAAHUC/z+B2gAAfSX/P30lAAB9Jf8/+7AAAL4J/vMcx///khX+62zq///iOP/bQPYAAANP/9OJ/f//+Jj/s4HaAACB2v+bHMf//2zq/5P7sAAAQPb/i/9/AAD///+DBmf//4n9/4PiOP//bOr/k30lAACB2v+bvgkAAPuw/6t1Av//+Jj/s74JAAADT//TkhX//+I4/9viOP//khX+6+I4AACSFf7rA08AAL4J/vPiOP//khX/v5IV///iOP+/bOr//+I4/78cx///khX/v4n9///4mP+/Bmf//4n9/791Av//+Jj/v+I4//9s6v+/HMf//2zq/7/7sAAAvgn/P0D2AAADT/8/gdoAAIHa/z/7sAAAQPb/P/9/AAD///8/fSUAAIHa/z++CQAA+7D/P74JAAADT/8/4jgAAJIV/z8DTwAAvgn/P/iYAAB1Av7z+7D//74J/vP4mP//dQL+8/uwAAC+Cf7r+7D//74J/uscxwAAkhX+6xzHAACSFf7jgdr//30l/uMcx///khX+44HaAAB9Jf/bgdr//30l/9ts6gAA4jj/22zqAADiOP/TQPb//wNP/9Ns6v//4jj/00D2AAADT//LQPb//wNP/8uJ/QAABmf/w///////f//Dif3//wZn/8P//wAA/3//w4n9///4mP+7if0AAPiY/7uJ/QAA+Jj/s0D2///7sP+zQPYAAPuw/7Ns6v//HMf/q0D2///7sP+rbOoAABzH/6ts6gAAHMf/o4Ha//+B2v+jgdoAAIHa/6Mcx///bOr/m4Ha//+B2v+bHMcAAGzq/5scxwAAbOr/k/uw//9A9v+T+7AAAED2/5P4mP//if3/i/uw//9A9v+L+JgAAIn9/4v/fwAA////g/9///////+DBmcAAIn9/4MGZwAAif3/iwNP//9A9v+LBmf//4n9/4sDTwAAQPb/kwNP//9A9v+T4jgAAGzq/5PiOAAAbOr/m30l//+B2v+b4jj//2zq/5t9JQAAgdr/o30l//+B2v+jkhUAABzH/6OSFQAAHMf/q74J///7sP+rkhX//xzH/6u+CQAA+7D/s74J///7sP+zdQIAAPiY/7N1AgAA+Jj/u3UC///4mP+7AAAAAP9//8N1Av//Bmf/wwAA////f//DdQIAAAZn/8O+Cf//A0//y74JAAADT//LkhX//+I4/9O+Cf//A0//05IVAADiOP/TkhUAAOI4/9t9Jf//fSX/230lAAB9Jf/b4jj//5IV/uN9Jf//fSX+4+I4AACSFf7jA0///74J/usDTwAAvgn+6/uw//++Cf+/A0///74J/799Jf//fSX/v74J//8DT/+/vgn///uw/78DT///QPb/v30l//+B2v+/+7D//0D2/79A9v//+7D/v4Ha//+B2v+/gdr//30l/79A9v//A0//vwZn//91Av7zA0///74J/vMGZwAAdQL+8xzHAACSFf8/bOoAAOI4/z+J/QAA+Jj/P2zqAAAcx/8/HMcAAGzq/z8GZwAAif3/P+I4AABs6v8/dQIAAPiY/z+SFQAAHMf/P5IVAADiOP8//38AAP9/AAD/fwAA/38AAP9/AAD/f////3////9/////f///////f/7//3////9//v//fwAA/38AAP9/AAD/f/9/AAD/fwAA/38AAP9/AAD/f////3////9/////f////v//f/7//3////9/AAD/fwAA/38AAP9/AAD/fwAA/3//fwAA/38AAP9/AAD/fwAA/38AAP9/////f////3////7//3/+//9/////f/7//38AAP9/AAD/fwAA/38AAP9//38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9/////f////3////7//3/+//9//v//f/7//3/+//9//v//f/7//3/+//9//v//fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3//fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9///////9/////f/7//3/+//9/////f////3/+//9/////f/7//3/+//9//v//f////3//f////3////9///8AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7ps1f")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuqwt"]
+albedo_texture = ExtResource("2_p11d5")
+
+[node name="gate1" instance=ExtResource("1_6dmw0")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ekst7")
+
+[node name="Cube_001" parent="." index="1"]
+surface_material_override/0 = SubResource("StandardMaterial3D_ekst7")
+
+[node name="Cylinder" parent="." index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_04gcx")
+
+[node name="Cylinder_001" parent="." index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8j6wy")
+
+[node name="Cylinder_002" parent="." index="4"]
+surface_material_override/0 = SubResource("StandardMaterial3D_04gcx")
+
+[node name="Cylinder_003" parent="." index="5"]
+surface_material_override/0 = SubResource("StandardMaterial3D_04gcx")
+
+[node name="Cylinder_006" type="MeshInstance3D" parent="." index="8"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 22.374731, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_007" type="MeshInstance3D" parent="." index="9"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 22.006428, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_008" type="MeshInstance3D" parent="." index="10"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 21.598425, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_009" type="MeshInstance3D" parent="." index="11"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 21.198433, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_010" type="MeshInstance3D" parent="." index="12"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 20.83013, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_011" type="MeshInstance3D" parent="." index="13"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 20.796806, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_012" type="MeshInstance3D" parent="." index="14"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 20.396814, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_013" type="MeshInstance3D" parent="." index="15"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 20.028511, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_014" type="MeshInstance3D" parent="." index="16"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 19.677036, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_015" type="MeshInstance3D" parent="." index="17"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 19.277044, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_016" type="MeshInstance3D" parent="." index="18"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 18.908741, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_017" type="MeshInstance3D" parent="." index="19"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 18.475683, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_018" type="MeshInstance3D" parent="." index="20"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 18.075691, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_019" type="MeshInstance3D" parent="." index="21"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 17.707388, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_020" type="MeshInstance3D" parent="." index="22"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 17.294996, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_021" type="MeshInstance3D" parent="." index="23"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 16.895004, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_022" type="MeshInstance3D" parent="." index="24"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 16.526701, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_023" type="MeshInstance3D" parent="." index="25"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 16.061695, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_024" type="MeshInstance3D" parent="." index="26"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 15.661703, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_025" type="MeshInstance3D" parent="." index="27"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 15.2934, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_026" type="MeshInstance3D" parent="." index="28"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 14.921074, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_027" type="MeshInstance3D" parent="." index="29"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 14.552771, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_028" type="MeshInstance3D" parent="." index="30"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 14.144768, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_029" type="MeshInstance3D" parent="." index="31"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 13.744776, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_030" type="MeshInstance3D" parent="." index="32"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 13.376472, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_031" type="MeshInstance3D" parent="." index="33"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 13.343149, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_032" type="MeshInstance3D" parent="." index="34"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 12.943157, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_033" type="MeshInstance3D" parent="." index="35"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 12.574854, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_034" type="MeshInstance3D" parent="." index="36"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 12.223379, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_035" type="MeshInstance3D" parent="." index="37"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 11.823387, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_036" type="MeshInstance3D" parent="." index="38"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 11.455084, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_037" type="MeshInstance3D" parent="." index="39"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 11.022026, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_038" type="MeshInstance3D" parent="." index="40"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 10.622034, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_039" type="MeshInstance3D" parent="." index="41"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 10.253731, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_040" type="MeshInstance3D" parent="." index="42"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 9.841339, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_041" type="MeshInstance3D" parent="." index="43"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 9.441347, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_042" type="MeshInstance3D" parent="." index="44"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 9.073044, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_043" type="MeshInstance3D" parent="." index="45"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 8.608038, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_044" type="MeshInstance3D" parent="." index="46"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 8.208046, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_045" type="MeshInstance3D" parent="." index="47"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 7.8397427, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_046" type="MeshInstance3D" parent="." index="48"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 7.3815813, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_047" type="MeshInstance3D" parent="." index="49"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 7.013278, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_048" type="MeshInstance3D" parent="." index="50"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 6.605275, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_049" type="MeshInstance3D" parent="." index="51"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 6.205283, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_050" type="MeshInstance3D" parent="." index="52"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 5.83698, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_051" type="MeshInstance3D" parent="." index="53"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 5.8036566, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_052" type="MeshInstance3D" parent="." index="54"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 5.4036646, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_053" type="MeshInstance3D" parent="." index="55"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 5.0353613, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_054" type="MeshInstance3D" parent="." index="56"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 4.6838865, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_055" type="MeshInstance3D" parent="." index="57"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 4.2838945, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_056" type="MeshInstance3D" parent="." index="58"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 3.9155912, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_057" type="MeshInstance3D" parent="." index="59"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 3.4825335, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_058" type="MeshInstance3D" parent="." index="60"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 3.0825415, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_059" type="MeshInstance3D" parent="." index="61"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 2.7142382, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_060" type="MeshInstance3D" parent="." index="62"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 2.3018465, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_061" type="MeshInstance3D" parent="." index="63"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 1.9018545, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_062" type="MeshInstance3D" parent="." index="64"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 1.5335512, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_063" type="MeshInstance3D" parent="." index="65"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 1.0685453, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_064" type="MeshInstance3D" parent="." index="66"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 0.66855335, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_065" type="MeshInstance3D" parent="." index="67"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 0.30025005, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_066" type="MeshInstance3D" parent="." index="68"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, 0.012556076, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_067" type="MeshInstance3D" parent="." index="69"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -0.35574722, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_068" type="MeshInstance3D" parent="." index="70"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -0.7637501, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_069" type="MeshInstance3D" parent="." index="71"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -1.1637421, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_070" type="MeshInstance3D" parent="." index="72"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -1.5320454, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_071" type="MeshInstance3D" parent="." index="73"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -1.5653687, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_072" type="MeshInstance3D" parent="." index="74"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -1.9653606, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_073" type="MeshInstance3D" parent="." index="75"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -2.333664, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_074" type="MeshInstance3D" parent="." index="76"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -2.6851387, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_075" type="MeshInstance3D" parent="." index="77"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -3.0851307, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_076" type="MeshInstance3D" parent="." index="78"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -3.453434, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_077" type="MeshInstance3D" parent="." index="79"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -3.8864918, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_078" type="MeshInstance3D" parent="." index="80"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -4.286484, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_079" type="MeshInstance3D" parent="." index="81"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -4.654787, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_080" type="MeshInstance3D" parent="." index="82"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -5.0671787, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_081" type="MeshInstance3D" parent="." index="83"]
+transform = Transform3D(-0.082811885, 4.652287e-07, 0, -1.2504247e-08, -3.0810704, 0, 0, 0, 0.07708314, -5.4671707, 22.56992, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_083" type="MeshInstance3D" parent="." index="84"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.654924, 23.864296, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_084" type="MeshInstance3D" parent="." index="85"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.63418, 24.232573, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_085" type="MeshInstance3D" parent="." index="86"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.610956, 24.644934, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_086" type="MeshInstance3D" parent="." index="87"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.588442, 25.044895, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_087" type="MeshInstance3D" parent="." index="88"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.67744, 21.67045, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_088" type="MeshInstance3D" parent="." index="89"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.654924, 22.070414, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_089" type="MeshInstance3D" parent="." index="90"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.63418, 22.43869, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_090" type="MeshInstance3D" parent="." index="91"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.610956, 22.851051, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_091" type="MeshInstance3D" parent="." index="92"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.588442, 23.38516, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_092" type="MeshInstance3D" parent="." index="93"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.67744, 19.46644, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_093" type="MeshInstance3D" parent="." index="94"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.654924, 19.866404, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_097" type="MeshInstance3D" parent="." index="95"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.654924, 21.344475, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_094" type="MeshInstance3D" parent="." index="96"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.63418, 20.23468, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_095" type="MeshInstance3D" parent="." index="97"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.610956, 20.647041, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")
+
+[node name="Cylinder_096" type="MeshInstance3D" parent="." index="98"]
+transform = Transform3D(-3.6198229e-09, -14.302065, 0, 0.08281189, -6.251631e-07, 0, 0, 0, 0.07708314, 9.588442, 21.047003, -0.02641965)
+mesh = SubResource("ArrayMesh_vny4f")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_nuqwt")

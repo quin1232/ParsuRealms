@@ -1,0 +1,763 @@
+[gd_scene load_steps=86 format=3 uid="uid://c75s2m6eic1vo"]
+
+[ext_resource type="Script" uid="uid://bkc6nf06w5gfk" path="res://addons/ThirdPersonTemplate/Character/Scripts/PlayerTemplate.gd" id="1_wojse"]
+[ext_resource type="PackedScene" uid="uid://dcyqaw6kwj58q" path="res://addons/ThirdPersonTemplate/Character/Nodes/camroot.tscn" id="2_pr6fu"]
+[ext_resource type="PackedScene" uid="uid://dmxkno3jkvejb" path="res://Character/Character.tscn" id="3_wkkmv"]
+[ext_resource type="Texture2D" uid="uid://7cjjjmytys6l" path="res://UI/fix(2).png" id="4_bosd6"]
+[ext_resource type="Texture2D" uid="uid://vrlq5d8bxr8t" path="res://UI/Talk.png" id="5_4i8u8"]
+[ext_resource type="PackedScene" uid="uid://h6abgi3vxpxb" path="res://Scene/mini_map.tscn" id="5_k8fix"]
+[ext_resource type="Texture2D" uid="uid://dp06c3lwgnv6e" path="res://UI/Collectbutton.png" id="5_mg6kr"]
+[ext_resource type="Script" uid="uid://cfupmd0k261jt" path="res://addons/ThirdPersonTemplate/Character/Nodes/collect.gd" id="6_6r6tm"]
+[ext_resource type="Texture2D" uid="uid://dimdfejn6a84p" path="res://UI/jump button1.png" id="6_ethhk"]
+[ext_resource type="Texture2D" uid="uid://b86bnbwt1roiv" path="res://UI/jump button.png" id="6_kwtnq"]
+[ext_resource type="Texture2D" uid="uid://6ul6o4tlk2hg" path="res://UI/Open.png" id="7_bjv6w"]
+[ext_resource type="Texture2D" uid="uid://cp5h5mx1lniob" path="res://UI/Sprint button.png" id="7_wkkmv"]
+[ext_resource type="Texture2D" uid="uid://cxfsssc0kjby7" path="res://UI/quest.png" id="8_b7h63"]
+[ext_resource type="Texture2D" uid="uid://tnjttpphr7qp" path="res://UI/Sprint button1.png" id="8_mg6kr"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="8_wkkmv"]
+[ext_resource type="Texture2D" uid="uid://cixfxcap44xu3" path="res://UI/Drive.png" id="9_bc3ju"]
+[ext_resource type="Script" uid="uid://fml08ok6imgl" path="res://addons/ThirdPersonTemplate/Character/Nodes/drive.gd" id="9_g3c0o"]
+[ext_resource type="Texture2D" uid="uid://chdg8boafytnh" path="res://UI/Character.png" id="9_mar2f"]
+[ext_resource type="Script" uid="uid://b622weug2rjmf" path="res://Scene/home.gd" id="10_d1p82"]
+[ext_resource type="Script" uid="uid://ca6vv30tuh7r2" path="res://addons/ThirdPersonTemplate/Character/Nodes/exit.gd" id="10_yltla"]
+[ext_resource type="Texture2D" uid="uid://cqkclvh3fr765" path="res://UI/Inventory.png" id="11_leh66"]
+[ext_resource type="Texture2D" uid="uid://bi7esaqqxrwfw" path="res://UI/EXIT.png" id="11_v41gb"]
+[ext_resource type="Texture2D" uid="uid://2kfkdbeu5ivt" path="res://UI/arrow.png" id="12_tsbjn"]
+[ext_resource type="Script" uid="uid://d0awgak8pj8jw" path="res://Scene/arrowmap.gd" id="13_ousa2"]
+[ext_resource type="Script" uid="uid://qn3t3ahltood" path="res://Inventory/Player/Interaction/PlayerInteractionHandler.gd" id="14_87tgf"]
+[ext_resource type="Script" uid="uid://d1eklw33buvw1" path="res://Inventory/Inventory/ItemData.gd" id="15_6e6ps"]
+[ext_resource type="PackedScene" uid="uid://cuiklvlmyu8n6" path="res://Inventory/Inventory/TestCube.tscn" id="17_mg6kr"]
+[ext_resource type="Script" uid="uid://chrucxqwwr32y" path="res://addons/ThirdPersonTemplate/Character/Nodes/quest.gd" id="18_c8s3t"]
+[ext_resource type="PackedScene" uid="uid://dcig5eot87p8w" path="res://Inventory/Inventory/TestSphere.tscn" id="19_bjv6w"]
+[ext_resource type="Texture2D" uid="uid://bi4ki6bxfxy2d" path="res://UI/Sparkplug.png" id="20_6r6tm"]
+[ext_resource type="Script" uid="uid://cg8ggpore0g04" path="res://Inventory/Inventory/InventoryHandler.gd" id="20_vueoo"]
+[ext_resource type="Texture2D" uid="uid://b37f4hnlyuu3p" path="res://UI/bOOK.png" id="21_1m7k5"]
+[ext_resource type="Texture2D" uid="uid://blhrbf423o3q0" path="res://assets/Battery.png" id="22_6r6tm"]
+[ext_resource type="Script" uid="uid://c2tre0yeohy8h" path="res://addons/ThirdPersonTemplate/Character/Nodes/book.gd" id="22_syiw4"]
+[ext_resource type="FontFile" uid="uid://3pxb8cfk2kfb" path="res://Fonts/AdventureRequest-j8W9.ttf" id="26_vueoo"]
+[ext_resource type="Script" uid="uid://cqjc1fxh5jis4" path="res://addons/ThirdPersonTemplate/Character/Nodes/questsystem.gd" id="28_a424l"]
+[ext_resource type="Texture2D" uid="uid://dexj7ml7x3tiq" path="res://Map/campuses/opening clouds.png" id="31_vmyyc"]
+[ext_resource type="PackedScene" uid="uid://dd02cf35hdgqr" path="res://Inventory/Inventory/TestSpheres.tscn" id="32_vmyyc"]
+[ext_resource type="PackedScene" uid="uid://b3xp6ih7xeemg" path="res://Inventory/Inventory/TestSpheress.tscn" id="33_4x1gm"]
+[ext_resource type="PackedScene" uid="uid://q8ci6y737stv" path="res://Inventory/Inventory/book.tscn" id="35_13q5v"]
+[ext_resource type="PackedScene" uid="uid://cc4b488lp5evj" path="res://Inventory/Inventory/calculator.tscn" id="38_pv44u"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="38_xyirl"]
+[ext_resource type="PackedScene" uid="uid://nwontlscpi2k" path="res://Inventory/Inventory/Ledger.tscn" id="39_g1f6m"]
+[ext_resource type="PackedScene" uid="uid://r0jae0dqaja3" path="res://assets/sangay/ron.tscn" id="40_es531"]
+[ext_resource type="PackedScene" uid="uid://dj0uv3m2mu6vi" path="res://assets/sangay/baitb.tscn" id="41_ivweo"]
+[ext_resource type="Theme" uid="uid://f4wbom1wnc0x" path="res://Map/Mapss.tres" id="43_2usbq"]
+[ext_resource type="AudioStream" uid="uid://bd2s783lw3yo6" path="res://Sound Effects/walkings.mp3" id="46_u35jv"]
+[ext_resource type="AudioStream" uid="uid://bynomm1othkwn" path="res://Sound Effects/Click.mp3" id="47_2friq"]
+[ext_resource type="AudioStream" uid="uid://bdoud21eaxx2n" path="res://Sound Effects/backgame-[AudioTrimmer.com].mp3" id="48_u35jv"]
+[ext_resource type="AudioStream" uid="uid://nvbs76m0bhes" path="res://Sound Effects/collect.mp3" id="49_adp2a"]
+[ext_resource type="AudioStream" uid="uid://dn4ly6vk538jn" path="res://Sound Effects/WIN.mp3" id="51_2usbq"]
+[ext_resource type="AudioStream" uid="uid://c6btgrpmenmv8" path="res://Sound Effects/arrived.mp3" id="51_u35jv"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wkkmv"]
+
+[sub_resource type="AnimationNodeAnimation" id="20"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wkkmv"]
+animation = &"JumpingUp"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7stjy"]
+animation = &"Landing"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0d3b5"]
+animation = &"OnAir"
+
+[sub_resource type="AnimationNodeAnimation" id="23"]
+animation = &"Running"
+
+[sub_resource type="AnimationNodeAnimation" id="24"]
+animation = &"Walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="27"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"IsWalking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="28"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"IsRunning"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="31"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"IsNotRunning"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="32"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"IsNotWalking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_u47nw"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xc7tu"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"IsJumpingUp"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d4wyj"]
+xfade_time = 0.3
+advance_mode = 2
+advance_condition = &"IsInAir"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b7h63"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"IsLanding"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mar2f"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"IsJumpingUp"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d1p82"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"IsJumpingUp"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wkkmv"]
+xfade_time = 0.1
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"IsOnFloor"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7stjy"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"IsWalking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0d3b5"]
+xfade_time = 0.1
+advance_mode = 2
+advance_condition = &"IsRunning"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_kmv6c"]
+states/Idle/node = SubResource("20")
+states/Idle/position = Vector2(359, 213)
+states/JumpingUp/node = SubResource("AnimationNodeAnimation_wkkmv")
+states/JumpingUp/position = Vector2(403, 360.725)
+states/Landing/node = SubResource("AnimationNodeAnimation_7stjy")
+states/Landing/position = Vector2(566, 464.725)
+states/OnAir/node = SubResource("AnimationNodeAnimation_0d3b5")
+states/OnAir/position = Vector2(381, 457.725)
+states/Run/node = SubResource("23")
+states/Run/position = Vector2(741, 213)
+states/Start/position = Vector2(255, 213)
+states/Walk/node = SubResource("24")
+states/Walk/position = Vector2(566, 213)
+transitions = ["Idle", "Walk", SubResource("27"), "Walk", "Run", SubResource("28"), "Run", "Walk", SubResource("31"), "Walk", "Idle", SubResource("32"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_u47nw"), "Walk", "JumpingUp", SubResource("AnimationNodeStateMachineTransition_xc7tu"), "JumpingUp", "OnAir", SubResource("AnimationNodeStateMachineTransition_d4wyj"), "OnAir", "Landing", SubResource("AnimationNodeStateMachineTransition_b7h63"), "Idle", "JumpingUp", SubResource("AnimationNodeStateMachineTransition_mar2f"), "Run", "JumpingUp", SubResource("AnimationNodeStateMachineTransition_d1p82"), "Landing", "Idle", SubResource("AnimationNodeStateMachineTransition_wkkmv"), "Landing", "Walk", SubResource("AnimationNodeStateMachineTransition_7stjy"), "Landing", "Run", SubResource("AnimationNodeStateMachineTransition_0d3b5")]
+graph_offset = Vector2(-45.003, 152.786)
+
+[sub_resource type="Resource" id="Resource_qmlov"]
+script = ExtResource("15_6e6ps")
+ItemName = "Spark Plug"
+Icon = ExtResource("20_6r6tm")
+ItemModelPrefab = ExtResource("17_mg6kr")
+
+[sub_resource type="Resource" id="Resource_eff87"]
+script = ExtResource("15_6e6ps")
+ItemName = "Battery"
+Icon = ExtResource("22_6r6tm")
+ItemModelPrefab = ExtResource("19_bjv6w")
+
+[sub_resource type="Resource" id="Resource_4x1gm"]
+script = ExtResource("15_6e6ps")
+ItemName = "Clock"
+Icon = ExtResource("31_vmyyc")
+ItemModelPrefab = ExtResource("32_vmyyc")
+metadata/_custom_type_script = "uid://d1eklw33buvw1"
+
+[sub_resource type="Resource" id="Resource_4i8u8"]
+script = ExtResource("15_6e6ps")
+ItemName = "Answer Sheets"
+Icon = ExtResource("31_vmyyc")
+ItemModelPrefab = ExtResource("33_4x1gm")
+metadata/_custom_type_script = "uid://d1eklw33buvw1"
+
+[sub_resource type="Resource" id="Resource_1m7k5"]
+script = ExtResource("15_6e6ps")
+ItemName = "Book"
+ItemModelPrefab = ExtResource("35_13q5v")
+metadata/_custom_type_script = "uid://d1eklw33buvw1"
+
+[sub_resource type="Resource" id="Resource_g1f6m"]
+script = ExtResource("15_6e6ps")
+ItemName = "Calculator"
+ItemModelPrefab = ExtResource("38_pv44u")
+metadata/_custom_type_script = "uid://d1eklw33buvw1"
+
+[sub_resource type="Resource" id="Resource_wm55k"]
+script = ExtResource("15_6e6ps")
+ItemName = "Ledger"
+ItemModelPrefab = ExtResource("39_g1f6m")
+metadata/_custom_type_script = "uid://d1eklw33buvw1"
+
+[sub_resource type="Resource" id="Resource_2friq"]
+script = ExtResource("15_6e6ps")
+ItemName = "Fishing Rod"
+ItemModelPrefab = ExtResource("40_es531")
+metadata/_custom_type_script = "uid://d1eklw33buvw1"
+
+[sub_resource type="Resource" id="Resource_rn8ge"]
+script = ExtResource("15_6e6ps")
+ItemName = "Fishing Bait"
+ItemModelPrefab = ExtResource("41_ivweo")
+metadata/_custom_type_script = "uid://d1eklw33buvw1"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_c8s3t"]
+radius = 1.231
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a424l"]
+bg_color = Color(0.223238, 0.24924, 0.26794, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0.129412)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.168627)
+shadow_size = 3
+shadow_offset = Vector2(-1, 3)
+
+[sub_resource type="Theme" id="Theme_c8s3t"]
+resource_local_to_scene = true
+default_font = ExtResource("26_vueoo")
+
+[node name="PlayerTemplate" type="CharacterBody3D" node_paths=PackedStringArray("PLAYER_COLLIDER") groups=["player"]]
+script = ExtResource("1_wojse")
+PLAYER_COLLIDER = NodePath("CollisionShape3D")
+metadata/_edit_vertical_guides_ = [960.0]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.00757897, 0.686456, 0)
+shape = SubResource("CapsuleShape3D_wkkmv")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("../Character")
+tree_root = SubResource("AnimationNodeStateMachine_kmv6c")
+anim_player = NodePath("../Character/AnimationPlayer")
+parameters/conditions/IsInAir = false
+parameters/conditions/IsJumpingUp = false
+parameters/conditions/IsLanding = false
+parameters/conditions/IsNotRunning = false
+parameters/conditions/IsNotWalking = false
+parameters/conditions/IsOnFloor = false
+parameters/conditions/IsRunning = false
+parameters/conditions/IsWalking = false
+
+[node name="DashTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Camroot" parent="." instance=ExtResource("2_pr6fu")]
+cam_v_max = 80.0
+joystick_path = NodePath("../CanvasLayer/Virtual Joystick")
+look_pad_paths = Array[NodePath]([NodePath("../Control"), NodePath("../Control2")])
+
+[node name="v" parent="Camroot/h" index="0"]
+spring_length = -4.0
+
+[node name="Camera3D" parent="Camroot/h/v" index="0"]
+transform = Transform3D(-1, 1.45794e-08, -8.61985e-08, 0, 0.985996, 0.166769, 8.74228e-08, 0.166769, -0.985996, 0, 0, -3)
+
+[node name="Character" parent="." instance=ExtResource("3_wkkmv")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Character/Armature" index="0"]
+bones/0/position = Vector3(-188.32375, 25.684969, -2502.6575)
+bones/0/rotation = Quaternion(-0.71067864, 0.011374864, -0.002754449, 0.7034194)
+bones/1/position = Vector3(7.458912e-06, 279.587, -25.2592)
+bones/1/rotation = Quaternion(-0.04115081, -0.0034531679, 0.0026559504, 0.9991435)
+bones/2/position = Vector3(2.98023e-06, 327.514, 1.93045e-05)
+bones/2/rotation = Quaternion(0.0024305258, -0.02479312, 0.004886931, 0.9996778)
+bones/3/position = Vector3(-2.38419e-06, 374.302, -5.42402e-06)
+bones/3/rotation = Quaternion(0.0021855664, -0.024710352, 0.0050467784, 0.99967957)
+bones/4/position = Vector3(7.665319e-06, 421.08908, -1.9628362e-05)
+bones/4/rotation = Quaternion(0.040403526, 0.016295634, -0.024567232, 0.9987485)
+bones/5/position = Vector3(6.580655e-06, 223.769, 50.579)
+bones/5/rotation = Quaternion(0.075241975, -0.016074091, 0.016840156, 0.9968936)
+bones/6/position = Vector3(6.566859e-06, 752.9408, 170.188)
+bones/7/position = Vector3(148.884, 351.9784, -5.996888)
+bones/7/rotation = Quaternion(-0.5124486, -0.44478875, 0.6386549, -0.36287665)
+bones/8/position = Vector3(-4.966023e-06, 330.711, 0.0006199606)
+bones/8/rotation = Quaternion(0.42915344, 0.15917568, 0.07368836, 0.88603646)
+bones/9/position = Vector3(5.1508086e-05, 884.0358, -0.0003190042)
+bones/9/rotation = Quaternion(0.030427113, 0.001031846, 0.2585711, 0.9655124)
+bones/10/position = Vector3(-1.61317e-05, 623.08, -0.000110571)
+bones/10/rotation = Quaternion(0.11879376, 0.10540967, -0.18303414, 0.9701935)
+bones/11/position = Vector3(-37.8391, 94.6638, 23.7028)
+bones/11/rotation = Quaternion(0.1592428, -0.090839766, 0.14874426, 0.9717331)
+bones/12/position = Vector3(-8.39027, 83.3113, -0.000146746)
+bones/12/rotation = Quaternion(-0.009930221, 0.017066592, -0.14971289, 0.98853236)
+bones/13/position = Vector3(-11.6638, 95.9913, 0.000225152)
+bones/13/rotation = Quaternion(-0.026608419, -0.0013574186, 0.15325098, 0.98782814)
+bones/14/position = Vector3(20.0542, 88.7522, 3.0517593e-05)
+bones/15/position = Vector3(-79.7001, 346.435, -6.189554)
+bones/15/rotation = Quaternion(0.17918858, 0.016985662, 0.06067767, 0.9817949)
+bones/16/position = Vector3(3.36445, 65.1036, -0.000350342)
+bones/16/rotation = Quaternion(0.26552597, -0.00035973795, -0.078912586, 0.9608687)
+bones/17/position = Vector3(-3.03103, 67.6418, 0.000252785)
+bones/17/rotation = Quaternion(0.11567903, 0.0047256313, 0.00468635, 0.99326444)
+bones/18/position = Vector3(-0.333534, 45.4832, 3.4332304e-05)
+bones/19/position = Vector3(-37.0122, 343.771, -13.6336)
+bones/19/rotation = Quaternion(0.22930498, -0.0043114377, 0.031494, 0.9728354)
+bones/20/position = Vector3(2.14679, 81.959, -5.8200094e-05)
+bones/20/rotation = Quaternion(0.17024851, 0.00047218867, -0.049991272, 0.9841322)
+bones/21/position = Vector3(-1.11954, 75.5751, 3.4139084e-06)
+bones/21/rotation = Quaternion(0.12370889, 0.0017805654, -0.022467023, 0.9920626)
+bones/22/position = Vector3(-1.02725, 61.2643, 0.000116348)
+bones/23/position = Vector3(26.8617, 330.55, -6.41718)
+bones/23/rotation = Quaternion(0.2757559, -0.016362116, 0.013322105, 0.96099603)
+bones/24/position = Vector3(-0.693303, 65.8892, -0.000662932)
+bones/24/rotation = Quaternion(0.12694784, 9.287378e-05, -0.015453438, 0.9917891)
+bones/25/position = Vector3(0.801978, 67.5706, 0.000748427)
+bones/25/rotation = Quaternion(0.09295407, -0.0013812894, -0.026667707, 0.9953123)
+bones/26/position = Vector3(-0.108537, 43.5197, 2.1606698e-05)
+bones/27/position = Vector3(89.8505, 319.682, -13.2165)
+bones/27/rotation = Quaternion(0.35637787, -0.0068477984, -0.037510425, 0.9335636)
+bones/28/position = Vector3(0.159416, 53.0605, -0.000246068)
+bones/28/rotation = Quaternion(0.16089667, 0.005739171, -0.005566465, 0.98693895)
+bones/29/position = Vector3(-0.364986, 43.5325, -3.93487e-05)
+bones/29/rotation = Quaternion(0.065654695, 0.00011549909, -0.006864488, 0.99781877)
+bones/30/position = Vector3(0.205559, 27.9732, 4.52995e-05)
+bones/31/position = Vector3(-148.884, 352.02206, -6.486829)
+bones/31/rotation = Quaternion(0.55675393, -0.44166952, 0.54794544, 0.44125846)
+bones/32/position = Vector3(-6.593779e-05, 330.711, -0.00020370561)
+bones/32/rotation = Quaternion(0.47982612, -0.14204128, -0.11135974, 0.85859793)
+bones/33/position = Vector3(-6.59752e-05, 883.959, 4.60346e-05)
+bones/33/rotation = Quaternion(0.027684812, -0.0009625013, -0.23296545, 0.9720905)
+bones/34/position = Vector3(-7.78458e-05, 622.704, -0.000520689)
+bones/34/rotation = Quaternion(0.00078946655, -0.0328955, 0.17091656, 0.9847359)
+bones/35/position = Vector3(40.868, 102.894, 28.1185)
+bones/35/rotation = Quaternion(0.17375106, -0.034060083, -0.008815209, 0.98416096)
+bones/36/position = Vector3(13.600863, 90.364586, 0.00030637742)
+bones/36/rotation = Quaternion(0.018108826, -0.05224074, -0.023445072, 0.99819505)
+bones/37/position = Vector3(3.77637, 94.443, -0.000576588)
+bones/37/rotation = Quaternion(-0.029775446, 0.0012242842, -0.1291076, 0.9911827)
+bones/38/position = Vector3(-17.3775, 81.4481, 1.71661e-05)
+bones/39/position = Vector3(93.7099, 308.104, -6.46896)
+bones/39/rotation = Quaternion(0.076192655, -0.0018598078, -0.024401836, 0.99679273)
+bones/40/position = Vector3(-3.75982, 86.7733, 0.000188533)
+bones/40/rotation = Quaternion(0.321031, 0.0006308796, 0.08119577, 0.94358146)
+bones/41/position = Vector3(1.59092, 78.0295, -0.000530872)
+bones/41/rotation = Quaternion(0.07376122, -0.00058907125, 0.017514102, 0.99712205)
+bones/42/position = Vector3(2.16893, 67.2393, 9.91821e-05)
+bones/43/position = Vector3(27.859, 309.854, -5.83983)
+bones/43/rotation = Quaternion(0.16918802, -0.007071591, 0.008948037, 0.9855179)
+bones/44/position = Vector3(-2.63647, 93.7529, 0.000176802)
+bones/44/rotation = Quaternion(0.2247682, -0.00061745936, 0.05843667, 0.9726582)
+bones/45/position = Vector3(1.32213, 85.825, -8.12277e-05)
+bones/45/rotation = Quaternion(0.043933567, 0.017749269, 0.0095264595, 0.9988314)
+bones/46/position = Vector3(1.31408, 70.9367, -4.7683716e-06)
+bones/47/position = Vector3(-34.239, 305.543, -7.33673)
+bones/47/rotation = Quaternion(0.2457198, 0.0052396446, 0.008497077, 0.96928954)
+bones/48/position = Vector3(-0.434007, 81.6507, 0.00024199502)
+bones/48/rotation = Quaternion(0.15541165, -7.620129e-05, 0.03460056, 0.9872437)
+bones/49/position = Vector3(0.223832, 70.7797, -0.000212893)
+bones/49/rotation = Quaternion(0.068218015, 0.020150037, 0.0151716955, 0.9973515)
+bones/50/position = Vector3(0.210169, 52.9652, 0.000231266)
+bones/51/position = Vector3(-87.3293, 291.338, -12.6336)
+bones/51/rotation = Quaternion(0.33008173, 0.011522648, 0.05022542, 0.9425448)
+bones/52/position = Vector3(0.209646, 58.1777, -0.000202741)
+bones/52/rotation = Quaternion(0.13947274, -3.6321576e-06, 0.029557921, 0.98978466)
+bones/53/position = Vector3(-0.16748, 52.8318, 0.000227804)
+bones/53/rotation = Quaternion(0.056234587, 0.00021681, 0.014324096, 0.9983148)
+bones/54/position = Vector3(-0.0421486, 39.4154, -7.152412e-07)
+bones/55/rotation = Quaternion(0.05774766, 0.084214464, 0.9933667, -0.05287528)
+bones/56/position = Vector3(-5.7141006e-06, 1184.59, 2.2067e-05)
+bones/56/rotation = Quaternion(-0.20715705, -0.077978514, 0.014469103, 0.97508776)
+bones/57/position = Vector3(2.7507402e-05, 1028.28, 4.65905e-05)
+bones/57/rotation = Quaternion(0.62400955, -0.08311115, -0.006438899, 0.77695763)
+bones/58/position = Vector3(3.34013e-05, 397.29, -6.077531e-06)
+bones/58/rotation = Quaternion(0.21396382, -0.068434596, 0.014771684, 0.9743296)
+bones/59/position = Vector3(-1.5974e-05, 185.259, -1.9073398e-06)
+bones/60/rotation = Quaternion(-0.09955342, 0.1071697, 0.9888949, 0.02628245)
+bones/61/position = Vector3(4.9629205e-05, 1184.68, 4.5312e-06)
+bones/61/rotation = Quaternion(-0.23952857, 0.05008928, -0.0029892838, 0.9695918)
+bones/62/position = Vector3(-4.87658e-05, 1026.8, 3.39588e-05)
+bones/62/rotation = Quaternion(0.6335525, 0.11972012, -0.070242375, 0.7611468)
+bones/63/position = Vector3(1.85109e-05, 387.418, 2.8191407e-06)
+bones/63/rotation = Quaternion(0.21874687, 0.06176335, -0.013741656, 0.973728)
+bones/64/position = Vector3(5.50747e-05, 183.901, 9.5369e-07)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Fix" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.45677084
+anchor_top = 0.38148147
+anchor_right = 0.5598958
+anchor_bottom = 0.4564815
+texture_normal = ExtResource("4_bosd6")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Talk" type="TextureButton" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_left = 0.5109375
+anchor_top = 0.38333333
+anchor_right = 0.61510414
+anchor_bottom = 0.45555556
+texture_normal = ExtResource("5_4i8u8")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Mini Map" parent="CanvasLayer" node_paths=PackedStringArray("player_camera") instance=ExtResource("5_k8fix")]
+offset_left = 72.0
+offset_top = 57.0
+offset_right = -128.0
+offset_bottom = -143.0
+player_camera = NodePath("../../Camroot/h/v/Camera3D")
+
+[node name="Collect" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.7348958
+anchor_top = 0.5138889
+anchor_right = 0.862912
+anchor_bottom = 0.69268054
+offset_left = -54.999878
+offset_top = 86.99994
+offset_right = -73.91235
+offset_bottom = 108.90497
+rotation = -0.092620194
+texture_normal = ExtResource("5_mg6kr")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_6r6tm")
+metadata/_edit_use_anchors_ = true
+
+[node name="Collect2" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.7125
+anchor_top = 0.5833333
+anchor_right = 0.8286938
+anchor_bottom = 0.78604335
+offset_right = 3.7868652
+offset_bottom = -3.9268188
+rotation = 0.017453292
+texture_normal = ExtResource("7_bjv6w")
+ignore_texture_size = true
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="drive" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.71197915
+anchor_top = 0.58148146
+anchor_right = 0.828173
+anchor_bottom = 0.7841915
+offset_right = 3.7868652
+offset_bottom = -3.9268188
+rotation = 0.017453292
+texture_normal = ExtResource("9_bc3ju")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("9_g3c0o")
+metadata/_edit_use_anchors_ = true
+
+[node name="exit" type="TextureButton" parent="CanvasLayer"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.675
+anchor_top = 0.6
+anchor_right = 0.79119384
+anchor_bottom = 0.80271
+offset_right = 3.7868652
+offset_bottom = -3.9268188
+rotation = 0.017453292
+texture_normal = ExtResource("11_v41gb")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("10_yltla")
+metadata/_edit_use_anchors_ = true
+
+[node name="jump" type="TextureButton" parent="CanvasLayer"]
+z_index = 10
+offset_left = 1600.0
+offset_top = 647.0
+offset_right = 1791.0
+offset_bottom = 838.0
+texture_normal = ExtResource("6_kwtnq")
+texture_pressed = ExtResource("6_ethhk")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="run" type="TextureButton" parent="CanvasLayer"]
+z_index = 10
+offset_left = 1422.0
+offset_top = 840.0
+offset_right = 1613.0
+offset_bottom = 1031.0
+texture_normal = ExtResource("7_wkkmv")
+texture_focused = ExtResource("8_mg6kr")
+ignore_texture_size = true
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Virtual Joystick" parent="CanvasLayer" instance=ExtResource("8_wkkmv")]
+anchors_preset = -1
+anchor_left = 0.059895832
+anchor_top = 0.58981484
+anchor_right = 0.24739549
+anchor_bottom = 0.92314726
+offset_top = 0.0
+offset_right = -59.99991
+offset_bottom = -59.999817
+scale = Vector2(1.2, 1.2)
+metadata/_edit_use_anchors_ = true
+
+[node name="arrowmap" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.19270833
+anchor_top = 0.094444446
+anchor_right = 0.26510417
+anchor_bottom = 0.22314815
+texture = ExtResource("12_tsbjn")
+expand_mode = 1
+flip_h = true
+script = ExtResource("13_ousa2")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.74583334
+anchor_top = 0.08333334
+anchor_right = 0.9917919
+anchor_bottom = 0.17828186
+offset_right = 3893.7595
+offset_bottom = 921.45557
+scale = Vector2(0.10816317, 0.10014101)
+theme_override_constants/separation = 90
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BOOK" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("21_1m7k5")
+script = ExtResource("22_syiw4")
+
+[node name="Inventory" type="TextureButton" parent="CanvasLayer/HBoxContainer" node_paths=PackedStringArray("panel")]
+layout_mode = 2
+texture_normal = ExtResource("11_leh66")
+stretch_mode = 5
+script = ExtResource("10_d1p82")
+panel = NodePath("../../../InventoryUI/Panel")
+metadata/_edit_use_anchors_ = true
+
+[node name="Quest" type="TextureButton" parent="CanvasLayer/HBoxContainer" node_paths=PackedStringArray("panel")]
+layout_mode = 2
+texture_normal = ExtResource("8_b7h63")
+stretch_mode = 5
+script = ExtResource("18_c8s3t")
+panel = NodePath("../../../Quest")
+metadata/_edit_use_anchors_ = true
+
+[node name="Character" type="TextureButton" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("9_mar2f")
+stretch_mode = 5
+script = ExtResource("10_d1p82")
+metadata/_edit_use_anchors_ = true
+
+[node name="InteractionArea" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("14_87tgf")
+ItemTypes = Array[ExtResource("15_6e6ps")]([SubResource("Resource_qmlov"), SubResource("Resource_eff87"), SubResource("Resource_4x1gm"), SubResource("Resource_4i8u8"), SubResource("Resource_1m7k5"), SubResource("Resource_g1f6m"), SubResource("Resource_wm55k"), SubResource("Resource_2friq"), SubResource("Resource_rn8ge")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17939311, 0)
+shape = SubResource("SphereShape3D_c8s3t")
+
+[node name="InventoryUI" type="Control" parent="." node_paths=PackedStringArray("PlayerBody", "InventoryGrid")]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("20_vueoo")
+PlayerBody = NodePath("..")
+CollisionMask = 1
+InventoryGrid = NodePath("Panel/MarginContainer/GridContainer")
+
+[node name="Panel" type="Panel" parent="InventoryUI"]
+visible = false
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00052083336
+anchor_top = 0.9990741
+anchor_right = 0.00052083336
+anchor_bottom = 0.9990741
+offset_left = 598.99994
+offset_top = -766.0
+offset_right = 963.99994
+offset_bottom = -481.0
+grow_vertical = 0
+scale = Vector2(1.9874088, 1.9874088)
+theme_override_styles/panel = SubResource("StyleBoxFlat_a424l")
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryUI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="InventoryUI/Panel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 5
+
+[node name="Quest" type="Panel" parent="." node_paths=PackedStringArray("label1", "checkbox1", "label2", "checkbox2")]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5764706)
+anchors_preset = -1
+anchor_left = 0.76354164
+anchor_top = 0.22037037
+anchor_right = 0.94635415
+anchor_bottom = 0.5185185
+offset_left = 35.0
+offset_top = -26.0
+offset_right = 35.0
+offset_bottom = -26.0
+scale = Vector2(1.135, 1.135)
+theme = ExtResource("43_2usbq")
+script = ExtResource("28_a424l")
+label1 = NodePath("VBoxContainer/Label")
+checkbox1 = NodePath("VBoxContainer/Label/CheckBox")
+label2 = NodePath("VBoxContainer/Label2")
+checkbox2 = NodePath("VBoxContainer/Label2/CheckBox")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Quest"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.11940298
+anchor_right = 0.926
+anchor_bottom = 1.0
+offset_right = 1.8549805
+theme_override_constants/separation = 15
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Quest/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("38_xyirl")
+theme_override_font_sizes/font_size = 30
+text = "Collect Item
+"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Quest/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_c8s3t")
+theme_override_fonts/font = ExtResource("38_xyirl")
+theme_override_font_sizes/font_size = 25
+text = "Battery"
+
+[node name="CheckBox" type="CheckBox" parent="Quest/VBoxContainer/Label"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0663555
+anchor_top = -0.37272748
+anchor_right = 1.2855989
+anchor_bottom = 1.470909
+offset_left = -67.857635
+offset_top = -16.047413
+offset_right = -84.41766
+offset_bottom = -32.607414
+scale = Vector2(2.305, 2.305)
+theme = SubResource("Theme_c8s3t")
+
+[node name="Label2" type="Label" parent="Quest/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_c8s3t")
+theme_override_fonts/font = ExtResource("38_xyirl")
+theme_override_font_sizes/font_size = 25
+text = "SparkPlug"
+
+[node name="CheckBox" type="CheckBox" parent="Quest/VBoxContainer/Label2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0663555
+anchor_top = -0.37272748
+anchor_right = 1.2855989
+anchor_bottom = 1.470909
+offset_left = -68.73869
+offset_top = -11.827139
+offset_right = -85.29874
+offset_bottom = -28.387142
+scale = Vector2(2.3, 2.3)
+theme = SubResource("Theme_c8s3t")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.043229166
+anchor_top = 0.027777778
+anchor_right = 0.953125
+anchor_bottom = 0.5212963
+metadata/_edit_use_anchors_ = true
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.2890625
+anchor_top = 0.4768518
+anchor_right = 0.64375
+anchor_bottom = 0.8851852
+offset_top = 6.1035156e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="SoundEffecs" type="Node" parent="."]
+
+[node name="Walking_Run" type="AudioStreamPlayer3D" parent="SoundEffecs"]
+stream = ExtResource("46_u35jv")
+volume_db = 80.0
+
+[node name="Click" type="AudioStreamPlayer3D" parent="SoundEffecs"]
+stream = ExtResource("47_2friq")
+
+[node name="Backgroundmusic" type="AudioStreamPlayer3D" parent="SoundEffecs"]
+stream = ExtResource("48_u35jv")
+volume_db = 31.068
+
+[node name="Collect" type="AudioStreamPlayer3D" parent="SoundEffecs"]
+stream = ExtResource("49_adp2a")
+volume_db = 80.0
+
+[node name="QuestComplete" type="AudioStreamPlayer3D" parent="SoundEffecs"]
+stream = ExtResource("51_2usbq")
+
+[node name="Arrived" type="AudioStreamPlayer3D" parent="SoundEffecs"]
+stream = ExtResource("51_u35jv")
+volume_db = 32.621
+
+[connection signal="OnItemPickedUp" from="InteractionArea" to="InventoryUI" method="PickupItem"]
+[connection signal="body_entered" from="InteractionArea" to="InteractionArea" method="OnObjectEnteredArea"]
+[connection signal="body_exited" from="InteractionArea" to="InteractionArea" method="OnObjectExitedArea"]
+
+[editable path="Camroot"]
+[editable path="Character"]

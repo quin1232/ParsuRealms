@@ -1,0 +1,151 @@
+[gd_scene load_steps=8 format=3 uid="uid://duy0dbkychify"]
+
+[ext_resource type="Script" uid="uid://dvh57xa7500b4" path="res://cars/BaseCar.gd" id="1_iqrfq"]
+[ext_resource type="PackedScene" uid="uid://8sl5gmdd6o6w" path="res://cars/camera/camera_3d.tscn" id="2_5wm5h"]
+[ext_resource type="Texture2D" uid="uid://b4mfcnbgyk82d" path="res://UI/arrow left.png" id="3_8bwpk"]
+[ext_resource type="Texture2D" uid="uid://cmsotwl5temge" path="res://UI/right.png" id="4_8bwpk"]
+[ext_resource type="Texture2D" uid="uid://c424f2w2u1d4v" path="res://UI/break(1).png" id="5_863hg"]
+[ext_resource type="Texture2D" uid="uid://c4nuiipkw8rc6" path="res://UI/gas.png" id="6_37fee"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mm2gk"]
+size = Vector3(1.9717, 1, 2.08592)
+
+[node name="car" type="VehicleBody3D"]
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.1, 0)
+script = ExtResource("1_iqrfq")
+btn_left_path = NodePath("Control/left2")
+btn_right_path = NodePath("Control/right")
+btn_gas_path = NodePath("Control/gas")
+btn_reverse_path = NodePath("Control/break")
+
+[node name="wheal0" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03343, 0.340338, -1.57977)
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.431
+wheel_rest_length = 0.3
+wheel_friction_slip = 3.0
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="wheal1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02622, 0.340338, -1.57977)
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.431
+wheel_rest_length = 0.3
+wheel_friction_slip = 3.0
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="wheal2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03343, 0.340338, 1.51869)
+use_as_traction = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.431
+wheel_rest_length = 0.3
+wheel_friction_slip = 3.0
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="wheal3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02622, 0.340338, 1.51869)
+use_as_traction = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.431
+wheel_rest_length = 0.3
+wheel_friction_slip = 3.0
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.689432, -0.062412)
+shape = SubResource("BoxShape3D_mm2gk")
+
+[node name="look" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2149, 0)
+
+[node name="Camera3D" parent="look" instance=ExtResource("2_5wm5h")]
+transform = Transform3D(1, 0, 0, 0, 0.974347, 0.225053, 0, -0.225053, 0.974347, 0, 1.97324, 6.19962)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Hud" type="CanvasLayer" parent="Control"]
+layer = 0
+
+[node name="speed" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 920.0
+offset_top = 971.0
+offset_right = 960.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+
+[node name="right" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.234375
+anchor_top = 0.61296296
+anchor_right = 0.303125
+anchor_bottom = 0.737656
+action_mode = 0
+texture_normal = ExtResource("4_8bwpk")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="break" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.703125
+anchor_top = 0.59074074
+anchor_right = 0.771875
+anchor_bottom = 0.76111114
+action_mode = 0
+texture_normal = ExtResource("5_863hg")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="gas" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7885417
+anchor_top = 0.5925926
+anchor_right = 0.890625
+anchor_bottom = 0.762963
+action_mode = 0
+texture_normal = ExtResource("6_37fee")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="left2" type="TextureButton" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.086979166
+anchor_top = 0.6111111
+anchor_right = 0.15572916
+anchor_bottom = 0.73580414
+action_mode = 0
+texture_normal = ExtResource("3_8bwpk")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true

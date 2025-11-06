@@ -1,0 +1,484 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp7p8lvhs4psq"]
+
+[ext_resource type="PackedScene" uid="uid://c3dmpj4eurghu" path="res://assets/cone.tscn" id="1_ssnur"]
+[ext_resource type="PackedScene" uid="uid://cuctl6nrfo684" path="res://assets/stepglow.tscn" id="2_cpswr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ssnur"]
+size = Vector3(3.34227, 0.9785156, 0.60522753)
+
+[node name="Cone" type="Node3D"]
+
+[node name="Cone2" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.7095032)
+
+[node name="Cone3" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9069748, 0, 3.7095032)
+
+[node name="Cone4" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7874603, 0, 3.7095032)
+
+[node name="Cone5" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.599205, 0, 3.7095032)
+
+[node name="Cone6" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3060074, 0, 3.7095032)
+
+[node name="Cone7" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.068008, 0, 3.7095032)
+
+[node name="Cone8" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.913811, 0, 3.7095032)
+
+[node name="Cone18" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.015358, 0, 3.574524)
+
+[node name="Cone19" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.310066, 0, 3.0307312)
+
+[node name="Cone20" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.548668, 0, 2.258522)
+
+[node name="Cone21" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.985291, 0, 1.2916031)
+
+[node name="Cone22" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -0.051223755)
+
+[node name="Cone23" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -1.5477676)
+
+[node name="Cone30" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -3.5512009)
+
+[node name="Cone31" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -5.390709)
+
+[node name="Cone32" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.165642, 0, -7.1862793)
+
+[node name="Cone33" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -7.1573715)
+
+[node name="Cone34" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -8.716728)
+
+[node name="Cone35" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -10.59713)
+
+[node name="Cone39" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.770996, 0, -12.030045)
+
+[node name="Cone40" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.740967, 0, -10.200684)
+
+[node name="Cone41" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.770996, 0, -13.966461)
+
+[node name="Cone42" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.770996, 0, -15.671669)
+
+[node name="Cone44" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.361565, 0, -17.436882)
+
+[node name="Cone53" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.613228, 0, -18.862991)
+
+[node name="Cone45" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.142937, 0, -19.884918)
+
+[node name="Cone46" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2697525, 0, -20.8162)
+
+[node name="Cone47" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.718834, -0.023672104, -21.38704)
+
+[node name="Cone48" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.948475, -0.023672104, -21.847885)
+
+[node name="Cone59" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.026806, -0.023672104, -21.847885)
+
+[node name="Cone49" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.423729, -0.023672104, -21.921402)
+
+[node name="Cone50" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.800034, -0.023672104, -21.921402)
+
+[node name="Cone36" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -12.523399)
+
+[node name="Cone37" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -12.523399)
+
+[node name="Cone38" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, 0, -14.320892)
+
+[node name="Cone51" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.378876, 0, -15.495056)
+
+[node name="Cone55" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.311798, 0, -16.29589)
+
+[node name="Cone56" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.01426, 0, -16.29589)
+
+[node name="Cone58" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.256523, 0, -16.518661)
+
+[node name="Cone60" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.174541, -0.023672104, -21.921402)
+
+[node name="Cone61" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.922619, 0, -16.518661)
+
+[node name="Cone62" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.027805, -0.023672104, -21.921402)
+
+[node name="Cone63" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.775883, 0, -16.518661)
+
+[node name="Cone64" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.035507, -0.023672104, -22.026596)
+
+[node name="Cone65" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.783585, 0, -16.518661)
+
+[node name="Cone68" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.370296, 0, -21.821007)
+
+[node name="Cone70" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.33493, 0, -21.404655)
+
+[node name="Cone71" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.442436, 0, -20.8769)
+
+[node name="Cone72" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.669975, 0, -20.46772)
+
+[node name="Cone73" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.04133, 0, -19.96241)
+
+[node name="Cone84" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.489197, 0, -19.343048)
+
+[node name="Cone85" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.31477, 0, -19.460175)
+
+[node name="Cone86" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.266243, 0, -19.460175)
+
+[node name="Cone87" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.68985, 0, -19.460175)
+
+[node name="Cone89" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.90669, 0, -19.052704)
+
+[node name="Cone90" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.494217, 0, -18.676712)
+
+[node name="Cone91" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.831085, 0, -17.396004)
+
+[node name="Cone92" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.000843, 0, -16.059135)
+
+[node name="Cone93" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.919937, 0, -14.847595)
+
+[node name="Cone94" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.922596, 0, -12.758743)
+
+[node name="Cone95" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.79992, 0, -10.878777)
+
+[node name="Cone96" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.551907, 0, -9.082359)
+
+[node name="Cone97" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.01145, 0, -6.784622)
+
+[node name="Cone98" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.873287, 0, -5.525017)
+
+[node name="Cone99" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.663254, 0, -4.464302)
+
+[node name="Cone100" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.84348, 0, -4.294693)
+
+[node name="Cone101" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.84348, 0, -4.294693)
+
+[node name="Cone102" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.84348, 0, -4.294693)
+
+[node name="Cone103" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.815605, 0, -4.294693)
+
+[node name="Cone104" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.50385, 0, -4.294693)
+
+[node name="Cone125" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.34584, 0, -4.294693)
+
+[node name="Cone126" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.60357, 0, -4.294693)
+
+[node name="Cone127" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75.312836, 0, -4.294693)
+
+[node name="Cone128" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.39839, 0, -4.294693)
+
+[node name="Cone129" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.67225, 0, -3.4985352)
+
+[node name="Cone130" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.22476, 0, -2.3042908)
+
+[node name="Cone131" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.18015, 0, -0.99542236)
+
+[node name="Cone132" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.93651, 0, 0.7959366)
+
+[node name="Cone133" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 2.9057693)
+
+[node name="Cone134" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 5.135025)
+
+[node name="Cone135" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 7.1496277)
+
+[node name="Cone138" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 9.091316)
+
+[node name="Cone139" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 13.155014)
+
+[node name="Cone142" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 14.730316)
+
+[node name="Cone147" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 16.371246)
+
+[node name="Cone148" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 17.837654)
+
+[node name="Cone149" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 19.518494)
+
+[node name="Cone152" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 21.067078)
+
+[node name="Cone153" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 22.067078)
+
+[node name="Cone158" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.93791, 0, 22.592247)
+
+[node name="Cone159" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.6814, 0, 22.536835)
+
+[node name="Cone160" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.41457, 0, 22.536835)
+
+[node name="Cone161" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.36439, 0, 22.536835)
+
+[node name="Cone163" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(0.99985045, 0.017295351, 0, -0.017295351, 0.99985045, 0, 0, 0, 1, -78.11406, 0, 22.536835)
+
+[node name="Cone164" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(0.99985045, 0.017295351, 0, -0.017295351, 0.99985045, 0, 0, 0, 1, -77.068504, 0, 17.749832)
+
+[node name="Cone165" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(0.99985045, 0.017295351, 0, -0.017295351, 0.99985045, 0, 0, 0, 1, -77.068504, 0, 19.136192)
+
+[node name="Cone166" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(0.99985045, 0.017295351, 0, -0.017295351, 0.99985045, 0, 0, 0, 1, -77.068504, 0, 22.45179)
+
+[node name="Cone167" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(0.99985045, 0.017295351, 0, -0.017295351, 0.99985045, 0, 0, 0, 1, -77.068504, 0, 20.101997)
+
+[node name="Cone168" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(0.99985045, 0.017295351, 0, -0.017295351, 0.99985045, 0, 0, 0, 1, -77.068504, 0, 20.101997)
+
+[node name="Cone169" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(0.99985045, 0.017295351, 0, -0.017295351, 0.99985045, 0, 0, 0, 1, -77.068504, 0, 21.057137)
+
+[node name="Cone141" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 11.493217)
+
+[node name="Cone143" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -83.692856, 0, 11.493217)
+
+[node name="Cone74" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.239155, 0, -15.998779)
+
+[node name="Cone75" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.403744, 0, -15.788109)
+
+[node name="Cone76" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.599808, 0, -15.34745)
+
+[node name="Cone77" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.54407, 0, -14.62352)
+
+[node name="Cone78" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.05489, 0, -13.962532)
+
+[node name="Cone80" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.974888, 0, -14.234367)
+
+[node name="Cone81" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.24112, 0, -14.234367)
+
+[node name="Cone82" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.91354, 0, -13.959694)
+
+[node name="Cone88" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.693203, 0, -13.186432)
+
+[node name="Cone105" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.27795, 0, -11.724564)
+
+[node name="Cone106" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.753418, 0, -9.938499)
+
+[node name="Cone107" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.976856, 0, -7.8918915)
+
+[node name="Cone108" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.781727, 0, -5.4617233)
+
+[node name="Cone109" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.757603, 0, -3.5126877)
+
+[node name="Cone110" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.373634, 0, -2.2837677)
+
+[node name="Cone111" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.248283, 0, -0.6568451)
+
+[node name="Cone112" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.489807, 0, 0.41519165)
+
+[node name="Cone113" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.023705, 0, 0.95121)
+
+[node name="Cone114" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.801243, 0, 1.1948471)
+
+[node name="Cone116" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.801243, 0, 1.1948471)
+
+[node name="Cone120" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.121155, 0, 1.1948471)
+
+[node name="Cone118" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.822426, 0, 1.1948471)
+
+[node name="Cone121" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.00832, 0, 1.1948471)
+
+[node name="Cone122" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.47017, 0, 1.1948471)
+
+[node name="Cone123" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.73132, 0, 1.1948471)
+
+[node name="Cone124" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.73132, 0, 1.1948471)
+
+[node name="Cone144" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.72257, 0, 1.8064194)
+
+[node name="Cone145" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.04635, 0, 2.993599)
+
+[node name="Cone146" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.04635, 0, 5.0368805)
+
+[node name="Cone150" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.04635, 0, 6.4039307)
+
+[node name="Cone151" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.04635, 0, 10.9388275)
+
+[node name="Cone154" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.04635, 0, 12.979088)
+
+[node name="Cone155" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.16014, 0, 8.798805)
+
+[node name="Cone156" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.04635, 0, 14.742195)
+
+[node name="Cone157" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.04635, 0, 16.335289)
+
+[node name="Cone83" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.41292, 0, -14.234367)
+
+[node name="Cone69" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.67463, 0, -16.4141)
+
+[node name="Cone52" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.751976, -0.023672104, -21.758476)
+
+[node name="Cone24" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.107475, -1.5599747, -1.7775574)
+
+[node name="Cone25" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.136742, -1.1614552, -1.7775574)
+
+[node name="Cone9" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4120865, 0, 3.7095032)
+
+[node name="Cone10" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3885193, 0, -2.283371)
+
+[node name="Cone11" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5184555, 0, -2.283371)
+
+[node name="Cone12" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.398941, 0, -2.1783142)
+
+[node name="Cone13" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2106857, 0, -2.1362915)
+
+[node name="Cone14" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.917488, 0, -2.1783142)
+
+[node name="Cone15" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.679489, 0, -2.1783142)
+
+[node name="Cone26" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.725861, 0, -2.959877)
+
+[node name="Cone27" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.725861, 0, -4.8133926)
+
+[node name="Cone28" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.725861, 0, -8.613319)
+
+[node name="Cone29" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.725861, 0, -6.7286606)
+
+[node name="Cone17" parent="." instance=ExtResource("1_ssnur")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.023567, 0, -2.1783142)
+
+[node name="Glow" parent="." instance=ExtResource("2_cpswr")]
+transform = Transform3D(-6.512997e-08, 0, 0.88, 0, 0.205, 0, -1.49, 0, -3.8466023e-08, -80.23921, 0.013948947, 19.240952)
+
+[node name="SpawnCar" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3370514, 0, 1.1480637)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9489751, 0.12817383, 115.36109)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.37884, 0.35595703, -93.690994)
+shape = SubResource("BoxShape3D_ssnur")

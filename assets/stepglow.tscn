@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuctl6nrfo684"]
+
+[ext_resource type="PackedScene" uid="uid://dlottjq1qaop" path="res://assets/servicing.glb" id="1_dui24"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_dui24")]
+
+[node name="Sphere001" parent="Sketchfab_model/1ce6c1475d794e9d85878b106bd86aa9_fbx/Object_2/RootNode" index="1"]
+transform = Transform3D(0.000100016594, 0, 0, 0, -4.371864e-12, 0.000100016594, 0, -0.000100016594, -4.371864e-12, -1.7309753e-07, 201.68799, -19.12812)
+
+[node name="Sphere002" parent="Sketchfab_model/1ce6c1475d794e9d85878b106bd86aa9_fbx/Object_2/RootNode" index="2"]
+transform = Transform3D(0.000100016594, 0, 0, 0, -4.371864e-12, 0.000100016594, 0, -0.000100016594, -4.371864e-12, -1.7309753e-07, 201.68799, 0.21717797)
+
+[node name="Sphere003" parent="Sketchfab_model/1ce6c1475d794e9d85878b106bd86aa9_fbx/Object_2/RootNode" index="3"]
+transform = Transform3D(0.000100016594, 0, 0, 0, -4.371864e-12, 0.000100016594, 0, -0.000100016594, -4.371864e-12, -1.7309753e-07, 201.68799, 19.562477)

@@ -1,0 +1,73 @@
+Engineer: Let’s test your fundamentals!
+
+label Q1
+Which law states that current is directly proportional to voltage and inversely proportional to resistance?
+- Newton’s Law
+    Wrong answer! Please try again.
+    jump Q1
+- Ohm’s Law
+    jump Q2
+- Coulomb’s Law
+    Wrong answer! Please try again.
+    jump Q1
+- Hooke’s Law
+    Wrong answer! Please try again.
+    jump Q1
+
+label Q2
+Concrete is commonly used in construction. Which main ingredient gives concrete its binding property?
+- Gravel
+    Wrong answer! Please try again.
+    jump Q2
+- Cement
+    jump Q3
+- Sand
+    Wrong answer! Please try again.
+    jump Q2
+- Water
+    Wrong answer! Please try again.
+    jump Q2
+
+label Q3
+Which of the following is a type of simple machine?
+- Pulley
+    jump Q4
+- Transformer
+    Wrong answer! Please try again.
+    jump Q3
+- Generator
+    Wrong answer! Please try again.
+    jump Q3
+- Capacitor
+    Wrong answer! Please try again.
+    jump Q3
+
+label Q4
+What is the SI unit of force?
+- Watt
+    Wrong answer! Please try again.
+    jump Q4
+- Newton
+    jump Q5
+- Pascal
+    Wrong answer! Please try again.
+    jump Q4
+- Joule
+    Wrong answer! Please try again.
+    jump Q4
+
+label Q5
+If a circuit has 10 V and 2 A current, what is the power? (P = V × I)
+- 5 W
+    Wrong answer! Please try again.
+    jump Q5
+- 12 W
+    Wrong answer! Please try again.
+    jump Q5
+- 20 W
+    [signal arg="correct"]
+    set {Quest1complete} = true
+    Engineer: Perfect! You’ve solved the questions.
+- 25 W
+    Wrong answer! Please try again.
+    jump Q5

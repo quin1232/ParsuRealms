@@ -1,0 +1,95 @@
+[gd_scene load_steps=4 format=3 uid="uid://xh7778rta1co"]
+
+[ext_resource type="Texture2D" uid="uid://5wpjr02ssb7u" path="res://assets/book.png" id="1_e2m6s"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="2_7fwig"]
+[ext_resource type="Script" uid="uid://cllxbhmalxc7o" path="res://Scene/continueCORE.gd" id="3_7fwig"]
+
+[node name="Core Values" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.70980394)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.15104167
+anchor_top = 0.10555556
+anchor_right = 0.85097504
+anchor_bottom = 0.9907407
+texture = ExtResource("1_e2m6s")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel/TextureRect"]
+layout_mode = 0
+anchor_left = 0.112361886
+anchor_top = 0.14225942
+anchor_right = 0.49111816
+anchor_bottom = 0.208159
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7fwig")
+theme_override_font_sizes/font_size = 46
+text = "ParSU 
+Core Values"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12277954
+anchor_top = 0.32635984
+anchor_right = 0.4680505
+anchor_bottom = 0.8995816
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_7fwig")
+theme_override_font_sizes/normal_font_size = 25
+text = "P - Passion for Excellence
+
+We always aspire for competitiveness, creativity, and innovativeness.
+
+S - Service
+
+We care for marginalized communities and contribute our talents for promotion of sustainable ecosystems and their ecological services. We work hard and are tireless in the pursuit of our goals and achieving outcomes of the highest quality.
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Panel/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.52609175
+anchor_top = 0.12656903
+anchor_right = 0.8713627
+anchor_bottom = 0.6997908
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_7fwig")
+theme_override_font_sizes/normal_font_size = 25
+text = "U - Unity and Inclusiveness
+
+We are in solidarity with local and international communities, aligh our intent and actions consistent with the aspiration of the world for sustainable and resilient communities. We treat others with differential regard, honor each individual and celebrate differences."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="continue" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7083333
+anchor_top = 0.837963
+anchor_right = 0.77135414
+anchor_bottom = 0.8898148
+theme_override_fonts/font = ExtResource("2_7fwig")
+text = "Continue"
+script = ExtResource("3_7fwig")
+metadata/_edit_use_anchors_ = true

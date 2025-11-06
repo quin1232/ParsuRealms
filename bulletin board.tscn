@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ujcx7yxg1hs"]
+
+[ext_resource type="PackedScene" uid="uid://bjpqvghnliktb" path="res://assets/bulletin_board.glb" id="1_wgy60"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wgy60"]
+points = PackedVector3Array(-59.351162, -1.1427612, -1.2868626, 59.35126, 78.61043, 2.4225879, 59.35126, 78.61043, -1.2868626, -59.351162, 78.61043, 2.4225879, 59.35126, -1.1427612, 2.4225879, 59.35126, -1.1427612, -1.2868626, -59.351162, 78.61043, -1.2868626, -59.351162, -1.1427612, 2.4225879)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_wgy60")]
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Sketchfab_model/4b49dd9693ed4e16b43c9579493218d7_fbx/RootNode/SM_BoardA_v3/SM_BoardA_v3_bulletin_board_0" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/4b49dd9693ed4e16b43c9579493218d7_fbx/RootNode/SM_BoardA_v3/SM_BoardA_v3_bulletin_board_0/StaticBody3D2" index="0"]
+shape = SubResource("ConvexPolygonShape3D_wgy60")

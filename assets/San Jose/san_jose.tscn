@@ -1,0 +1,287 @@
+[gd_scene load_steps=14 format=3 uid="uid://fa571q0vkhbv"]
+
+[ext_resource type="Script" uid="uid://dvx6sw7ryg12m" path="res://assets/San Jose/san_jose.gd" id="1_bhwvc"]
+[ext_resource type="PackedScene" uid="uid://cfd4y04ccsx7i" path="res://assets/San Jose/sanjose.tscn" id="1_hwcb1"]
+[ext_resource type="PackedScene" uid="uid://c75s2m6eic1vo" path="res://addons/ThirdPersonTemplate/Character/Nodes/PlayerTemplate.tscn" id="2_3un8l"]
+[ext_resource type="PackedScene" uid="uid://duy0dbkychify" path="res://cars/BaseCar.tscn" id="2_20olc"]
+[ext_resource type="Script" uid="uid://dnpvegc66t1nb" path="res://Scene/canvas_layer.gd" id="4_n6hqr"]
+[ext_resource type="FontFile" uid="uid://3pxb8cfk2kfb" path="res://Fonts/AdventureRequest-j8W9.ttf" id="4_ptcs4"]
+[ext_resource type="Script" uid="uid://dvelserfjf2yo" path="res://Scene/fix.gd" id="6_af4ea"]
+[ext_resource type="Script" uid="uid://devdbe7mb81fa" path="res://Scene/talk.gd" id="7_1ubcv"]
+[ext_resource type="Shader" uid="uid://6xg3un80skyj" path="res://Scene/map.gdshader" id="8_bj3yv"]
+[ext_resource type="Script" uid="uid://bydwa475ki42w" path="res://Scene/collect_2.gd" id="9_n566b"]
+[ext_resource type="PackedScene" uid="uid://cfov3hprx4v8h" path="res://fixcarloading.tscn" id="10_h5k3o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nbo8s"]
+shader = ExtResource("8_bj3yv")
+
+[sub_resource type="Theme" id="Theme_f7tuk"]
+resource_local_to_scene = true
+default_font = ExtResource("4_ptcs4")
+
+[node name="San Jose" type="Node3D"]
+script = ExtResource("1_bhwvc")
+
+[node name="car" parent="." instance=ExtResource("2_20olc")]
+
+[node name="Sanjose" parent="." instance=ExtResource("1_hwcb1")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-3.0688284e-08, -0.71211183, 0.70206606, -3.1127396e-08, 0.70206606, 0.71211183, -1, 1.7763568e-15, -4.371139e-08, 30.143555, 69.09633, -92.50091)
+
+[node name="PlayerTemplate" parent="." instance=ExtResource("2_3un8l")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.498749, 9.084373, -93.87222)
+PlayerCharacterMesh = NodePath("Character")
+
+[node name="Camera3D" parent="PlayerTemplate/Camroot/h/v" index="0"]
+current = true
+
+[node name="Skeleton3D" parent="PlayerTemplate/Character/Armature" index="0"]
+bones/0/position = Vector3(-254.10944, 30.453035, -2490.2458)
+bones/0/rotation = Quaternion(-0.7158977, 0.04244652, -0.03114159, 0.69621754)
+bones/1/position = Vector3(4.709118e-06, 279.587, -25.2592)
+bones/1/rotation = Quaternion(-0.032411937, -0.0018225434, 0.0028069348, 0.999469)
+bones/2/rotation = Quaternion(0.014719887, -0.02299294, 0.006697678, 0.9996049)
+bones/3/rotation = Quaternion(0.014495213, -0.0229066, 0.007284074, 0.99960595)
+bones/4/position = Vector3(-1.067847e-05, 421.08914, -7.368195e-06)
+bones/4/rotation = Quaternion(0.035773907, 0.0101327915, -0.026879856, 0.998947)
+bones/5/position = Vector3(-2.4456907e-05, 223.76955, 50.5789)
+bones/5/rotation = Quaternion(0.050995614, -0.03364521, 0.031988215, 0.9976193)
+bones/6/position = Vector3(-1.8461613e-05, 752.9393, 170.188)
+bones/7/position = Vector3(148.884, 351.97836, -5.9969034)
+bones/7/rotation = Quaternion(-0.5371631, -0.43004367, 0.6230625, -0.37190259)
+bones/8/position = Vector3(-3.581328e-05, 330.711, 0.00020562971)
+bones/8/rotation = Quaternion(0.44421542, 0.15905489, 0.107831225, 0.8750695)
+bones/9/position = Vector3(4.470695e-05, 884.035, -0.00025994628)
+bones/9/rotation = Quaternion(0.028158171, 0.0010371602, 0.23929074, 0.97053903)
+bones/10/rotation = Quaternion(0.12190703, 0.06979819, -0.18910752, 0.97185665)
+bones/11/rotation = Quaternion(0.15965417, -0.090515345, 0.14554098, 0.9721808)
+bones/12/rotation = Quaternion(-0.010203327, 0.010770274, -0.14246908, 0.98968816)
+bones/13/rotation = Quaternion(-0.026875967, -0.0011965258, 0.15858385, 0.98697895)
+bones/15/position = Vector3(-79.7001, 346.435, -6.18968)
+bones/15/rotation = Quaternion(0.1905169, 0.01686646, 0.060238093, 0.97968894)
+bones/16/rotation = Quaternion(0.2775487, -0.00040294172, -0.080217436, 0.95735663)
+bones/17/rotation = Quaternion(0.13937578, 0.0053379396, 0.001780612, 0.99022365)
+bones/19/rotation = Quaternion(0.23316132, -0.0041574594, 0.030679513, 0.9719452)
+bones/20/rotation = Quaternion(0.18488272, 0.00038495133, -0.05249723, 0.9813574)
+bones/21/rotation = Quaternion(0.12017162, 0.0017246156, -0.021852814, 0.99251115)
+bones/23/rotation = Quaternion(0.27237302, -0.015995419, 0.0121277785, 0.96198237)
+bones/24/rotation = Quaternion(0.13769262, 8.543351e-05, -0.017717773, 0.99031657)
+bones/25/rotation = Quaternion(0.090627275, -0.0013705809, -0.026180714, 0.9955398)
+bones/27/rotation = Quaternion(0.3627287, -0.0050753085, -0.04188324, 0.93093926)
+bones/28/rotation = Quaternion(0.180074, 0.0064938692, -0.00996323, 0.9835812)
+bones/31/position = Vector3(-148.884, 352.02298, -6.486801)
+bones/31/rotation = Quaternion(0.59113497, -0.416707, 0.5323335, 0.43992704)
+bones/32/position = Vector3(-3.51431e-05, 330.711, 0.00011991465)
+bones/32/rotation = Quaternion(0.4517118, -0.1594344, -0.14572488, 0.86562204)
+bones/33/rotation = Quaternion(0.028193058, -0.0009614052, -0.23724405, 0.9710405)
+bones/34/rotation = Quaternion(0.014939122, -0.005868089, 0.17800552, 0.9838986)
+bones/35/rotation = Quaternion(0.17772721, -0.038267102, -0.0045311227, 0.98332506)
+bones/36/position = Vector3(13.6009, 90.36487, 0.0002727004)
+bones/36/rotation = Quaternion(0.018076565, -0.0499889, -0.026636442, 0.99823093)
+bones/37/rotation = Quaternion(-0.029907938, 0.0011550135, -0.13083813, 0.99095184)
+bones/39/rotation = Quaternion(0.06890062, -0.0018628584, -0.020916704, 0.99740255)
+bones/40/rotation = Quaternion(0.35158908, 0.0010171994, 0.08570244, 0.9322228)
+bones/41/rotation = Quaternion(0.080436714, -0.0007654645, 0.018561453, 0.99658656)
+bones/43/rotation = Quaternion(0.15033984, -0.0062411623, 0.008610209, 0.98857725)
+bones/44/rotation = Quaternion(0.27208257, -0.00029073708, 0.066007376, 0.96000737)
+bones/45/rotation = Quaternion(0.05535078, 0.01358314, 0.011398339, 0.99830955)
+bones/47/rotation = Quaternion(0.23937197, 0.00542105, 0.007993295, 0.9708799)
+bones/48/rotation = Quaternion(0.20745137, -1.7348697e-05, 0.044741444, 0.97722167)
+bones/49/rotation = Quaternion(0.07475943, 0.015673988, 0.016244605, 0.99694616)
+bones/51/rotation = Quaternion(0.31984273, 0.01264838, 0.047418576, 0.9461989)
+bones/52/rotation = Quaternion(0.16288614, -8.583077e-06, 0.035095382, 0.98602057)
+bones/53/rotation = Quaternion(0.06838899, 0.000242523, 0.01719281, 0.99751055)
+bones/55/rotation = Quaternion(0.051949047, 0.08872617, 0.9924874, -0.06631675)
+bones/56/rotation = Quaternion(-0.21578057, -0.06597743, 0.015208368, 0.9740916)
+bones/57/rotation = Quaternion(0.62097937, -0.06768026, -0.028611515, 0.7803752)
+bones/58/rotation = Quaternion(0.21763942, -0.069143206, 0.014573091, 0.973468)
+bones/60/rotation = Quaternion(-0.12499212, 0.10154876, 0.9868142, 0.016206909)
+bones/61/rotation = Quaternion(-0.26136512, 0.060314164, -0.009757007, 0.96330434)
+bones/62/rotation = Quaternion(0.6504631, 0.12401443, -0.07679761, 0.7453995)
+bones/63/rotation = Quaternion(0.21816805, 0.061648823, -0.013771526, 0.9738648)
+
+[node name="CanvasLayer" parent="PlayerTemplate" index="5"]
+script = ExtResource("4_n6hqr")
+player_path = NodePath("..")
+
+[node name="Fix" parent="PlayerTemplate/CanvasLayer" index="0"]
+visible = false
+script = ExtResource("6_af4ea")
+loading_control_path = NodePath("../fixcarloading")
+
+[node name="Talk" parent="PlayerTemplate/CanvasLayer" index="1" node_paths=PackedStringArray("character")]
+visible = false
+script = ExtResource("7_1ubcv")
+character = NodePath("../..")
+
+[node name="Mini Map" parent="PlayerTemplate/CanvasLayer" index="2" node_paths=PackedStringArray("car_camera", "car", "arrow", "TopView")]
+z_index = 100
+material = SubResource("ShaderMaterial_nbo8s")
+anchor_left = 0.0380205
+anchor_top = 0.058333926
+anchor_right = 0.0380205
+anchor_bottom = 0.058333926
+offset_left = 3.9902039
+offset_top = -10.877289
+offset_right = 253.9902
+offset_bottom = 239.12271
+target = NodePath("../..")
+car_camera = NodePath("../../../car/look/Camera3D")
+car = NodePath("../../../car")
+arrow = NodePath("../arrowmap")
+dialog_manager_path = NodePath("../../..")
+TopView = NodePath("../../../Camera3D")
+nodes_to_hide = Array[NodePath]([NodePath("../jump"), NodePath("../run"), NodePath("../Virtual Joystick"), NodePath("../../InventoryUI"), NodePath("../../Quest"), NodePath("../HBoxContainer"), NodePath("../../../parsu/Label")])
+
+[node name="Collect" parent="PlayerTemplate/CanvasLayer" index="3"]
+anchor_left = 0.70677084
+anchor_top = 0.5907407
+anchor_right = 0.834787
+anchor_bottom = 0.7695323
+offset_left = 0.0
+offset_top = 0.0
+offset_right = -18.912476
+offset_bottom = 21.90503
+pickup_area = NodePath("../../InteractionArea")
+
+[node name="Collect2" parent="PlayerTemplate/CanvasLayer" index="4" node_paths=PackedStringArray("car", "fixbtn", "player", "col")]
+visible = false
+anchor_left = 0.71354175
+anchor_top = 0.58055556
+anchor_right = 0.8297356
+anchor_bottom = 0.7832656
+script = ExtResource("9_n566b")
+car = NodePath("")
+fixbtn = NodePath("../Fix")
+player = NodePath("../..")
+col = NodePath("")
+
+[node name="drive" parent="PlayerTemplate/CanvasLayer" index="5" node_paths=PackedStringArray("car", "player", "playerCol", "exit", "car_body")]
+car = NodePath("")
+player = NodePath("../..")
+playerCol = NodePath("../../CollisionShape3D")
+exit = NodePath("../exit")
+car_body = NodePath("")
+
+[node name="exit" parent="PlayerTemplate/CanvasLayer" index="6" node_paths=PackedStringArray("car", "player", "playerCol", "playerCam", "spawn", "car_body")]
+car = NodePath("")
+player = NodePath("../..")
+playerCol = NodePath("../../CollisionShape3D")
+playerCam = NodePath("../../Camroot/h/v/Camera3D")
+spawn = NodePath("")
+car_body = NodePath("")
+
+[node name="jump" parent="PlayerTemplate/CanvasLayer" index="7"]
+anchors_preset = -1
+anchor_left = 0.8052083
+anchor_top = 0.58518517
+anchor_right = 0.9340338
+anchor_bottom = 0.8142083
+offset_left = 0.0
+offset_top = 0.0
+offset_right = -56.34497
+offset_bottom = -56.34497
+scale = Vector2(1.295, 1.295)
+
+[node name="run" parent="PlayerTemplate/CanvasLayer" index="8"]
+anchors_preset = -1
+anchor_left = 0.7192709
+anchor_top = 0.73240745
+anchor_right = 0.84809643
+anchor_bottom = 0.96143067
+offset_left = 0.0
+offset_top = 0.0
+offset_right = -56.34497
+offset_bottom = -56.34503
+scale = Vector2(1.295, 1.295)
+
+[node name="fixcarloading" parent="PlayerTemplate/CanvasLayer" index="9" instance=ExtResource("10_h5k3o")]
+visible = false
+show_wrench_emoji = false
+
+[node name="Virtual Joystick" parent="PlayerTemplate/CanvasLayer" index="10"]
+anchor_left = 0.056250002
+anchor_top = 0.59444445
+anchor_right = 0.30468702
+anchor_bottom = 1.0361099
+offset_left = -69.00001
+offset_top = -71.0
+offset_right = -245.99966
+offset_bottom = -247.99957
+grow_vertical = 1
+scale = Vector2(1.59, 1.59)
+
+[node name="arrowmap" parent="PlayerTemplate/CanvasLayer" index="11"]
+anchor_left = 0.190625
+anchor_top = 0.097222224
+anchor_right = 0.26302084
+anchor_bottom = 0.22592592
+
+[node name="HBoxContainer" parent="PlayerTemplate/CanvasLayer" index="12"]
+anchor_left = 0.79218745
+anchor_top = 0.091666676
+anchor_right = 0.9753888
+anchor_bottom = 0.18661518
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 2728.253
+offset_bottom = 921.45557
+
+[node name="InventoryUI" parent="PlayerTemplate" index="7"]
+visible = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" parent="PlayerTemplate/InventoryUI" index="0"]
+anchor_left = 0.50100005
+anchor_top = 0.55200005
+anchor_right = 0.50100005
+anchor_bottom = 0.55200005
+offset_left = -361.92017
+offset_top = -283.16003
+offset_right = 3.079834
+offset_bottom = 1.8399658
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" parent="PlayerTemplate/InventoryUI/Panel" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Quest" parent="PlayerTemplate" index="8"]
+visible = false
+anchor_left = 0.8078125
+anchor_top = 0.23333333
+anchor_right = 0.9625
+anchor_bottom = 0.46944445
+offset_top = 3.0
+offset_bottom = 3.0
+theme = SubResource("Theme_f7tuk")
+pickup_area_path = NodePath("../InteractionArea")
+
+[node name="VBoxContainer" parent="PlayerTemplate/Quest" index="0"]
+anchor_right = 0.9328986
+anchor_bottom = 1.0126613
+offset_right = 0.0
+offset_bottom = -29.641998
+
+[node name="Label" parent="PlayerTemplate/Quest/VBoxContainer" index="1"]
+theme = SubResource("Theme_f7tuk")
+
+[node name="CheckBox" parent="PlayerTemplate/Quest/VBoxContainer/Label" index="0"]
+theme = SubResource("Theme_f7tuk")
+disabled = true
+
+[node name="Label2" parent="PlayerTemplate/Quest/VBoxContainer" index="2"]
+theme = SubResource("Theme_f7tuk")
+
+[node name="CheckBox" parent="PlayerTemplate/Quest/VBoxContainer/Label2" index="0"]
+theme = SubResource("Theme_f7tuk")
+disabled = true
+
+[connection signal="pressed" from="PlayerTemplate/CanvasLayer/Talk" to="PlayerTemplate/CanvasLayer/Talk" method="_on_pressed"]
+[connection signal="pressed" from="PlayerTemplate/CanvasLayer/Collect2" to="PlayerTemplate/CanvasLayer/Collect2" method="_on_pressed"]
+
+[editable path="car"]
+[editable path="PlayerTemplate"]
+[editable path="PlayerTemplate/Camroot"]
+[editable path="PlayerTemplate/Character"]

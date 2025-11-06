@@ -1,0 +1,169 @@
+[gd_scene load_steps=7 format=3 uid="uid://b10bix06wbyc3"]
+
+[ext_resource type="Texture2D" uid="uid://5wpjr02ssb7u" path="res://assets/book.png" id="1_bie67"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="2_ipvhi"]
+[ext_resource type="Texture2D" uid="uid://dufnslr0pnvnb" path="res://assets/History.jpg" id="3_q5c7o"]
+[ext_resource type="Script" uid="uid://b75dw8nm37p4y" path="res://assets/buttonnext.gd" id="4_ooa7i"]
+[ext_resource type="Script" uid="uid://b20tc60ytcmwj" path="res://assets/continue.gd" id="5_vkyuh"]
+[ext_resource type="Script" uid="uid://dfcy5i6ftbpv7" path="res://assets/prev.gd" id="6_muybq"]
+
+[node name="Historybook" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0375
+anchor_top = 0.06388889
+anchor_right = 0.95625
+anchor_bottom = 0.9324074
+texture = ExtResource("1_bie67")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.23802084
+anchor_top = 0.1574074
+anchor_right = 0.36770833
+anchor_bottom = 0.22685185
+offset_right = -50.0
+offset_bottom = -23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ipvhi")
+theme_override_font_sizes/font_size = 61
+text = "History"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.13333334
+anchor_top = 0.25648147
+anchor_right = 0.4684533
+anchor_bottom = 0.54351854
+texture = ExtResource("3_q5c7o")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Page 1" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.1421875
+anchor_top = 0.5740741
+anchor_right = 0.48125
+anchor_bottom = 0.84074074
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_ipvhi")
+theme_override_font_sizes/normal_font_size = 16
+text = "The beginnings of Partido High School went back to the time when the Provincial Board of Camarines Sur announced that whichever town that could meet the basic requirements of a school site, an enrolment of at least 200 students, and a building that could house the classes, a branch of Camarines Sur National High School (in Naga City) would be established. 
+Goa mobilized its whole community. A school site was secured – a riceland located at the boundary of Goa – San Jose.
+
+In June 1941, while war threats circulated, the Partido High School opened its first classes with a little over 200 first year students in four sections. They came from different towns in Goa Partido, representing all social classes."
+metadata/_edit_use_anchors_ = true
+
+[node name="Page 2" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5130208
+anchor_top = 0.15925926
+anchor_right = 0.8520833
+anchor_bottom = 0.80277777
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_ipvhi")
+text = "The Pacific War temporarily halted the momentum and PHS reopened in 1945. The pioneer students were accelerated to second year a few months after classes resumed. Before the end of the school year, they were again accelerated to third year. They were called the “superstudents” for having been accelerated twice in a school year. Finally, the first batch of 120 students graduated in 1947.
+
+The issue of a permanent school site cropped up and was settled when representatives from the Bureau of Public Schools came and recommended a transfer. Finally, in 1948, the school moved to its new site, a 10-hectare lot donated by the civic-spirited citizens of Goa. 
+Its first buildings were constructed through the pork barrel funds of then Congressman Sebastian Moll and from Parent-Teacher Association (PTA) funds.
+
+In the latter part of 1970, the PTA and Municipal Council of Goa sought Congressman Felix Fuentebella to file a bill in Congress for the conversion of Partido High School into Partido National High School. Unfortunately, martial law was declared in 1972.
+
+It was only in 1974 when Partido National High School became operative. It was this time that the school entered its “Golden Era” when it almost dominated all academic, athletic and cultural competitions. It garnered plums in both regional and national secondary press conferences.
+
+The decade of the ‘70s likewise saw the establishment of other secondary schools within the district.
+
+In 1974, the Municipal Council of San Jose under then Mayor Gil Pacamarra established the Salogon Barangay High School with Dr. Seneca Z. Tacurda as its first principal. It was converted into San Jose Fisheries School pursuant to Batas Pambansa Blg. 406 approved on June 10, 1983 with its new status as a national vocational school. SJFS would later on become the PSU-Salogon Campus.
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Page 3" type="RichTextLabel" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1296875
+anchor_top = 0.18796296
+anchor_right = 0.46875003
+anchor_bottom = 0.83148146
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_ipvhi")
+text = "In 1977, another barangay high school within the term of Mayor Pacamarra was born in the town of San Jose, Camarines Sur. It acquired its status as San Jose Nationalized High School in 1987, when the new government gave budgetary priority to education as a consequence of the newly ratified 1987 Philippine Constitution. It was converted to the San Jose Polytechnic Institute (SJPI) on March 30, 1995 by virtue of Republic Act No. 7972 through the efforts of Hon. Congressman Arnulfo P. Fuentebella. Dr. Marie Jane Pacamarra was the first administrator of SJPI, now the PSU-San Jose Campus.
+
+Republic Act 6651 passed by Congressman Felix Fuentebella authorized the creation of Goa High School. In 1976, the late superintendent Carlos Borjal of Camarines Sur National College of Arts & Trades (in Naga City) requested from the Ministry of Education the transfer of Goa High School to Barangay Nato, Sagnay, Camarines Sur and was acted upon favorably in 1977. A year later, its name was changed to Governor Mariano Fuentebella Memorial Fisheries School with Francisco Romanes as principal. On March 14, 1998, it was converted to Governor Mariano Fuentebella Memorial College of Fisheries (GMFMCF) pursuant to Republic Act No. 8594 and then to the PSU-Sagnay Campus. Dr. Pedro V. Vargas was its first administrator.
+
+In Caramoan, Camarines Sur, the Caramoan Vocational-Technical School (CVTS), now the PSU-Caramoan was born in 1994 in accordance with Republic Act No. 7828, which was also through the efforts of Congressman Arnulfo P. Fuentebella and was organized under the leadership of the late Manuel dela Torre. Dr. Vicente Lleno became its first Administrator.
+
+In Tinambac, Camarines Sur, the Tinambac Polytechnic Institute (TPI) came into existence by virtue of Republic Act No. 7958 signed March 29, 1995, due to the initiative of Cong. Arnulfo P. Fuentebella and was organized by Dr. Gregilda Pan before its first Superintendent, Dr. Fortuno P. Villanueva, took over. TPI would later on become the PSU-Tinambac."
+metadata/_edit_use_anchors_ = true
+
+[node name="Page 4" type="RichTextLabel" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51979166
+anchor_top = 0.18611111
+anchor_right = 0.8588542
+anchor_bottom = 0.8296296
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_ipvhi")
+text = "In the northern part of Lagonoy, Barangay Cabotonan, the Lagonoy Fishery School (LFS), now the PSU-Lagonoy, came into being pursuant to Republic Act No. 8417. Ms. Trinidad Soltes is its first ever administrator since its existence in 1997.
+
+The momentum of Partido National High School was sustained by Congressman Arnulfo Fuentebella in 1986, when, through his representation, Partido National High School was converted into Partido State College by virtue of Presidential Decree No. 2011.
+
+The different stakeholders in the province of Camarines Sur clamored for the conversion of Partido State College, together with the six other schools/colleges in the district, to a state university.
+
+Finally, the greatest boon came to Partidoanos when Republic Act No. 9029 authored by Speaker Arnulfo P. Fuentebella was signed into law by President Gloria Macapagal-Arroyo on March 5, 2001 creating Partido State University."
+metadata/_edit_use_anchors_ = true
+
+[node name="next" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.79791665
+anchor_top = 0.79351854
+anchor_right = 0.8609375
+anchor_bottom = 0.84537035
+theme_override_fonts/font = ExtResource("2_ipvhi")
+text = "Next"
+script = ExtResource("4_ooa7i")
+metadata/_edit_use_anchors_ = true
+
+[node name="continue" type="Button" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.79791665
+anchor_top = 0.79351854
+anchor_right = 0.8609375
+anchor_bottom = 0.84537035
+theme_override_fonts/font = ExtResource("2_ipvhi")
+text = "Continue"
+script = ExtResource("5_vkyuh")
+metadata/_edit_use_anchors_ = true
+
+[node name="prev" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 244.0
+offset_top = 867.0
+offset_right = 365.0
+offset_bottom = 923.0
+theme_override_fonts/font = ExtResource("2_ipvhi")
+text = "Prev"
+script = ExtResource("6_muybq")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://demd36s4k2tbx"]
+
+[ext_resource type="PackedScene" uid="uid://e4jme06jeusa" path="res://assets/table.glb" id="1_q50yl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q50yl"]
+size = Vector3(1.0754395, 1.1210938, 2.0029907)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_q50yl")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/Collada visual scene group/Table/defaultMaterial" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Collada visual scene group/Table/defaultMaterial/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006560087, 0.0075332504, 0.0011634856)
+shape = SubResource("BoxShape3D_q50yl")

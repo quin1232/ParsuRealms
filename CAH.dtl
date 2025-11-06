@@ -1,0 +1,77 @@
+Welcome to the College of Arts and Sciences — Bachelor of Arts in Communication Studio!
+Locate the BA Communication Studio.
+[signal arg="arrow"]
+label arrow
+if {IsArrowClick} == true:
+	Look for Kara, a broadcasting student at the BA Communication Studio.
+	label BAArrived
+	if {BAArrived} == true:
+		if :
+		You arrived at the BA Communication Studio.
+		label TalkToKara
+		if {TalkToKara} == true:
+			Kara: Oh hi! You must be one of the campus explorers, right?
+			Kara: I’m Kara — a BA Communication student and one of the hosts for our live radio program.
+			Kara: We’re about to start broadcasting, but something terrible happened...
+			Kara: Our microphone and today’s script are missing!
+			Kara: Without those, we can’t go live on air.
+			Kara: Could you please help me find them? I think the microphone was left near the recording booth,
+			Kara: and the script might be in the student lounge or somewhere around here.
+			[signal arg="questpanel"]
+			Kara: Please find the missing Microphone and Radio Script around the BA Communication area.
+			
+			if {bool} == true:
+				label FoundMicrophone
+				You found a microphone tucked behind a stack of soundproof foam panels.
+				if {bool} == true:
+					label MicrophoneFound
+					You obtained the Microphone.
+			
+			if {bool} == true:
+				label FoundScript
+				You found a folded paper titled "Radio Script — Morning Segment."
+				if {bool} == true:
+					label ScriptFound
+					You obtained the Radio Script.
+
+if {CollectComplete} == true:
+	label CollectComplete
+	Kara: You found both the Microphone and the Script — thank you so much!
+	Kara: You saved our broadcast! I was starting to panic.
+	Kara: Broadcasting is all about timing, focus, and confidence on air.
+	Kara: Since you helped, how about joining me for a quick mock broadcast session?
+	Kara: I’ll test the mic levels while you help me read a few lines from the script.
+	[signal arg="broadcastoffer"]
+
+if {AgreeToHelp} == true:
+	label OnAirPrep
+	Kara: Great! Let’s start our short rehearsal.
+	Kara: I’ll cue you when it’s your turn to read, just like in a real studio setting.
+	Kara: Ready? Let’s go live in 3… 2… 1…
+	[signal arg="onairrehearsal"]
+	Kara: “Good morning, listeners! You’re tuned in to ParSU Radio — where every voice matters!”
+	Kara: Perfect delivery! You’ve got talent for this.
+	Kara: Let’s wrap it up with the closing line together.
+	Kara: “Stay informed, stay inspired, and stay connected with the ParSU community!”
+	Player: That was fun!
+	Kara: Haha, I knew you’d enjoy it! You’ve got great energy.
+
+if {RehearsalComplete} == true:
+	label RehearsalComplete
+	Kara: You did amazing! The mic levels are good and the timing was perfect.
+	Kara: Thank you for helping me get the broadcast running again.
+	Kara: Here, take this Broadcast Badge as a token of appreciation.
+	Kara: It symbolizes clear communication and confidence — core values of every BA Communication student.
+	Kara: Keep exploring the campus — you might discover other colleges preparing for big projects too!
+	[signal arg="rewardBroadcastBadge"]
+
+if {Completequest} == true:
+	label Completequest
+	Kara: Wow! You really went above and beyond.
+	Kara: The live broadcast went smoothly thanks to you.
+	Kara: You’ve proven yourself to be a true communicator — adaptable, creative, and reliable under pressure.
+	Kara: As a special token, I want you to have this “On Air Assistant” pin.
+	Kara: Wear it proudly! You’ve earned the respect of the BA Communication team.
+	Kara: And remember — in communication, your voice is your power.
+	Kara: Use it to inspire others, share stories, and make a difference wherever you go.
+	[signal arg="onairpin"]

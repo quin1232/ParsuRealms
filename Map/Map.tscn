@@ -1,0 +1,836 @@
+[gd_scene load_steps=50 format=3 uid="uid://b2bk143ow36up"]
+
+[ext_resource type="Texture2D" uid="uid://bneebhynyaw78" path="res://Map/bg.png" id="1_17lxq"]
+[ext_resource type="Script" uid="uid://clnatbb1mhnvt" path="res://Map/map.gd" id="1_b3jsu"]
+[ext_resource type="Texture2D" uid="uid://boew0j8ioalac" path="res://Map/clouds.png" id="2_7s3fs"]
+[ext_resource type="Script" uid="uid://bsky5qfh1xhkg" path="res://Map/parallax_layer.gd" id="2_2623n"]
+[ext_resource type="Theme" uid="uid://f4wbom1wnc0x" path="res://Map/Mapss.tres" id="3_2q318"]
+[ext_resource type="Texture2D" uid="uid://dm7okfka41wim" path="res://Map/cloud1.png" id="4_qtvud"]
+[ext_resource type="Texture2D" uid="uid://do4i4l8u815co" path="res://UI/COLLEGES/reward/mu.png" id="5_tlvak"]
+[ext_resource type="Texture2D" uid="uid://bffwd0o7sfh5e" path="res://UI/COLLEGES/reward/vis.png" id="6_4r87e"]
+[ext_resource type="Texture2D" uid="uid://bpkp4heam54r0" path="res://Map/NewMap/MapA finnnnaaall.png" id="6_riqoh"]
+[ext_resource type="Script" uid="uid://h85i6yyfdf5i" path="res://Map/vision.gd" id="7_4e4q7"]
+[ext_resource type="Script" uid="uid://cetb4vof2t6ig" path="res://Map/t_inambac.gd" id="7_6od3y"]
+[ext_resource type="Texture2D" uid="uid://b37f4hnlyuu3p" path="res://UI/bOOK.png" id="7_b3jsu"]
+[ext_resource type="Texture2D" uid="uid://c16pe2ahyvjcu" path="res://UI/COLLEGES/reward/miss.png" id="7_u7bh7"]
+[ext_resource type="Texture2D" uid="uid://c7yne4fvj7inb" path="res://UI/COLLEGES/reward/val(1).png" id="8_8x48j"]
+[ext_resource type="Script" uid="uid://dk6e0cu7iaos7" path="res://Map/mission.gd" id="8_riqoh"]
+[ext_resource type="Script" uid="uid://bknr5s88v7siy" path="res://Map/values.gd" id="10_c31by"]
+[ext_resource type="Texture2D" uid="uid://db7sakr8oq6sx" path="res://UI/COLLEGES/reward/Quest.png" id="11_tlvak"]
+[ext_resource type="Texture2D" uid="uid://b5k38scux2f68" path="res://UI/COLLEGES/reward/Player.png" id="12_4r87e"]
+[ext_resource type="Texture2D" uid="uid://cr7a56nh4w8lv" path="res://assets/com.png" id="12_c31by"]
+[ext_resource type="PackedScene" uid="uid://c51hwenkuwn78" path="res://Scene/select_colleges.tscn" id="12_riqoh"]
+[ext_resource type="Script" uid="uid://hqr4p8vs8js1" path="res://Map/history.gd" id="12_tlvak"]
+[ext_resource type="Texture2D" uid="uid://cqui0d8s3fuyl" path="res://UI/COLLEGES/reward/SETTINGS(1).png" id="13_oaqmq"]
+[ext_resource type="Texture2D" uid="uid://cmxcecdgv6po0" path="res://Map/NewMap/GoaL.png" id="14_4r87e"]
+[ext_resource type="Script" uid="uid://dq52tv88t7jw4" path="res://Map/achivement.gd" id="14_7m04m"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="14_ehio4"]
+[ext_resource type="Texture2D" uid="uid://btvja3s560oqo" path="res://UI/COLLEGES/reward/reward.png" id="14_elbhq"]
+[ext_resource type="Texture2D" uid="uid://b6as4va7052hi" path="res://Map/NewMap/SanjoseL.png" id="24_u7bh7"]
+[ext_resource type="Texture2D" uid="uid://bqxwkhw2lyfb8" path="res://Map/NewMap/SangayL.png" id="25_c31by"]
+[ext_resource type="PackedScene" uid="uid://cmci7und5xf51" path="res://assets/historybook.tscn" id="27_4r87e"]
+[ext_resource type="PackedScene" uid="uid://bpr22gxab0vrw" path="res://Scene/loading.tscn" id="27_riqoh"]
+[ext_resource type="AudioStream" uid="uid://ck54nuwepm5dd" path="res://Sound Effects/Intro.mp3" id="28_4r87e"]
+[ext_resource type="AudioStream" uid="uid://bynomm1othkwn" path="res://Sound Effects/Click.mp3" id="29_8x48j"]
+[ext_resource type="AudioStream" uid="uid://02kvqfaxycer" path="res://Sound Effects/Select.mp3" id="30_oaqmq"]
+[ext_resource type="PackedScene" uid="uid://dcgp1lm2n2oet" path="res://Scene/Misson.tscn" id="30_s8ygv"]
+[ext_resource type="AudioStream" uid="uid://cuiktxi0bho6n" path="res://Sound Effects/Select2.mp3" id="31_oaqmq"]
+[ext_resource type="PackedScene" uid="uid://xh7778rta1co" path="res://Scene/core_values.tscn" id="31_xecfs"]
+[ext_resource type="PackedScene" uid="uid://byjgf1voeuayr" path="res://Scene/Vission.tscn" id="32_xecfs"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ehio4"]
+load_path = "res://.godot/imported/Tinambakbanner.png-d64fc4de463f51de4d4b4c06f75b57d2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7a0j3"]
+load_path = "res://.godot/imported/Goabanner.png-cdee3369eaa4ea0e38926a1341ab7e5b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0g0qh"]
+load_path = "res://.godot/imported/Caramoanbanner.png-4ad23f5861a0162e2166fbe1d5010296.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t64y5"]
+load_path = "res://.godot/imported/Lagonoybanner.png-4ddb4ef6cd8da061dd1d1ec007322a29.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b3jsu"]
+load_path = "res://.godot/imported/Sangaybanner.png-b380f3ab71d343bb2cfb8a53778b444c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2q318"]
+load_path = "res://.godot/imported/San josebanner.png-185d509565129d640400799bc16cf057.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bl6si"]
+load_path = "res://.godot/imported/Select campus.png-a4b9ce332a1238e6d12b2881a328fb35.ctex"
+
+[sub_resource type="Animation" id="Animation_b3jsu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(83, 561)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../OpeningClouds2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1636, 486)]
+}
+
+[sub_resource type="Animation" id="Animation_elbhq"]
+resource_name = "closeclounds"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1709, 571), Vector2(484, 485)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../OpeningClouds2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3714, 390), Vector2(1207, 561)]
+}
+
+[sub_resource type="Animation" id="Animation_t64y5"]
+resource_name = "openclouds"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.55, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(83, 561), Vector2(83, 561), Vector2(-1604, 565)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../OpeningClouds2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1636, 486), Vector2(1636, 486), Vector2(4004, 458)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2q318"]
+_data = {
+&"RESET": SubResource("Animation_b3jsu"),
+&"closeclounds": SubResource("Animation_elbhq"),
+&"openclouds": SubResource("Animation_t64y5")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s8uph"]
+load_path = "res://.godot/imported/opening clouds.png-6549b866b288637c5136af0c2cb15998.ctex"
+
+[node name="Node2D" type="Node3D"]
+script = ExtResource("1_b3jsu")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 1.00417
+anchor_bottom = 1.01111
+offset_right = -0.00012207
+metadata/_edit_use_anchors_ = true
+
+[node name="Sea" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.22821502
+anchor_top = -0.18772915
+anchor_right = 1.1861995
+anchor_bottom = 1.1172174
+offset_left = 10.0
+offset_top = 25.0
+offset_right = 10.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_17lxq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.049479168
+anchor_top = 0.06574074
+anchor_right = 0.26302084
+anchor_bottom = 0.12962963
+offset_right = -3.0517578e-05
+theme = ExtResource("3_2q318")
+metadata/_edit_use_anchors_ = true
+
+[node name="Questpan" type="Panel" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.06431515
+anchor_top = 0.19139215
+anchor_right = 0.24429382
+anchor_bottom = 0.27564132
+offset_left = -9.485085
+offset_top = 2.2964783
+offset_right = -9.485077
+offset_bottom = 2.2964783
+theme = ExtResource("3_2q318")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Questpan"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12585022
+anchor_top = 0.092105225
+anchor_right = 0.92942154
+anchor_bottom = 0.51315784
+theme_override_fonts/font = ExtResource("14_ehio4")
+theme_override_font_sizes/font_size = 30
+text = "Quest Complete"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="CanvasLayer/Questpan"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.40072197
+anchor_top = 0.55263156
+anchor_right = 0.6150077
+anchor_bottom = 0.9736842
+theme_override_fonts/font = ExtResource("14_ehio4")
+theme_override_font_sizes/font_size = 30
+text = "0/3"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel3" type="Panel" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.89500004
+anchor_top = 0.21100001
+anchor_right = 0.97800004
+anchor_bottom = 0.82500005
+offset_left = -157.40002
+offset_top = 655.1201
+offset_right = -157.68152
+offset_bottom = 654.6962
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.1415927
+pivot_offset = Vector2(158, 3.999939)
+theme = ExtResource("3_2q318")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.9280007
+anchor_top = 0.047684047
+anchor_right = 1.0019337
+anchor_bottom = 1.0337265
+offset_left = 0.37506104
+offset_top = 608.39996
+offset_right = 158.61389
+offset_bottom = 779.9534
+rotation = 3.1415927
+scale = Vector2(0.78, 0.78)
+theme_override_constants/separation = 45
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="hym" type="TextureButton" parent="CanvasLayer/Panel3/VBoxContainer"]
+custom_minimum_size = Vector2(61, 120)
+layout_mode = 2
+texture_normal = ExtResource("5_tlvak")
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/hym"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12896426
+anchor_top = 1.0090115
+anchor_right = 0.9548026
+anchor_bottom = 1.8840116
+theme_override_font_sizes/font_size = 28
+text = "HYM
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="vision" type="TextureButton" parent="CanvasLayer/Panel3/VBoxContainer" node_paths=PackedStringArray("vis", "UI")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("6_4r87e")
+script = ExtResource("7_4e4q7")
+vis = NodePath("../../../../CanvasLayer2/Vission2")
+UI = NodePath("../../..")
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/vision"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11926036
+anchor_top = 0.93337065
+anchor_right = 0.9680976
+anchor_bottom = 1.6083707
+theme_override_font_sizes/font_size = 28
+text = "VISSION
+"
+horizontal_alignment = 1
+
+[node name="mission" type="TextureButton" parent="CanvasLayer/Panel3/VBoxContainer" node_paths=PackedStringArray("mis", "UI")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+texture_normal = ExtResource("7_u7bh7")
+script = ExtResource("8_riqoh")
+mis = NodePath("../../../../CanvasLayer2/Misson")
+UI = NodePath("../../..")
+
+[node name="Label3" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/mission"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02236135
+anchor_top = 0.96862715
+anchor_right = 1.0223613
+anchor_bottom = 1.6436272
+theme_override_font_sizes/font_size = 28
+text = "MISSION
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="values" type="TextureButton" parent="CanvasLayer/Panel3/VBoxContainer" node_paths=PackedStringArray("values", "UI")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+texture_normal = ExtResource("8_8x48j")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_c31by")
+values = NodePath("../../../../CanvasLayer2/Core Values")
+UI = NodePath("../../..")
+
+[node name="Label4" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/values"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022362363
+anchor_top = 0.98251635
+anchor_right = 1.0223624
+anchor_bottom = 1.6575164
+theme_override_font_sizes/font_size = 28
+text = "VALUES
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="history" type="TextureButton" parent="CanvasLayer/Panel3/VBoxContainer" node_paths=PackedStringArray("historybook", "UI")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+texture_normal = ExtResource("7_b3jsu")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("12_tlvak")
+historybook = NodePath("../../../../CanvasLayer2/Historybook")
+UI = NodePath("../../..")
+
+[node name="Label5" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/history"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05098477
+anchor_top = 0.9109347
+anchor_right = 1.0149087
+anchor_bottom = 1.5859348
+offset_right = 1.5258789e-05
+theme_override_font_sizes/font_size = 28
+text = "HISTORY
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel3/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0125
+anchor_top = 0.17870371
+anchor_right = 0.08745559
+anchor_bottom = 0.29962224
+offset_right = -36.515686
+offset_bottom = -33.135284
+scale = Vector2(1.34, 1.34)
+texture = ExtResource("11_tlvak")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.91372806
+anchor_top = 0.36722764
+anchor_right = 3.1084187
+anchor_bottom = 0.8187097
+offset_left = -13.805168
+offset_top = -123.8485
+offset_right = -11.512848
+offset_bottom = -123.848465
+theme_override_fonts/font = ExtResource("14_ehio4")
+theme_override_font_sizes/font_size = 36
+text = "Player name"
+metadata/_edit_use_anchors_ = true
+
+[node name="player" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0036458324
+anchor_top = 0.021296294
+anchor_right = 0.08427604
+anchor_bottom = 0.14687963
+offset_right = -41.809998
+offset_bottom = -36.630005
+scale = Vector2(1.37, 1.37)
+texture = ExtResource("12_4r87e")
+expand_mode = 2
+stretch_mode = 5
+flip_h = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.9
+anchor_top = 0.05648148
+anchor_right = 0.96875
+anchor_bottom = 0.17561108
+offset_left = -5.0
+offset_top = -5.000004
+offset_right = -39.0
+offset_bottom = -37.659958
+scale = Vector2(1.34, 1.34)
+texture = ExtResource("13_oaqmq")
+expand_mode = 2
+stretch_mode = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect4" type="TextureButton" parent="CanvasLayer" node_paths=PackedStringArray("achiveBox", "achivePanel")]
+anchors_preset = -1
+anchor_left = 0.8776042
+anchor_top = 0.8259259
+anchor_right = 0.99625003
+anchor_bottom = 0.9748148
+offset_left = 5.0
+offset_top = 6.1035156e-05
+offset_right = -52.80005
+offset_bottom = -40.799927
+scale = Vector2(1.34, 1.34)
+texture_normal = ExtResource("14_elbhq")
+script = ExtResource("14_7m04m")
+achiveBox = NodePath("../Panel3/VBoxContainer")
+achivePanel = NodePath("../Panel3")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = 0
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+script = ExtResource("2_2623n")
+
+[node name="TextureRect11" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.508)
+offset_left = 938.0
+offset_top = 267.0
+offset_right = 1237.0
+offset_bottom = 384.0
+mouse_filter = 2
+texture = ExtResource("2_7s3fs")
+expand_mode = 1
+
+[node name="TextureRect7" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.508)
+offset_left = 1304.0
+offset_top = 799.0
+offset_right = 1792.0
+offset_bottom = 1014.0
+mouse_filter = 2
+texture = ExtResource("2_7s3fs")
+expand_mode = 1
+
+[node name="TextureRect13" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.508)
+offset_left = -135.0
+offset_top = 397.0
+offset_right = 4.0
+offset_bottom = 475.0
+mouse_filter = 2
+texture = ExtResource("2_7s3fs")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.188)
+offset_left = 677.0
+offset_top = 607.0
+offset_right = 1368.0
+offset_bottom = 865.0
+mouse_filter = 2
+texture = ExtResource("2_7s3fs")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+offset_left = 831.0
+offset_top = 373.0
+offset_right = 1702.0
+offset_bottom = 710.0
+mouse_filter = 2
+texture = ExtResource("4_qtvud")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.353)
+offset_left = 137.0
+offset_top = 885.0
+offset_right = 1008.0
+offset_bottom = 1222.0
+mouse_filter = 2
+texture = ExtResource("4_qtvud")
+expand_mode = 1
+
+[node name="TextureRect12" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.691)
+offset_left = -232.0
+offset_top = 559.0
+offset_right = 639.0
+offset_bottom = 896.0
+mouse_filter = 2
+texture = ExtResource("4_qtvud")
+expand_mode = 1
+
+[node name="Map" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.29270834
+anchor_top = 0.13796297
+anchor_right = 0.82604164
+anchor_bottom = 1.0861111
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_riqoh")
+stretch_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TInambac" type="Sprite2D" parent="Map" node_paths=PackedStringArray("outline", "icon", "anim_player")]
+position = Vector2(182, 387)
+script = ExtResource("7_6od3y")
+outline = NodePath("TInambac2")
+icon = NodePath("TInambacicon")
+anim_player = NodePath("../../AnimationPlayer")
+
+[node name="TInambac2" type="Sprite2D" parent="Map/TInambac"]
+position = Vector2(-21, -41)
+scale = Vector2(0.96, 0.982)
+
+[node name="TInambacicon" type="Sprite2D" parent="Map/TInambac"]
+self_modulate = Color(1, 1, 1, 0.4862745)
+position = Vector2(-9, -12)
+scale = Vector2(0.338582, 0.350877)
+
+[node name="TInambacbanner" type="Sprite2D" parent="Map/TInambac/TInambacicon"]
+position = Vector2(14.766424, -236.54556)
+scale = Vector2(1.29768, 1.3815)
+texture = SubResource("CompressedTexture2D_ehio4")
+
+[node name="Coming" type="Sprite2D" parent="Map/TInambac/TInambacicon/TInambacbanner"]
+position = Vector2(-1.908654, 82.32615)
+scale = Vector2(0.27338436, 0.23772573)
+texture = ExtResource("12_c31by")
+
+[node name="Goa" type="Sprite2D" parent="Map" node_paths=PackedStringArray("outline", "icon", "anim_player")]
+position = Vector2(279, 529)
+script = ExtResource("7_6od3y")
+outline = NodePath("Goa2")
+icon = NodePath("Goaicon")
+select_colleges = ExtResource("12_riqoh")
+anim_player = NodePath("../../AnimationPlayer")
+
+[node name="Goa2" type="Sprite2D" parent="Map/Goa"]
+position = Vector2(223.99962, -16.998413)
+scale = Vector2(0.96, 0.982)
+texture = ExtResource("14_4r87e")
+
+[node name="Goaicon" type="Sprite2D" parent="Map/Goa"]
+position = Vector2(4.999634, 43.001587)
+rotation = 0.054105207
+scale = Vector2(0.339, 0.339)
+
+[node name="Goabanner" type="Sprite2D" parent="Map/Goa/Goaicon"]
+position = Vector2(8.8496065, -135.6933)
+rotation = 0.036844566
+scale = Vector2(2.774, 1.734)
+texture = SubResource("CompressedTexture2D_7a0j3")
+
+[node name="Caramoan" type="Sprite2D" parent="Map" node_paths=PackedStringArray("outline", "icon")]
+position = Vector2(798, 502)
+script = ExtResource("7_6od3y")
+outline = NodePath("Caramoan1")
+icon = NodePath("Caramoanicon")
+
+[node name="Caramoan1" type="Sprite2D" parent="Map/Caramoan"]
+position = Vector2(-1, -3)
+scale = Vector2(0.96, 0.982)
+
+[node name="Caramoanicon" type="Sprite2D" parent="Map/Caramoan"]
+position = Vector2(-38.000366, -8.998411)
+scale = Vector2(0.338582, 0.350877)
+
+[node name="Coming" type="Sprite2D" parent="Map/Caramoan/Caramoanicon"]
+position = Vector2(-5.907959, 14.254517)
+scale = Vector2(0.35476542, 0.32841808)
+texture = ExtResource("12_c31by")
+
+[node name="Caramoanbanner" type="Sprite2D" parent="Map/Caramoan/Caramoanicon"]
+position = Vector2(-5.906876, -128.25002)
+scale = Vector2(1.73426, 1.3815)
+texture = SubResource("CompressedTexture2D_0g0qh")
+
+[node name="Lagonoy" type="Sprite2D" parent="Map" node_paths=PackedStringArray("outline", "icon")]
+position = Vector2(390, 432)
+script = ExtResource("7_6od3y")
+outline = NodePath("Lagonoy1")
+icon = NodePath("Lagonoyicon")
+
+[node name="Lagonoy1" type="Sprite2D" parent="Map/Lagonoy"]
+position = Vector2(-1, -2)
+scale = Vector2(0.96, 0.982)
+
+[node name="Lagonoyicon" type="Sprite2D" parent="Map/Lagonoy"]
+self_modulate = Color(1, 1, 1, 0.42352942)
+position = Vector2(-49.00039, -2.998434)
+scale = Vector2(0.338582, 0.350877)
+
+[node name="Lagonoybanner" type="Sprite2D" parent="Map/Lagonoy/Lagonoyicon"]
+position = Vector2(4.96106, -127.979)
+scale = Vector2(1.73426, 1.3815)
+texture = SubResource("CompressedTexture2D_t64y5")
+
+[node name="Coming" type="Sprite2D" parent="Map/Lagonoy/Lagonoyicon"]
+position = Vector2(8.859073, -14.245808)
+scale = Vector2(0.35476542, 0.32841808)
+texture = ExtResource("12_c31by")
+
+[node name="Sagnay" type="Sprite2D" parent="Map" node_paths=PackedStringArray("outline", "icon")]
+position = Vector2(400, 803)
+script = ExtResource("7_6od3y")
+outline = NodePath("Sagnay1")
+icon = NodePath("sagnayicon")
+scene_index = 8
+select_colleges = ExtResource("27_riqoh")
+
+[node name="Sagnay1" type="Sprite2D" parent="Map/Sagnay"]
+position = Vector2(106.999626, -283.9984)
+scale = Vector2(0.96, 0.982)
+texture = ExtResource("25_c31by")
+
+[node name="sagnayicon" type="Sprite2D" parent="Map/Sagnay"]
+position = Vector2(-27.9999, -13)
+scale = Vector2(0.338582, 0.350877)
+
+[node name="Sagnaybanner" type="Sprite2D" parent="Map/Sagnay/sagnayicon"]
+position = Vector2(-0.0015099049, -199.49551)
+scale = Vector2(1.73426, 1.7235559)
+texture = SubResource("CompressedTexture2D_b3jsu")
+
+[node name="Sanjose" type="Sprite2D" parent="Map" node_paths=PackedStringArray("outline", "icon")]
+position = Vector2(405, 626)
+script = ExtResource("7_6od3y")
+outline = NodePath("Sanjose1")
+icon = NodePath("sanjoseicon")
+scene_index = 7
+select_colleges = ExtResource("27_riqoh")
+
+[node name="Sanjose1" type="Sprite2D" parent="Map/Sanjose"]
+position = Vector2(100.999626, -108.99841)
+scale = Vector2(0.96, 0.982)
+texture = ExtResource("24_u7bh7")
+
+[node name="sanjoseicon" type="Sprite2D" parent="Map/Sanjose"]
+position = Vector2(-11.9999, -30)
+scale = Vector2(0.338582, 0.350877)
+
+[node name="sanjosebanner" type="Sprite2D" parent="Map/Sanjose/sanjoseicon"]
+position = Vector2(44.300903, -88.34547)
+scale = Vector2(1.73426, 1.6095002)
+texture = SubResource("CompressedTexture2D_2q318")
+
+[node name="Area2D" type="Area2D" parent="Map"]
+position = Vector2(-470, -44)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D"]
+position = Vector2(-0.00036621094, -2.9983902)
+polygon = PackedVector2Array(581, 354, 598, 311, 611, 282, 630, 266, 646, 248, 654, 238, 678, 233, 690, 227, 697, 257, 711, 276, 720, 290, 725, 309, 730, 331, 734, 362, 743, 369, 717, 430, 709, 434, 689, 452, 688, 481, 686, 493, 676, 519, 663, 516, 664, 598, 670, 626, 677, 650, 664, 645, 656, 629, 581, 563, 579, 547, 595, 532, 612, 507, 588, 460, 579, 426, 559, 394, 575, 387)
+
+[node name="Area2D2" type="Area2D" parent="Map"]
+position = Vector2(-470, -44)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D2"]
+polygon = PackedVector2Array(710, 432, 720, 443, 716, 452, 720, 465, 749, 487, 739, 496, 749, 514, 837, 660, 812, 688, 748, 717, 723, 710, 708, 714, 692, 713, 673, 699, 673, 672, 678, 660, 675, 635, 670, 613, 670, 572, 666, 538, 675, 525, 685, 499, 691, 480, 698, 456)
+
+[node name="Area2D3" type="Area2D" parent="Map"]
+position = Vector2(-470, -44)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D3"]
+position = Vector2(-0.00036621094, -8.99839)
+polygon = PackedVector2Array(768, 319, 776, 327, 791, 332, 802, 345, 814, 346, 809, 368, 817, 374, 841, 369, 853, 374, 855, 378, 871, 389, 873, 364, 896, 380, 927, 385, 933, 407, 938, 430, 935, 442, 914, 453, 901, 472, 908, 484, 885, 485, 884, 489, 1008, 561, 983, 623, 925, 616, 907, 627, 915, 615, 817, 622, 751, 517, 743, 502, 746, 484, 725, 469, 716, 454, 720, 442, 712, 433, 742, 367, 745, 375)
+
+[node name="Area2D4" type="Area2D" parent="Map"]
+position = Vector2(-470, -44)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D4"]
+position = Vector2(-2.0003662, 1.0016098)
+polygon = PackedVector2Array(1074, 506, 1145, 436, 1150, 441, 1157, 452, 1166, 451, 1227, 495, 1249, 503, 1295, 500, 1317, 519, 1346, 537, 1385, 540, 1386, 574, 1410, 588, 1413, 607, 1376, 606, 1333, 610, 1292, 591, 1270, 619, 1250, 636, 1113, 521)
+
+[node name="Area2D5" type="Area2D" parent="Map"]
+position = Vector2(-470, -44)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D5"]
+polygon = PackedVector2Array(766, 795, 861, 741, 865, 757, 873, 764, 881, 768, 861, 789, 858, 806, 877, 817, 894, 813, 913, 820, 921, 836, 940, 835, 944, 852, 917, 854, 897, 858, 872, 863, 867, 873, 879, 880, 885, 886, 893, 897, 900, 900, 932, 901, 951, 915, 962, 927, 919, 932, 898, 938, 867, 940, 827, 893, 806, 861, 766, 819)
+
+[node name="Area2D6" type="Area2D" parent="Map"]
+position = Vector2(-470, -44)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Area2D6"]
+polygon = PackedVector2Array(815, 620, 888, 619, 915, 622, 888, 671, 871, 722, 866, 724, 846, 689, 819, 628)
+
+[node name="Label" type="Label" parent="Map"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.29785156
+anchor_top = -0.030273438
+anchor_right = 1.1875
+anchor_bottom = 0.06640625
+theme_override_colors/font_color = Color(0.99607843, 0.79607844, 0.14117648, 1)
+theme_override_colors/font_outline_color = Color(0.44313726, 0.2784314, 0.14509805, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("14_ehio4")
+theme_override_font_sizes/font_size = 80
+text = "SELECT CAMPUS"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SelectCampus" type="TextureRect" parent="Map"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177734
+anchor_top = -0.0341797
+anchor_right = 0.748523
+anchor_bottom = 0.0703125
+offset_right = 289.513
+offset_bottom = 53.0
+scale = Vector2(0.66875, 0.66875)
+texture = SubResource("CompressedTexture2D_bl6si")
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CanvasLayer2/OpeningClouds")
+libraries = {
+&"": SubResource("AnimationLibrary_2q318")
+}
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Historybook" parent="CanvasLayer2" instance=ExtResource("27_4r87e")]
+visible = false
+
+[node name="continue" parent="CanvasLayer2/Historybook" index="2"]
+script = null
+
+[node name="OpeningClouds" type="Sprite2D" parent="CanvasLayer2"]
+visible = false
+z_index = 10
+z_as_relative = false
+position = Vector2(83, 561)
+scale = Vector2(1.22839, 1.7486122)
+texture = SubResource("CompressedTexture2D_s8uph")
+
+[node name="OpeningClouds2" type="Sprite2D" parent="CanvasLayer2"]
+visible = false
+z_index = 10
+position = Vector2(1636, 486)
+scale = Vector2(1.27318, 1.7812506)
+texture = SubResource("CompressedTexture2D_s8uph")
+
+[node name="Misson" parent="CanvasLayer2" instance=ExtResource("30_s8ygv")]
+
+[node name="Core Values" parent="CanvasLayer2" instance=ExtResource("31_xecfs")]
+visible = false
+
+[node name="continue" parent="CanvasLayer2/Core Values/Panel" index="1"]
+text = "Close
+"
+script = null
+
+[node name="Vission2" parent="CanvasLayer2" instance=ExtResource("32_xecfs")]
+visible = false
+
+[node name="SoundEffects" type="Node" parent="."]
+
+[node name="Intro" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("28_4r87e")
+volume_db = 11.555
+
+[node name="Click" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("29_8x48j")
+volume_db = 18.641
+
+[node name="Select" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("30_oaqmq")
+volume_db = 13.903
+
+[node name="Select2" type="AudioStreamPlayer2D" parent="SoundEffects"]
+stream = ExtResource("31_oaqmq")
+volume_db = 13.903
+
+[connection signal="pressed" from="CanvasLayer/Panel3/VBoxContainer/vision" to="CanvasLayer/Panel3/VBoxContainer/vision" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel3/VBoxContainer/mission" to="CanvasLayer/Panel3/VBoxContainer/mission" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel3/VBoxContainer/values" to="CanvasLayer/Panel3/VBoxContainer/values" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel3/VBoxContainer/history" to="CanvasLayer/Panel3/VBoxContainer/history" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureRect4" to="CanvasLayer/TextureRect4" method="_on_pressed"]
+[connection signal="input_event" from="Map/Area2D" to="Map/TInambac" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Map/Area2D2" to="Map/Goa" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Map/Area2D3" to="Map/Lagonoy" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Map/Area2D4" to="Map/Caramoan" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Map/Area2D5" to="Map/Sagnay" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Map/Area2D6" to="Map/Sanjose" method="_on_area_2d_input_event"]
+[connection signal="pressed" from="CanvasLayer2/Historybook/continue" to="CanvasLayer/Panel3/VBoxContainer/history" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Misson/Button" to="CanvasLayer/Panel3/VBoxContainer/mission" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Core Values/Panel/continue" to="CanvasLayer/Panel3/VBoxContainer/values" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Vission2/Button" to="CanvasLayer/Panel3/VBoxContainer/vision" method="_on_pressed"]
+
+[editable path="CanvasLayer2/Historybook"]
+[editable path="CanvasLayer2/Misson"]
+[editable path="CanvasLayer2/Core Values"]
+[editable path="CanvasLayer2/Vission2"]

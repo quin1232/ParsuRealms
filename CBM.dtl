@@ -1,0 +1,54 @@
+Welcome to the College of Business and Management, where ideas grow into enterprises!
+Locate the College of Business and Management.
+[signal arg="arrow"]
+label arrow
+if {IsArrowClick} == true:
+	Look for Jasmine, a student at the CBM building.
+	label CBMArrived
+	if {CBMArrived} == true:
+		if :
+		You arrived at the CBM Building.
+		label TalktoJasmine
+		if {TalktoJasmine} == true:
+			Jasmine: Oh hey! You must be visiting from another college, right?
+			Jasmine: I’m working on our business project, but I lost my calculator and my ledger somewhere around here.
+			Jasmine: Without them, I can’t finish our cost computation!
+			Jasmine: Could you please help me find them? I think I left them here at the CBM Building.
+			Jasmine: And the other item... I might have misplaced it in the Entrep Lab.
+			[signal arg="questpanel"]
+			
+			if {bool} == true:
+				label FoundCalculator
+				You found Jasmine’s calculator.
+				if {bool} == true:
+					label CalculatorFound
+					You obtain Jasmine’s calculator.
+					Go to Entrep Building and look for ledger.
+			
+			if {bool} == true:
+				label FoundLedger
+				You found Jasmine’s Ledger.
+				if {bool} == true:
+					label LedgerFound
+					You obtain Jasmine’s Ledger.
+					Go to CBM building and find the calculator.
+
+if {CollectComplete} == true:
+	label CollectComplete
+	Jasmine: Great! You found both my calculator and Ledger — thank you so much!
+	Jasmine: Now we can finally finish our cost computation.
+	Jasmine: Since you’ve collected my calculator,  go back to me again and maybe you can help me solve some business questions?
+if {bool} == true:
+	label ComputeTask
+	Great Job!!. Your final task is to help me solve some Question related to Bussines. Good Luck!!
+	[signal arg="cbmquestion"]
+if {Completequest} == true:
+	label Completequest
+	Jasmine: Perfect! You’ve answered all the questions correctly!
+	Jasmine: I’m truly impressed by your skills and confidence.
+	Jasmine: You really have the makings of a successful entrepreneur!
+	Jasmine: Thank you for your help! Because of your effort, I can finally complete my report.
+	Jasmine: As a token of appreciation, take this Book of Parsu.
+	Jasmine: It contains the Core Values of the University — a guide for every student and future leader.
+	Jasmine: Keep it close, and may it inspire you to serve with passion, excellence, and unity.
+	[signal arg="corevaluesbook"]

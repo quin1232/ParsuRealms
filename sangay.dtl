@@ -1,0 +1,48 @@
+You’ve arrived at Partido State University, Sagnay Campus — home of the College of Fisheries and Marine Sciences.
+Your next task is to find Ma’am Mica at the WET Laboratory.
+[signal arg="arrow"]
+if {bool} == true:
+	label MeetMaamMica
+	MaamMica: Hi there! Welcome to Partido State University, Sagnay Campus — College of Fisheries and Marine Sciences!
+	MaamMica: I’m Ma’am Mica, and I’ll be guiding you through today’s activity.
+	MaamMica: Before we start, you’ll need a fishing rod and fishing bait for the exercise.
+	MaamMica: It should be somewhere near the pond area. Try to look around and see if you can find it.
+	[signal arg="questpanel"]
+if {bool} == true:
+	label LabArrived
+	You arrive at Laboratory Building.
+if {bool} == true:
+	label LabpratoryArrived
+	You arrive at Wet Labpratory Building.
+if {bool} == true:
+	label FoundRod
+	MaamMica: Great job! You found the fishing rod.
+	if {bool} == true:
+		label FishingrodFound
+		You obtain Fishing Rod.
+if {bool} == true:
+	label FoundBait
+	MaamMica: Good job! You found the fishing bait.
+	if {bool} == true:
+		label FishingbaitFound
+		You obtain Fishing Bait.
+if {CollectComplete} == true:
+	MaamMica: Great! All the items have been collected.
+	MaamMica: Now, head to the pond and try to catch 3 fish.
+	MaamMica: Each time you catch one, try to guess what kind of fish you’ve caught!
+	
+	if {bool} == true:
+		label Wrong
+		"Your answer is wrong! Try again."
+	
+	if {bool} == true:
+		label Correct
+		"Your answer is correct!"
+
+if {bool} == true:
+	label Complete
+	MaamMica: Excellent job! You caught all 3 fish.
+	MaamMica: As your reward, I’ll show you something special.
+	MaamMica: This is the Vision of Partido State University.
+	MaamMica: Always remember — this vision guides every student, faculty, and project in our university.
+	[signal arg="sangayquestcom"]

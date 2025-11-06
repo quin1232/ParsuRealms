@@ -1,0 +1,74 @@
+Welcome to the Main Campus of Partido State University.
+You’ve chosen the College of Engineering & Computational Science.
+Find the Engineering Building within the campus.
+[signal arg="arrow"]
+label arrow
+if {IsArrowClick} == true:
+	Head inside and look for Engr. Quin.
+label Arrived
+if {IsArrived} == true:
+	if {} == true:
+	You arrived at the Engineering Building.
+label TalktoEngr
+if {TalktoEngr} == true:
+	Engineer: Hi there! Great job finding the Engineering Building. Welcome to the College of Engineering and Computational Sciences!
+	Engineer: Can you help me out for a moment?
+	Engineer: One of the university’s service vehicles broke down just outside the building, and I’m trying to get it running again.
+	Engineer: Unfortunately, we’re missing a few important parts to complete the repair.
+	Engineer: I remember that one of the parts is stored inside a toolbox at the IT Building. You might need to look around carefully to find it.
+	Engineer: Another part should be here, somewhere inside the Engineering Building—check the lockers nearby!
+	[signal arg="questpanel"]
+if {Isfoundlocker} == true:
+	label locker
+	Engineer: Great! You found the locker.
+	Engineer: Solve some engineering question to unlock this, Good luck !!!
+	[signal arg="open"]
+if {IsArrivedIT} == true:
+	label ArriveIT
+	You arrived at IT Building.
+if {CECquestComplete} == true:
+	label CECquestComplete
+	Engineer: Perfect! The engine’s roaring back to life again.
+	Engineer: You can now use the car to travel between campuses.
+	Engineer: Drive safely, and head to your next destination when you’re ready.
+	Engineer: The vehicle’s all fixed up and ready to go!
+	[signal arg="close"]
+if {bool} == true:
+	label SparkPlugFound
+	You obtain the spark plug.
+	Go to IT building to find the battery.
+if {bool} == true:
+	label BatteryFound
+	You obtain the Battery.
+if {bool} == true:
+	label Cardialog
+	if {Cardialog} == true:
+		Engineer: Fix the  car.
+		if {Iscaropen} == false:
+			[signal arg="open"]
+		else:
+			[signal arg="fixbtn"]
+	label TestDriveStart
+	if {carFixed} == true:
+		Engineer: Great job repairing the car!
+		Engineer: Let’s see how well it runs now.
+		Engineer: Take it for a quick test drive and park it properly on the campus field.
+		Engineer: That should help us make sure everything’s working perfectly.
+		[signal arg="testdrive_start"]
+	
+	label TestDriveComplete
+	if {IsTestDriveDone} == true:
+		Engineer: Nice driving! You successfully completed the test drive and parked the car.
+		Engineer: The vehicle is officially back in service.
+		Engineer: Come back to me for your next mission.
+		[signal arg="return_to_engr"]
+	if {bool} == true:
+		
+		label ReturnToEngineer
+		Engineer: Excellent work once again!
+		Engineer: You’ve proven your skill and responsibility.
+		Engineer: The College of Engineering & Computational Science is proud of your effort.
+		Engineer: If you’re interested in solving real-world problems, designing innovations, and building the future —
+		Engineer: Then you belong here at the College of Engineering & Computational Science!
+		Engineer: We encourage you to become part of our growing family of future engineers and innovators.
+		[signal arg="CECCompleteQ"]

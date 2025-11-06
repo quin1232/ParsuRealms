@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://h6abgi3vxpxb"]
+
+[ext_resource type="Script" uid="uid://daxdvf5wh014i" path="res://Scripts/mini_map.gd" id="1_4lcwa"]
+[ext_resource type="Texture2D" uid="uid://x2ny3flkflbx" path="res://Scene/Image/Arrrow.png" id="1_wjpik"]
+[ext_resource type="Shader" uid="uid://6xg3un80skyj" path="res://Scene/map.gdshader" id="2_qpq6r"]
+[ext_resource type="Script" uid="uid://b1s458g5o6tkc" path="res://Scene/texture_rect.gd" id="4_2kpym"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qpq6r"]
+shader = ExtResource("2_qpq6r")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g10ps"]
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2kpym"]
+shader = ExtResource("2_qpq6r")
+
+[sub_resource type="Theme" id="Theme_g10ps"]
+
+[node name="Mini Map" type="ColorRect"]
+anchors_preset = -1
+anchor_right = 0.104166664
+anchor_bottom = 0.18518518
+color = Color(0.23, 0.23, 0.23, 1)
+script = ExtResource("1_4lcwa")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_qpq6r")
+layout_mode = 0
+anchor_left = -0.015
+anchor_right = 1.015
+anchor_bottom = 1.03
+theme_override_styles/panel = SubResource("StyleBoxFlat_g10ps")
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Panel"]
+material = SubResource("ShaderMaterial_2kpym")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014563107
+anchor_top = 0.014563107
+anchor_right = 0.9854369
+anchor_bottom = 0.9854369
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="Panel/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(200, 200)
+render_target_clear_mode = 1
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="Panel/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0)
+projection = 1
+current = true
+size = 60.952
+
+[node name="TextureRect" type="TextureRect" parent="Panel/SubViewportContainer/SubViewport"]
+offset_right = 15.0
+offset_bottom = 15.0
+theme = SubResource("Theme_g10ps")
+texture = ExtResource("1_wjpik")
+expand_mode = 1
+script = ExtResource("4_2kpym")

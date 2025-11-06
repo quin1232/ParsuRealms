@@ -1,0 +1,12 @@
+if {} == "":
+	label AnswerSheetsFound
+	You obtain Answer Sheets.
+	Go to COED building to find the Clock.
+if {} == "":
+	label ClockFound
+	You obtain Clock.
+	Go to C ateen building to find the answersheets.
+if {CollectComplete} == true:
+	label CollectComplete
+	Good job! You found all the item.
+	Talk to Mr. Celestial again.

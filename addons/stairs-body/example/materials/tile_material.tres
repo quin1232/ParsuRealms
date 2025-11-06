@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dhevvisj3yfbn"]
+
+[ext_resource type="Texture2D" uid="uid://jl1e7fccamrd" path="res://addons/stairs-body/example/materials/tile_texture.png" id="1_foddp"]
+
+[resource]
+albedo_texture = ExtResource("1_foddp")
+uv1_triplanar = true
+texture_filter = 0

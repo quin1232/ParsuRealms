@@ -1,0 +1,25 @@
+Welcome to the Main Campus of Partido State University.
+You’ve chosen the College of Engineering & Computational Science.
+Find the Engineering Building within the campus.
+[signal arg="arrow"]
+label arrow
+if {IsArrowClick} == true:
+	Head inside and look for Engr. Quin.
+	label Arrived
+	if {IsArrived} == true:
+		if {} == true:
+		You arrived at the Engineering Building.
+		label TalktoEngr
+		if {TalktoEngr} == true:
+			Engineer: Excellent work finding the Engineering Building! Welcome to the College of Engineering & Computational Science.
+			Engineer: But we have a problem one of the university’s vehicles broke down near the engineering building.
+			Engineer: To fix the car, we’ll need several parts.
+			Engineer: Find the spark plug and battery around the IT  and engineering building and bring them back to me.
+			if {Isfoundlocker} == true:
+				label locker
+				Engineer: Great! You found the locker.
+				Engineer: Solve some engineering question to unlock this, Good luck !!!
+				[signal arg="open"]
+label ArriveIT
+if {IsArrivedIT} == true:
+	You arrived at the IT Building.

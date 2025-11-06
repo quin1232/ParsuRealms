@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi5ml3qo3f4cb"]
+
+[ext_resource type="Script" uid="uid://bo3fwp41x7n1d" path="res://winpanel.gd" id="1_j0k88"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="1_nmkms"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j0k88")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.6039216)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="retry" type="Button" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.44427082
+anchor_top = 0.49537036
+anchor_right = 0.5400716
+anchor_bottom = 0.5703704
+theme_override_fonts/font = ExtResource("1_nmkms")
+theme_override_font_sizes/font_size = 31
+text = "RETRY"
+metadata/_edit_use_anchors_ = true
+
+[node name="Con" type="Button" parent="Panel"]
+visible = false
+layout_mode = 0
+anchor_left = 0.44427082
+anchor_top = 0.49537036
+anchor_right = 0.5400716
+anchor_bottom = 0.5703704
+theme_override_fonts/font = ExtResource("1_nmkms")
+theme_override_font_sizes/font_size = 31
+text = "Continue"
+metadata/_edit_use_anchors_ = true
+
+[node name="exit" type="Button" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.44427082
+anchor_top = 0.59166664
+anchor_right = 0.542437
+anchor_bottom = 0.66851854
+theme_override_fonts/font = ExtResource("1_nmkms")
+theme_override_font_sizes/font_size = 31
+text = "EXIT
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.013020833
+anchor_top = 0.30092594
+anchor_right = 0.9817708
+anchor_bottom = 0.40740737
+theme_override_fonts/font = ExtResource("1_nmkms")
+theme_override_font_sizes/font_size = 60
+text = "GAME FAILED"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Panel/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Panel/Con" to="." method="_on_con_pressed"]

@@ -1,0 +1,197 @@
+[gd_scene load_steps=10 format=3 uid="uid://bj7sybrphhb5p"]
+
+[ext_resource type="Script" uid="uid://bkvuse8l5lsfv" path="res://Scene/Questcomplete/questcomplete.gd" id="1_d46i8"]
+[ext_resource type="Texture2D" uid="uid://cv3vxb75mtsnt" path="res://UI/COLLEGES/CEC(3).png" id="1_q7136"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="2_d46i8"]
+[ext_resource type="Script" uid="uid://dq65cexrvyqje" path="res://again.gd" id="3_1k4h0"]
+[ext_resource type="Script" uid="uid://mrvy5hjvw1dm" path="res://view.gd" id="4_ji8ty"]
+[ext_resource type="Script" uid="uid://b5kep6ppvsvie" path="res://backtomap.gd" id="5_mk6io"]
+[ext_resource type="Texture2D" uid="uid://b1pbn08opnyah" path="res://UI/back.png" id="7_pkmr6"]
+[ext_resource type="Script" uid="uid://6kkayswfoemb" path="res://back.gd" id="8_jccux"]
+[ext_resource type="AudioStream" uid="uid://dn4ly6vk538jn" path="res://Sound Effects/WIN.mp3" id="9_d46i8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d46i8")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.8156863)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.99700004
+anchor_bottom = 1.0
+offset_right = -0.2220459
+offset_bottom = 5.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41013196
+anchor_top = 0.13456221
+anchor_right = 0.5841492
+anchor_bottom = 0.35030293
+texture = ExtResource("1_q7136")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08045901
+anchor_top = 0.3632616
+anchor_right = 0.9507715
+anchor_bottom = 0.41418746
+offset_bottom = 6.1035156e-05
+theme_override_colors/font_color = Color(1, 1, 0.7058824, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 0, 0.15686275)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_d46i8")
+theme_override_font_sizes/font_size = 41
+text = "You’ve conquered the CEC Challenge!"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.292959
+anchor_top = 0.42622465
+anchor_right = 0.73234874
+anchor_bottom = 0.51233566
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_d46i8")
+theme_override_font_sizes/font_size = 76
+text = "CEC Quest Complete"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3709474
+anchor_top = 0.62580645
+anchor_right = 0.6400149
+anchor_bottom = 0.87741935
+theme_override_constants/separation = 39
+metadata/_edit_use_anchors_ = true
+
+[node name="Again" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_d46i8")
+theme_override_font_sizes/font_size = 46
+text = "Retry Quest"
+icon_alignment = 1
+script = ExtResource("3_1k4h0")
+scene_path = "uid://f7qd8oovl7lf"
+metadata/_edit_use_anchors_ = true
+
+[node name="View" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_d46i8")
+theme_override_font_sizes/font_size = 46
+text = "View Offer Program"
+script = ExtResource("4_ji8ty")
+metadata/_edit_use_anchors_ = true
+
+[node name="Map" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_d46i8")
+theme_override_font_sizes/font_size = 46
+text = "Go to the Map"
+script = ExtResource("5_mk6io")
+scene_path = "uid://b2bk143ow36up"
+metadata/_edit_use_anchors_ = true
+
+[node name="View Program" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0036345
+anchor_bottom = 1.0120931
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="View Program"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.40558717
+anchor_top = 0.046875
+anchor_right = 0.5796044
+anchor_bottom = 0.2626157
+texture = ExtResource("1_q7136")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="back" type="TextureButton" parent="View Program"]
+layout_mode = 0
+anchor_left = 0.017071908
+anchor_top = 0.04595588
+anchor_right = 0.09570616
+anchor_bottom = 0.13970588
+texture_normal = ExtResource("7_pkmr6")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_jccux")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="View Program"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2741852
+anchor_top = 0.27297795
+anchor_right = 0.71357495
+anchor_bottom = 0.35908896
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_d46i8")
+theme_override_font_sizes/font_size = 71
+text = "CEC Program Offerd"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="View Program"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.015002587
+anchor_top = 0.40808824
+anchor_right = 0.9834454
+anchor_bottom = 0.9485294
+theme_override_fonts/normal_font = ExtResource("2_d46i8")
+theme_override_font_sizes/normal_font_size = 61
+text = "Bachelor of Science in Civil Engineering
+
+Bachelor of Science in Sanitary Engineering
+
+Bachelor of Science in Computer Science
+
+Bachelor of Automotive Technology
+
+Bachelor of Engineering Technology
+(Major in Electrical Engineering Technology)
+
+Bachelor of Engineering Technology in Mechanical Engineering Technology
+(Major in Automotive Technology)
+
+(Major in Refrigeration and Airconditioning Technology)
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Node" type="Node" parent="."]
+
+[node name="QuestComplete" type="AudioStreamPlayer2D" parent="Node"]
+stream = ExtResource("9_d46i8")
+volume_db = 16.421
+
+[connection signal="pressed" from="View Program/back" to="View Program/back" method="_on_pressed"]

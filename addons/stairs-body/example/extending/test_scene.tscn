@@ -1,0 +1,142 @@
+[gd_scene load_steps=7 format=3 uid="uid://6liw4h11hhqv"]
+
+[ext_resource type="PackedScene" uid="uid://bcbysfrvny1cj" path="res://addons/stairs-body/example/extending/player_body_3d.tscn" id="1_y6ur4"]
+[ext_resource type="Material" uid="uid://dhevvisj3yfbn" path="res://addons/stairs-body/example/materials/tile_material.tres" id="2_g8cvb"]
+[ext_resource type="PackedScene" uid="uid://b7fj5b4j7njx4" path="res://addons/stairs-body/scenes/stairs_body_3d.tscn" id="3_yd1dq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fux4r"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_w8x5s"]
+sky_material = SubResource("ProceduralSkyMaterial_fux4r")
+
+[sub_resource type="Environment" id="Environment_ib2l2"]
+background_mode = 2
+sky = SubResource("Sky_w8x5s")
+tonemap_mode = 2
+
+[node name="TestScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ib2l2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_y6ur4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33896, 0)
+JUMP_VELOCITY = 6.0
+
+[node name="Level" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.503714, 0)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(40, 1, 40)
+
+[node name="Ladder" type="Node3D" parent="Level"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level/Ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.248982, -1.50644)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level/Ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.747965, -2.51289)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 1)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Level/Ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24898, -3.50644)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 1)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Level/Ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74796, -4.51289)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 1)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Level/Ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.24898, -5.50644)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 1)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Level/Ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.74796, -6.51289)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 1)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Level/Ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.24898, -7.50644)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 1)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Level/Ladder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.74796, -8.51289)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 1)
+
+[node name="Ladder2" type="Node3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level/Ladder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.248982, -0.606446)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 0.4)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level/Ladder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.747965, -1.01289)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 0.4)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Level/Ladder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.24898, -1.40645)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 0.4)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Level/Ladder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74796, -1.81789)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 0.4)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Level/Ladder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.24898, -2.21144)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 0.4)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Level/Ladder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.74796, -2.61289)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 0.4)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Level/Ladder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.24898, -3.00644)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 0.4)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Level/Ladder2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.74796, -4.26289)
+material_override = ExtResource("2_g8cvb")
+use_collision = true
+size = Vector3(2, 0.5, 2)
+
+[node name="StairsBody3D" parent="." instance=ExtResource("3_yd1dq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.46199, 1.85077, 0.3111)

@@ -1,0 +1,795 @@
+[gd_scene load_steps=61 format=3 uid="uid://dim0hpapvtkkk"]
+
+[ext_resource type="Script" uid="uid://dvxs71wrk8ihn" path="res://Scene/cbm.gd" id="1_hca4y"]
+[ext_resource type="PackedScene" uid="uid://dke7i78quv1ja" path="res://Inventory/Inventory/coreval.tscn" id="2_mw2c4"]
+[ext_resource type="PackedScene" uid="uid://dru404jjhn52a" path="res://assets/parsu.tscn" id="3_hqmnf"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="4_lqpsd"]
+[ext_resource type="PackedScene" uid="uid://c75s2m6eic1vo" path="res://addons/ThirdPersonTemplate/Character/Nodes/PlayerTemplate.tscn" id="5_dr3mm"]
+[ext_resource type="Script" uid="uid://dnpvegc66t1nb" path="res://Scene/canvas_layer.gd" id="6_shygp"]
+[ext_resource type="Script" uid="uid://dvelserfjf2yo" path="res://Scene/fix.gd" id="7_erskp"]
+[ext_resource type="Script" uid="uid://4vygipd1ge81" path="res://Scene/talktojas.gd" id="7_ftbns"]
+[ext_resource type="Shader" uid="uid://6xg3un80skyj" path="res://Scene/map.gdshader" id="9_c72e6"]
+[ext_resource type="Script" uid="uid://bydwa475ki42w" path="res://Scene/collect_2.gd" id="10_sc6t2"]
+[ext_resource type="PackedScene" uid="uid://cfov3hprx4v8h" path="res://fixcarloading.tscn" id="11_ov1v3"]
+[ext_resource type="Script" uid="uid://bpxl1t15py0br" path="res://Scene/drive2.gd" id="11_wsiw3"]
+[ext_resource type="FontFile" uid="uid://3pxb8cfk2kfb" path="res://Fonts/AdventureRequest-j8W9.ttf" id="12_m51qq"]
+[ext_resource type="PackedScene" uid="uid://cuctl6nrfo684" path="res://assets/stepglow.tscn" id="13_i004f"]
+[ext_resource type="PackedScene" uid="uid://bmju5mfrai6bc" path="res://Scene/CBM NPC/cbmnpc.tscn" id="15_qb7lm"]
+[ext_resource type="Script" uid="uid://dxc5uay176r6" path="res://Scene/cbmnpc_area.gd" id="16_4gio8"]
+[ext_resource type="Script" uid="uid://cb1so8v5qd8vb" path="res://Scene/arived_cbm.gd" id="16_qb7lm"]
+[ext_resource type="PackedScene" uid="uid://cc4b488lp5evj" path="res://Inventory/Inventory/calculator.tscn" id="18_4gio8"]
+[ext_resource type="PackedScene" uid="uid://nwontlscpi2k" path="res://Inventory/Inventory/Ledger.tscn" id="19_76yuv"]
+[ext_resource type="PackedScene" uid="uid://ccut411672s84" path="res://Inventory/Inventory/paper_stack.glb" id="19_wyaib"]
+[ext_resource type="Texture2D" uid="uid://tb04cef0diag" path="res://Inventory/Inventory/paper_stack_0.png" id="20_d03h0"]
+[ext_resource type="Script" uid="uid://stac84urdqyv" path="res://Scene/cal.gd" id="21_djrt5"]
+[ext_resource type="Script" uid="uid://xpa6opv2pqk1" path="res://Scene/ledger.gd" id="22_d03h0"]
+[ext_resource type="PackedScene" uid="uid://demd36s4k2tbx" path="res://Scene/Table.tscn" id="22_djrt5"]
+[ext_resource type="PackedScene" uid="uid://ci52bv1m15cbs" path="res://cars/Doge.tscn" id="22_xyylo"]
+[ext_resource type="Texture2D" uid="uid://vml7iwutk0lh" path="res://assets/San Jose/Sanjose_Image_8.jpg" id="23_ve5rc"]
+[ext_resource type="PackedScene" uid="uid://ddi6g4qw1lksp" path="res://Scene/calc_ui.tscn" id="25_8h7fl"]
+[ext_resource type="PackedScene" uid="uid://xh7778rta1co" path="res://Scene/core_values.tscn" id="26_p5tkm"]
+[ext_resource type="Script" uid="uid://bkvuse8l5lsfv" path="res://Scene/Questcomplete/questcomplete.gd" id="27_q6ubo"]
+[ext_resource type="PackedScene" uid="uid://bj7sybrphhb5p" path="res://Scene/Questcomplete/questcomplete.tscn" id="29_mw2c4"]
+[ext_resource type="Texture2D" uid="uid://cq8t23hkm2isw" path="res://UI/CBM.png" id="30_wsiw3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rs2uj"]
+size = Vector3(3031.0535, 201.39465, 6.9425735)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m4lxm"]
+size = Vector3(1391.5713, 0.001, 36.70273)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xxnh1"]
+size = Vector3(173.35165, 63.0188, 0.001)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c0ehp"]
+size = Vector3(1366.181, 16.40479, 66.23952)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_717op"]
+size = Vector3(0.7414551, 2.9481506, 3.9722424)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g1owc"]
+size = Vector3(0.3054258, 1.0559082, 1.0013275)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1nq6k"]
+shader = ExtResource("9_c72e6")
+
+[sub_resource type="Theme" id="Theme_vterl"]
+resource_local_to_scene = true
+default_font = ExtResource("12_m51qq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c0ehp"]
+albedo_texture = ExtResource("23_ve5rc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_717op"]
+albedo_texture = ExtResource("23_ve5rc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g1owc"]
+albedo_texture = ExtResource("23_ve5rc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7hre"]
+albedo_texture = ExtResource("23_ve5rc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3bc1g"]
+albedo_texture = ExtResource("23_ve5rc")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mm2gk"]
+size = Vector3(0.60510504, 1.6986694, 1.0698155)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n7qdn"]
+radius = 0.291194
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xaafv"]
+size = Vector3(0.542114, 1.7092, 1.53265)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hca4y"]
+size = Vector3(1.3526917, 0.23779297, 0.38583374)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qb7lm"]
+size = Vector3(60.393074, 1.2523346, 23.210205)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wyaib"]
+albedo_texture = ExtResource("20_d03h0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d03h0"]
+albedo_texture = ExtResource("20_d03h0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djrt5"]
+albedo_texture = ExtResource("20_d03h0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8h7fl"]
+albedo_texture = ExtResource("20_d03h0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eb8tx"]
+albedo_texture = ExtResource("20_d03h0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5tkm"]
+albedo_texture = ExtResource("20_d03h0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q6ubo"]
+albedo_texture = ExtResource("20_d03h0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uaqvd"]
+albedo_texture = ExtResource("20_d03h0")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wlx25"]
+size = Vector3(21.416077, 5.6105957, 42.06723)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8h7fl"]
+size = Vector3(1, 1.6469727, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_djrt5"]
+size = Vector3(1, 1.4169922, 1.152832)
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("book_spawn")]
+script = ExtResource("1_hca4y")
+book_scene = ExtResource("2_mw2c4")
+book_spawn = NodePath("Spwan")
+metadata/_edit_horizontal_guides_ = [129.0]
+
+[node name="parsu" parent="." instance=ExtResource("3_hqmnf")]
+
+[node name="Sky3D" parent="parsu" index="0"]
+current_time = 15.504
+
+[node name="SunLight" parent="parsu/Sky3D" index="0"]
+transform = Transform3D(0, -0.6251723, -0.78048676, 0.51493293, -0.6690571, 0.53591675, -0.85723054, -0.40189832, 0.32192177, -0.78048664, 0.53591686, 0.32192186)
+
+[node name="MoonLight" parent="parsu/Sky3D" index="1"]
+transform = Transform3D(0, -0.98200357, -0.18886268, 0.21651557, -0.1843827, 0.9587096, -0.9762792, -0.04089171, 0.21261905, -0.18886255, 0.9587096, 0.21261913)
+
+[node name="Skydome" parent="parsu/Sky3D" index="2"]
+sun_altitude = -57.59386261568964
+sun_azimuth = -247.58556007278014
+moon_altitude = -16.52220198527895
+moon_azimuth = -221.61353353330506
+deep_space_euler = Vector3(1.2915428, 3.1415925, -0.5245857)
+
+[node name="TimeOfDay" parent="parsu/Sky3D" index="3"]
+total_hours = 15.504
+
+[node name="Sketchfab_Scene" parent="parsu" index="1"]
+transform = Transform3D(0.299947, 0, 0.00561786, 0, 0.3, 0, -0.00561786, 0, 0.299947, -66.56561, 1.9073486e-06, -41.96493)
+
+[node name="Mesh_790" parent="parsu/Root Node/CAMARINES SUR" index="0"]
+transform = Transform3D(1, -1.37667655e-14, 0, -9.325873e-15, 1, -6.217249e-15, 0, -1.3322676e-14, 1, 1.4333093e-05, 0, -3.109042e-05)
+
+[node name="CarCore#1" parent="parsu/Root Node/Car Sedan" index="7"]
+visible = false
+
+[node name="CarCore#2" parent="parsu/Root Node/Car Sedan" index="8"]
+visible = false
+
+[node name="DAY TO GO" parent="parsu/Root Node" index="27"]
+visible = false
+
+[node name="Mesh_497" parent="parsu/Root Node/Dorm/2989322" index="38"]
+transform = Transform3D(1.0000001, 0, 2.869517e-14, 0, 1.0000001, -3.5718532e-16, 2.8696687e-14, -7.1459257e-16, 1, 0, -0.04, 0.08)
+
+[node name="Mesh_985" parent="parsu/Root Node/Image_002" index="0"]
+transform = Transform3D(-0.545679, 0.06301, 0.835622, 0.837211, -0.0021409, 0.5468779, 0.0362478, 0.99801207, -0.051584404, 1603.96, -693.353, -213.59)
+
+[node name="Mesh_984" parent="parsu/Root Node" index="49"]
+transform = Transform3D(1, 1.0658141e-14, 5.0821977e-21, 0, 1, -8.526513e-14, 1.0164395e-20, 8.526513e-14, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="parsu/Root Node/Mesh_984/StaticBody3D" index="0"]
+transform = Transform3D(1, 1.0658141e-14, 0, 0, 1, 6.833144e-22, 6.7762636e-21, 6.833148e-22, 1, 0, 0, 0)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="parsu/Root Node/Mesh_984/StaticBody3D" index="1"]
+transform = Transform3D(0.9982055, 0.0598813, 2.1415222e-08, -0.059881307, 0.99820566, -6.4176314e-10, -2.1415223e-08, -6.417063e-10, 1, -495.05127, 2098.9722, 17.496075)
+shape = SubResource("BoxShape3D_rs2uj")
+debug_color = Color(0.844949, 0.0009878356, 0.9082964, 0.41960785)
+
+[node name="CollisionShape3D" parent="parsu/Root Node/Mesh_984_002/StaticBody3D" index="0"]
+transform = Transform3D(1, 7.1054274e-15, 1.6940659e-21, 0, 1, -5.684342e-14, 3.3881318e-21, 5.684342e-14, 1, 0, 0, 1.03)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="parsu/Root Node/Mesh_984_003/StaticBody3D" index="1"]
+transform = Transform3D(0.99947476, 0.016993752, 0.027591731, -0.032405116, 0.5241418, 0.85102594, -4.880755e-08, -0.8514732, 0.52441716, -1113.706, 2002.8707, 9.1593895)
+shape = SubResource("BoxShape3D_m4lxm")
+debug_color = Color(0.75585306, 0.45595706, 0, 0.41960785)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="parsu/Root Node/Mesh_984_004/StaticBody3D" index="1"]
+transform = Transform3D(1, -4.136133e-09, -1.8560314e-08, -4.136144e-09, 0.9053762, -0.42461038, 1.8560318e-08, 0.42461038, 0.9053762, -1897.5208, 2028.0525, 2.7624538)
+shape = SubResource("BoxShape3D_xxnh1")
+
+[node name="Mesh_789" parent="parsu/Root Node/PARTIDO STATE UN#2" index="0"]
+transform = Transform3D(1, -2.4868996e-14, -5.9604645e-08, 3.907985e-14, 1, 4.2632564e-14, 0, 0, 1, 2.3055014e-05, 4.200763e-06, -4.2408883e-05)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="parsu/Root Node/Truss_howe girder_005/howe girder_010/Mesh_627_010/StaticBody3D" index="1"]
+transform = Transform3D(0.99988824, 3.1285238e-10, 0.014921922, -2.3200683e-10, 0.9999907, -6.8284987e-09, -0.014922328, 6.824499e-09, 0.9998858, 434.68457, -2.165594, 521.67676)
+shape = SubResource("BoxShape3D_c0ehp")
+
+[node name="Sketchfab_Scene" parent="parsu/Root Node" index="140"]
+transform = Transform3D(-59.59163, -3.001198e-06, 6.1193457, 6.1193466, -2.1422487e-05, 59.59163, -7.9717165e-07, 59.905, 2.1617001e-05, -741.6929, 2025.1167, 69.97388)
+
+[node name="Label" type="Node3D" parent="parsu"]
+transform = Transform3D(4.2977486e-08, -0.9999648, 0.008394933, -8.7419714e-08, 0.008394933, 0.9999648, -1, -4.3709857e-08, -8.7055845e-08, -9.57042, 15.502247, -56.3557)
+visible = false
+
+[node name="Label3D" type="Label3D" parent="parsu/Label"]
+transform = Transform3D(1, -5.235611e-08, 1.7411436e-08, 5.2356093e-08, 0.80083615, -0.59888387, 1.7411537e-08, 0.59888387, 0.80083615, -145.20767, -5.985175, 4.3756237)
+modulate = Color(1, 1, 0, 1)
+outline_modulate = Color(1, 1, 0, 1)
+text = "CBM BUILDING"
+font = ExtResource("4_lqpsd")
+font_size = 1417
+
+[node name="Label3D2" type="Label3D" parent="parsu/Label"]
+transform = Transform3D(1, -5.235611e-08, 1.7411436e-08, 5.2356093e-08, 0.80083615, -0.59888387, 1.7411537e-08, 0.59888387, 0.80083615, -145.20767, -31.545107, 4.5902042)
+modulate = Color(1, 1, 0, 1)
+outline_modulate = Color(1, 1, 0, 1)
+text = "ENTREP LAB"
+font = ExtResource("4_lqpsd")
+font_size = 1417
+
+[node name="StaticBody3D9" type="StaticBody3D" parent="parsu"]
+transform = Transform3D(-0.23157056, 0.9720117, -0.038386796, -0.97273606, -0.23173729, -3.312487e-14, -0.0088960435, 0.037341177, 0.9992362, 129.7425, 2.5826554, 294.9004)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="parsu/StaticBody3D9"]
+transform = Transform3D(0.94303507, 0.23910424, -0.23131259, 0.23910573, -0.003666535, 0.97095406, 0.2313174, -0.9709539, -0.06062809, 71.269, -287.38065, -316.62772)
+shape = SubResource("BoxShape3D_717op")
+
+[node name="StaticBody3D10" type="StaticBody3D" parent="parsu"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="parsu/StaticBody3D10"]
+transform = Transform3D(1.035, 0, 0, 0, 1.18, 0, 0, 0, 1.035, -159.16554, 0.756646, -31.117506)
+shape = SubResource("BoxShape3D_g1owc")
+
+[node name="PlayerTemplate" parent="." instance=ExtResource("5_dr3mm")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.075813, 0.5728493, -29.348536)
+PlayerCharacterMesh = NodePath("Character")
+
+[node name="Camera3D" parent="PlayerTemplate/Camroot/h/v" index="0"]
+current = true
+
+[node name="Skeleton3D" parent="PlayerTemplate/Character/Armature" index="0"]
+bones/0/position = Vector3(-164.91599, 81.002975, -2519.8833)
+bones/0/rotation = Quaternion(-0.71566516, 0.030601386, -0.018866137, 0.6975177)
+bones/1/position = Vector3(4.335614e-06, 279.587, -25.2592)
+bones/1/rotation = Quaternion(-0.040769786, -0.0025437619, 0.0013600122, 0.99916446)
+bones/2/rotation = Quaternion(0.0012786085, -0.024085294, 0.0029262966, 0.9997049)
+bones/3/rotation = Quaternion(0.0011352149, -0.02404412, 0.0031176321, 0.99970543)
+bones/4/position = Vector3(-3.6426372e-06, 421.08948, 9.957064e-06)
+bones/4/rotation = Quaternion(0.022753052, 0.015692487, -0.029843396, 0.9991724)
+bones/5/position = Vector3(1.7864671e-05, 223.7692, 50.5789)
+bones/5/rotation = Quaternion(0.06468455, -0.017868979, 0.01943697, 0.99755645)
+bones/6/position = Vector3(-1.7604287e-05, 752.9393, 170.188)
+bones/7/position = Vector3(148.884, 351.97806, -5.9969006)
+bones/7/rotation = Quaternion(-0.5067127, -0.4581454, 0.618807, -0.38784397)
+bones/8/position = Vector3(-4.458295e-05, 330.711, 0.0002866631)
+bones/8/rotation = Quaternion(0.46476486, 0.12368877, 0.06243986, 0.87452626)
+bones/9/position = Vector3(5.656326e-05, 884.035, -0.0003111947)
+bones/9/rotation = Quaternion(0.030623952, 0.0010314228, 0.26024354, 0.9650567)
+bones/10/rotation = Quaternion(0.10854368, 0.114280194, -0.1893164, 0.96918404)
+bones/11/rotation = Quaternion(0.15991758, -0.09061907, 0.14823489, 0.9717207)
+bones/12/rotation = Quaternion(-0.010173015, 0.014351731, -0.14655526, 0.9890461)
+bones/13/rotation = Quaternion(-0.026713738, -0.0012893976, 0.15545006, 0.98748165)
+bones/15/position = Vector3(-79.7001, 346.435, -6.189684)
+bones/15/rotation = Quaternion(0.18794559, 0.016935866, 0.060126487, 0.980191)
+bones/16/rotation = Quaternion(0.2505488, -0.00030594607, -0.07727601, 0.9650149)
+bones/17/rotation = Quaternion(0.14139792, 0.0053900564, 0.0015322304, 0.989937)
+bones/19/rotation = Quaternion(0.23602487, -0.0043684444, 0.031428415, 0.97122884)
+bones/20/rotation = Quaternion(0.15664284, 0.0005528843, -0.04765713, 0.98650473)
+bones/21/rotation = Quaternion(0.12176609, 0.0017498859, -0.022129789, 0.9923105)
+bones/23/rotation = Quaternion(0.2790233, -0.016492426, 0.013636193, 0.96004593)
+bones/24/rotation = Quaternion(0.118871264, 9.843616e-05, -0.013752384, 0.9928145)
+bones/25/rotation = Quaternion(0.09107197, -0.0013727729, -0.02627385, 0.9954967)
+bones/27/rotation = Quaternion(0.34952757, -0.007858011, -0.034990124, 0.9362395)
+bones/28/rotation = Quaternion(0.15044647, 0.00532815, -0.0031759455, 0.9885987)
+bones/31/position = Vector3(-148.884, 352.02203, -6.4867415)
+bones/31/rotation = Quaternion(0.53548765, -0.45920825, 0.5504142, 0.44657028)
+bones/32/position = Vector3(-1.0744563e-05, 330.711, 0.0007111865)
+bones/32/rotation = Quaternion(0.48843813, -0.15534534, -0.13385877, 0.8481615)
+bones/33/rotation = Quaternion(0.027658572, -0.00096241897, -0.23274522, 0.97214395)
+bones/34/rotation = Quaternion(0.010562237, -0.033484172, 0.17733626, 0.9835239)
+bones/35/rotation = Quaternion(0.17575258, -0.04573005, 0.0026838223, 0.9833681)
+bones/36/position = Vector3(13.6009, 90.36466, 0.00025008153)
+bones/36/rotation = Quaternion(0.017931657, -0.04242898, -0.037340183, 0.9982404)
+bones/37/rotation = Quaternion(-0.029625699, 0.0010471907, -0.13641264, 0.99020857)
+bones/39/rotation = Quaternion(0.075991996, -0.001980985, -0.022898532, 0.9968435)
+bones/40/rotation = Quaternion(0.31248415, 0.0005235747, 0.07992888, 0.94655424)
+bones/41/rotation = Quaternion(0.07535784, -0.000631255, 0.017764539, 0.9969982)
+bones/43/rotation = Quaternion(0.16706084, -0.0073350878, 0.010831525, 0.9858599)
+bones/44/rotation = Quaternion(0.22418928, -0.0006214192, 0.058343664, 0.97279745)
+bones/45/rotation = Quaternion(0.047392607, 0.015090432, 0.010039813, 0.9987119)
+bones/47/rotation = Quaternion(0.24801725, 0.004249349, 0.012234838, 0.96866906)
+bones/48/rotation = Quaternion(0.15758799, -7.371328e-05, 0.035024934, 0.98688364)
+bones/49/rotation = Quaternion(0.07046208, 0.017509883, 0.015465867, 0.99724084)
+bones/51/rotation = Quaternion(0.29519418, 0.01309764, 0.047390893, 0.9541714)
+bones/52/rotation = Quaternion(0.120238826, 8.903445e-07, 0.02501049, 0.9924299)
+bones/53/rotation = Quaternion(0.059774444, 0.00022427183, 0.015159472, 0.9980968)
+bones/55/rotation = Quaternion(0.047927722, 0.048752435, 0.9965719, -0.046590056)
+bones/56/rotation = Quaternion(-0.16842087, -0.06660291, 0.006617352, 0.9834402)
+bones/57/rotation = Quaternion(0.6175989, -0.079640694, 0.0028397504, 0.78244543)
+bones/58/rotation = Quaternion(0.22135034, -0.06985849, 0.014371972, 0.9725828)
+bones/60/rotation = Quaternion(-0.12743895, 0.06808148, 0.9889212, 0.034046274)
+bones/61/rotation = Quaternion(-0.2060599, 0.041967943, -0.004620991, 0.9776282)
+bones/62/rotation = Quaternion(0.62878, 0.12807411, -0.06579186, 0.76413625)
+bones/63/rotation = Quaternion(0.21807289, 0.061629977, -0.013776406, 0.9738872)
+
+[node name="CanvasLayer" parent="PlayerTemplate" index="5"]
+script = ExtResource("6_shygp")
+player_path = NodePath("..")
+
+[node name="Fix" parent="PlayerTemplate/CanvasLayer" index="0"]
+visible = false
+script = ExtResource("7_erskp")
+loading_control_path = NodePath("../fixcarloading")
+
+[node name="Talk" parent="PlayerTemplate/CanvasLayer" index="1" node_paths=PackedStringArray("character")]
+visible = false
+script = ExtResource("7_ftbns")
+character = NodePath("../..")
+
+[node name="Mini Map" parent="PlayerTemplate/CanvasLayer" index="2" node_paths=PackedStringArray("car_camera", "car", "arrow", "TopView")]
+z_index = 100
+material = SubResource("ShaderMaterial_1nq6k")
+anchor_left = 0.0380205
+anchor_top = 0.058333926
+anchor_right = 0.0380205
+anchor_bottom = 0.058333926
+offset_left = 3.9902039
+offset_top = -10.877289
+offset_right = 253.9902
+offset_bottom = 239.12271
+target = NodePath("../..")
+car_camera = NodePath("../../../car/look/Camera3D")
+car = NodePath("../../../car")
+arrow = NodePath("../arrowmap")
+dialog_manager_path = NodePath("../../..")
+TopView = NodePath("../../../Camera3D")
+nodes_to_hide = Array[NodePath]([NodePath("../jump"), NodePath("../run"), NodePath("../Virtual Joystick"), NodePath("../../InventoryUI"), NodePath("../HBoxContainer"), NodePath("../../../parsu/Label")])
+
+[node name="Panel" parent="PlayerTemplate/CanvasLayer/Mini Map" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.032
+anchor_top = 0.004
+anchor_right = 0.99999994
+anchor_bottom = 1.036
+offset_left = 8.0
+offset_top = -1.0
+offset_right = 6.0000153
+offset_bottom = -3.0
+mouse_filter = 1
+
+[node name="SubViewportContainer" parent="PlayerTemplate/CanvasLayer/Mini Map/Panel" index="0"]
+anchor_left = 0.01282829
+anchor_top = 0.011119306
+anchor_right = 0.01282835
+anchor_bottom = 0.011119366
+offset_left = 250.00014
+offset_top = 250.00002
+offset_right = 500.0003
+offset_bottom = 500.0
+rotation = 3.1415927
+
+[node name="SubViewport" parent="PlayerTemplate/CanvasLayer/Mini Map/Panel/SubViewportContainer" index="0"]
+size = Vector2i(250, 250)
+
+[node name="TextureRect" parent="PlayerTemplate/CanvasLayer/Mini Map/Panel/SubViewportContainer/SubViewport" index="1" node_paths=PackedStringArray("target_camera")]
+offset_left = 31.98906
+offset_top = -95.8768
+offset_right = 51.98906
+offset_bottom = -75.8768
+rotation = -0.258309
+pivot_offset = Vector2(10, 13)
+target_camera = NodePath("../../../../../../Camroot/h/v/Camera3D")
+
+[node name="Collect" parent="PlayerTemplate/CanvasLayer" index="3"]
+anchor_left = 0.70677084
+anchor_top = 0.5907407
+anchor_right = 0.834787
+anchor_bottom = 0.7695323
+offset_left = 0.0
+offset_top = 0.0
+offset_right = -18.912476
+offset_bottom = 21.90503
+pickup_area = NodePath("../../InteractionArea")
+
+[node name="Collect2" parent="PlayerTemplate/CanvasLayer" index="4" node_paths=PackedStringArray("fixbtn", "player")]
+visible = false
+anchor_left = 0.71354175
+anchor_top = 0.58055556
+anchor_right = 0.8297356
+anchor_bottom = 0.7832656
+script = ExtResource("10_sc6t2")
+fixbtn = NodePath("../Fix")
+player = NodePath("../..")
+
+[node name="drive" parent="PlayerTemplate/CanvasLayer" index="5" node_paths=PackedStringArray("car", "player", "playerCol", "car_body")]
+script = ExtResource("11_wsiw3")
+car = NodePath("../../../car/look/Camera3D")
+player = NodePath("../..")
+playerCol = NodePath("../../CollisionShape3D")
+car_body = NodePath("../../../car")
+nodes_to_hide = Array[NodePath]([NodePath("../Virtual Joystick"), NodePath("../jump"), NodePath("../run")])
+
+[node name="exit" parent="PlayerTemplate/CanvasLayer" index="6" node_paths=PackedStringArray("car", "player", "playerCol", "playerCam", "spawn", "car_body", "unhide_nodes")]
+offset_left = 306.0
+offset_top = -289.99997
+offset_right = 309.78687
+offset_bottom = -293.92682
+car = NodePath("../../../car/look/Camera3D")
+player = NodePath("../..")
+playerCol = NodePath("../../CollisionShape3D")
+playerCam = NodePath("../../Camroot/h/v/Camera3D")
+spawn = NodePath("../../../car/spawns")
+car_body = NodePath("../../../car")
+unhide_nodes = [NodePath("../jump"), NodePath("../run"), NodePath("../Virtual Joystick")]
+
+[node name="jump" parent="PlayerTemplate/CanvasLayer" index="7"]
+anchors_preset = -1
+anchor_left = 0.8052083
+anchor_top = 0.58518517
+anchor_right = 0.9340338
+anchor_bottom = 0.8142083
+offset_left = 0.0
+offset_top = 0.0
+offset_right = -56.34497
+offset_bottom = -56.34497
+scale = Vector2(1.295, 1.295)
+
+[node name="run" parent="PlayerTemplate/CanvasLayer" index="8"]
+anchors_preset = -1
+anchor_left = 0.7192709
+anchor_top = 0.73240745
+anchor_right = 0.84809643
+anchor_bottom = 0.96143067
+offset_left = 0.0
+offset_top = 0.0
+offset_right = -56.34497
+offset_bottom = -56.34503
+scale = Vector2(1.295, 1.295)
+
+[node name="Paper" type="Node3D" parent="PlayerTemplate/CanvasLayer/run" index="0"]
+transform = Transform3D(0.0254, 0, 0, 0, 0.0254, -4.1381853e-09, 0, 4.1381853e-09, 0.0254, -0.06350102, -9.775241e-12, -0.016800428)
+
+[node name="Paper2" type="Node3D" parent="PlayerTemplate/CanvasLayer/run" index="1"]
+transform = Transform3D(0.0254, 0, 0, 0, 0.0254, -4.1381853e-09, 0, 4.1381853e-09, 0.0254, -0.0022841084, -0.02654709, -0.00818429)
+
+[node name="Paper3" type="Node3D" parent="PlayerTemplate/CanvasLayer/run" index="2"]
+transform = Transform3D(0.0254, 0, 0, 0, 0.0254, -4.1381853e-09, 0, 4.1381853e-09, 0.0254, 0.06578513, -0.058532152, 0.0055582356)
+
+[node name="fixcarloading" parent="PlayerTemplate/CanvasLayer" index="9" instance=ExtResource("11_ov1v3")]
+visible = false
+show_wrench_emoji = false
+
+[node name="Virtual Joystick" parent="PlayerTemplate/CanvasLayer" index="10"]
+anchor_left = 0.056250002
+anchor_top = 0.59444445
+anchor_right = 0.30468702
+anchor_bottom = 1.0361099
+offset_left = -69.00001
+offset_top = -71.0
+offset_right = -245.99966
+offset_bottom = -247.99957
+grow_vertical = 1
+scale = Vector2(1.59, 1.59)
+
+[node name="arrowmap" parent="PlayerTemplate/CanvasLayer" index="11"]
+anchor_left = 0.190625
+anchor_top = 0.097222224
+anchor_right = 0.26302084
+anchor_bottom = 0.22592592
+
+[node name="HBoxContainer" parent="PlayerTemplate/CanvasLayer" index="12"]
+anchor_left = 0.74427074
+anchor_top = 0.09166667
+anchor_right = 0.9902293
+anchor_bottom = 0.18661518
+
+[node name="BOOK" parent="PlayerTemplate/CanvasLayer/HBoxContainer" index="0" node_paths=PackedStringArray("hide_nodes")]
+visible = false
+hide_nodes = [NodePath("../../Virtual Joystick"), NodePath("../../Mini Map"), NodePath("../../jump"), NodePath("../../run"), null]
+
+[node name="InventoryUI" parent="PlayerTemplate" index="7"]
+visible = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" parent="PlayerTemplate/InventoryUI" index="0"]
+anchor_left = 0.50100005
+anchor_top = 0.55200005
+anchor_right = 0.50100005
+anchor_bottom = 0.55200005
+offset_left = -361.92017
+offset_top = -283.16003
+offset_right = 3.079834
+offset_bottom = 1.8399658
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" parent="PlayerTemplate/InventoryUI/Panel" index="0"]
+metadata/_edit_use_anchors_ = true
+
+[node name="Quest" parent="PlayerTemplate" index="8"]
+anchor_left = 0.7942708
+anchor_top = 0.19351852
+anchor_right = 0.94895834
+anchor_bottom = 0.42962962
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+pickup_area_path = NodePath("../InteractionArea")
+
+[node name="VBoxContainer" parent="PlayerTemplate/Quest" index="0"]
+anchor_right = 0.9328986
+anchor_bottom = 1.0126613
+offset_right = 0.0
+offset_bottom = -29.641998
+
+[node name="Label" parent="PlayerTemplate/Quest/VBoxContainer" index="1"]
+theme = SubResource("Theme_vterl")
+
+[node name="CheckBox" parent="PlayerTemplate/Quest/VBoxContainer/Label" index="0"]
+theme = SubResource("Theme_vterl")
+disabled = true
+
+[node name="Label2" parent="PlayerTemplate/Quest/VBoxContainer" index="2"]
+theme = SubResource("Theme_vterl")
+
+[node name="CheckBox" parent="PlayerTemplate/Quest/VBoxContainer/Label2" index="0"]
+theme = SubResource("Theme_vterl")
+disabled = true
+
+[node name="QuestComplete" parent="PlayerTemplate/SoundEffecs" index="4"]
+volume_db = 21.053
+
+[node name="Glow" parent="." instance=ExtResource("13_i004f")]
+transform = Transform3D(0.3614909, 0, 0.09469081, 0, 0.109999985, 0, -0.18261799, 0, 0.18743972, 75.723, 0.07997817, -3.035)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 8.7422784e-08, 0, 4.7396114e-08, 0.54214835, 0.84028286, 7.345986e-08, 0.84028286, -0.54214835, 40.7901, 128.23494, -29.462143)
+
+[node name="car" parent="." instance=ExtResource("22_xyylo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.299289, 0.0430836, -1.8166237)
+
+[node name="Control" parent="car" index="6"]
+visible = false
+
+[node name="Body" parent="car/doge-body" index="0"]
+material_override = SubResource("StandardMaterial3D_c0ehp")
+
+[node name="Hood" parent="car/doge-body" index="5"]
+material_override = SubResource("StandardMaterial3D_717op")
+
+[node name="Door_FL" parent="car/doge-body" index="6"]
+material_override = SubResource("StandardMaterial3D_g1owc")
+
+[node name="Trunkdoor" parent="car/doge-body" index="7"]
+material_override = SubResource("StandardMaterial3D_n7hre")
+
+[node name="Door_FR" parent="car/doge-body" index="30"]
+material_override = SubResource("StandardMaterial3D_3bc1g")
+
+[node name="CollisionShape3D2" parent="car" index="8"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.04623413, 0.59781927, -1.5723677)
+shape = SubResource("BoxShape3D_mm2gk")
+
+[node name="CollisionShape3D3" parent="car" index="9"]
+shape = SubResource("CapsuleShape3D_n7qdn")
+
+[node name="CollisionShape3D4" parent="car" index="11"]
+shape = SubResource("BoxShape3D_xaafv")
+
+[node name="Area3D" parent="car" index="12" node_paths=PackedStringArray("allowed_body")]
+allowed_body = NodePath("../../PlayerTemplate")
+button_path = NodePath("../../PlayerTemplate/CanvasLayer/drive")
+
+[node name="CBMNPC" parent="." instance=ExtResource("15_qb7lm")]
+transform = Transform3D(-0.85920995, 0, -0.5116231, 0, 1, 0, 0.5116231, 0, -0.85920995, 76.30505, 0.09902847, -1.9918704)
+
+[node name="CBMNPC_dialog" type="Area3D" parent="CBMNPC" node_paths=PackedStringArray("allowed_body", "NPCCBM", "btnTalk")]
+script = ExtResource("16_4gio8")
+allowed_body = NodePath("../../PlayerTemplate")
+trigger_once = false
+NPCCBM = NodePath("../AnimationPlayer")
+btnTalk = NodePath("../../PlayerTemplate/CanvasLayer/Talk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CBMNPC/CBMNPC_dialog"]
+transform = Transform3D(0.9972416, 0, -0.07423028, 0, 1, 0, 0.07423028, 0, 0.9972416, 0.08039856, -0.074172616, 0.93133163)
+shape = SubResource("BoxShape3D_hca4y")
+debug_color = Color(0.9733754, 0, 0.4378033, 0.41960785)
+
+[node name="Label3D" type="Label3D" parent="CBMNPC"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9985596, 0)
+outline_modulate = Color(0, 0, 0, 0.32156864)
+text = "Jasmine"
+font = ExtResource("4_lqpsd")
+
+[node name="ArivedCBM" type="Area3D" parent="." node_paths=PackedStringArray("allowed_body")]
+script = ExtResource("16_qb7lm")
+allowed_body = NodePath("../PlayerTemplate")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArivedCBM"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.83418, 0.1261673, 6.07605)
+shape = SubResource("BoxShape3D_qb7lm")
+
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("19_wyaib")]
+transform = Transform3D(0.0019444692, 0.0007280725, -0.009782073, -0.00031999632, 0.009971816, 0.0006785865, 0.00980391, 0.00018107369, 0.0019622871, 114.86795, 0.931, 3.829)
+
+[node name="defaultMaterial" parent="Sketchfab_Scene2/Sketchfab_model/Collada visual scene group/polySurface7/polySurface13" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_wyaib")
+
+[node name="defaultMaterial2" parent="Sketchfab_Scene2/Sketchfab_model/Collada visual scene group/polySurface7/polySurface14" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_d03h0")
+
+[node name="defaultMaterial3" parent="Sketchfab_Scene2/Sketchfab_model/Collada visual scene group/Cube5/polySurface11" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_djrt5")
+
+[node name="defaultMaterial4" parent="Sketchfab_Scene2/Sketchfab_model/Collada visual scene group/Cube5/polySurface12" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8h7fl")
+
+[node name="defaultMaterial5" parent="Sketchfab_Scene2/Sketchfab_model/Collada visual scene group/Cube4/polySurface21" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_eb8tx")
+
+[node name="defaultMaterial6" parent="Sketchfab_Scene2/Sketchfab_model/Collada visual scene group/Cube4/polySurface22" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_p5tkm")
+
+[node name="defaultMaterial7" parent="Sketchfab_Scene2/Sketchfab_model/Collada visual scene group/Cube3/polySurface8" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_q6ubo")
+
+[node name="defaultMaterial8" parent="Sketchfab_Scene2/Sketchfab_model/Collada visual scene group/Cube2/polySurface9" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_uaqvd")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Sketchfab_Scene2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene2/StaticBody3D2"]
+transform = Transform3D(1, -6.426126e-07, 2.9802322e-08, 3.7252903e-08, 1, 1.2340024e-08, -2.0861626e-06, -1.6321428e-07, 1.0000001, 0.020263672, 2.3012695, 0.25585938)
+shape = SubResource("BoxShape3D_wlx25")
+
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("19_wyaib")]
+transform = Transform3D(0.008086872, 0.0006573006, -0.0058455514, -0.00031999635, 0.009971816, 0.00067858666, 0.0058736796, -0.00036170875, 0.008085113, 114.86795, 0.931, 4.2106304)
+
+[node name="defaultMaterial" parent="Sketchfab_Scene3/Sketchfab_model/Collada visual scene group/polySurface7/polySurface13" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_wyaib")
+
+[node name="defaultMaterial2" parent="Sketchfab_Scene3/Sketchfab_model/Collada visual scene group/polySurface7/polySurface14" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_d03h0")
+
+[node name="defaultMaterial3" parent="Sketchfab_Scene3/Sketchfab_model/Collada visual scene group/Cube5/polySurface11" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_djrt5")
+
+[node name="defaultMaterial4" parent="Sketchfab_Scene3/Sketchfab_model/Collada visual scene group/Cube5/polySurface12" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8h7fl")
+
+[node name="defaultMaterial5" parent="Sketchfab_Scene3/Sketchfab_model/Collada visual scene group/Cube4/polySurface21" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_eb8tx")
+
+[node name="defaultMaterial6" parent="Sketchfab_Scene3/Sketchfab_model/Collada visual scene group/Cube4/polySurface22" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_p5tkm")
+
+[node name="defaultMaterial7" parent="Sketchfab_Scene3/Sketchfab_model/Collada visual scene group/Cube3/polySurface8" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_q6ubo")
+
+[node name="defaultMaterial8" parent="Sketchfab_Scene3/Sketchfab_model/Collada visual scene group/Cube2/polySurface9" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_uaqvd")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Sketchfab_Scene3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene3/StaticBody3D2"]
+transform = Transform3D(1, -6.426126e-07, 2.9802322e-08, 3.7252903e-08, 1, 1.2340024e-08, -2.0861626e-06, -1.6321428e-07, 1.0000001, 0.020263672, 2.3012695, 0.25585938)
+shape = SubResource("BoxShape3D_wlx25")
+
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("19_wyaib")]
+transform = Transform3D(0.008086872, 0.0006573006, -0.0058455514, -0.00031999635, 0.009971816, 0.00067858666, 0.0058736796, -0.00036170875, 0.008085113, 115.13864, 0.931, 4.569058)
+
+[node name="defaultMaterial" parent="Sketchfab_Scene4/Sketchfab_model/Collada visual scene group/polySurface7/polySurface13" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_wyaib")
+
+[node name="defaultMaterial2" parent="Sketchfab_Scene4/Sketchfab_model/Collada visual scene group/polySurface7/polySurface14" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_d03h0")
+
+[node name="defaultMaterial3" parent="Sketchfab_Scene4/Sketchfab_model/Collada visual scene group/Cube5/polySurface11" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_djrt5")
+
+[node name="defaultMaterial4" parent="Sketchfab_Scene4/Sketchfab_model/Collada visual scene group/Cube5/polySurface12" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_8h7fl")
+
+[node name="defaultMaterial5" parent="Sketchfab_Scene4/Sketchfab_model/Collada visual scene group/Cube4/polySurface21" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_eb8tx")
+
+[node name="defaultMaterial6" parent="Sketchfab_Scene4/Sketchfab_model/Collada visual scene group/Cube4/polySurface22" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_p5tkm")
+
+[node name="defaultMaterial7" parent="Sketchfab_Scene4/Sketchfab_model/Collada visual scene group/Cube3/polySurface8" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_q6ubo")
+
+[node name="defaultMaterial8" parent="Sketchfab_Scene4/Sketchfab_model/Collada visual scene group/Cube2/polySurface9" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_uaqvd")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Sketchfab_Scene4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene4/StaticBody3D2"]
+transform = Transform3D(1, -6.426126e-07, 2.9802322e-08, 3.7252903e-08, 1, 1.2340024e-08, -2.0861626e-06, -1.6321428e-07, 1.0000001, 0.020263672, 2.3012695, 0.25585938)
+shape = SubResource("BoxShape3D_wlx25")
+
+[node name="Calculator" parent="." instance=ExtResource("18_4gio8")]
+transform = Transform3D(0.9994856, 0.032073654, 0, -0.0028706808, 0.08945675, 0.9959867, 0.031944927, -0.99547416, 0.08950271, 114.85579, 1.002089, 3.8046856)
+
+[node name="cal" type="Area3D" parent="Calculator" node_paths=PackedStringArray("allowed_body")]
+script = ExtResource("21_djrt5")
+allowed_body = NodePath("../../PlayerTemplate")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Calculator/cal"]
+transform = Transform3D(0.98579466, -0.16728562, 0.014984194, 0.16727819, 0.985908, 0.0017478317, -0.015065409, 0.00078356266, 0.9998864, -0.4355011, -0.3374617, 0)
+shape = SubResource("BoxShape3D_8h7fl")
+
+[node name="ledger" parent="." instance=ExtResource("19_76yuv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 99.45152, 2.4162247, -14.656403)
+
+[node name="Ledger" type="Area3D" parent="ledger" node_paths=PackedStringArray("allowed_body")]
+script = ExtResource("22_d03h0")
+allowed_body = NodePath("../../PlayerTemplate")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ledger/Ledger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2084961, -0.076416016)
+shape = SubResource("BoxShape3D_djrt5")
+
+[node name="Spwan" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.16729, 0.4862206, -0.9656944)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("22_djrt5")]
+transform = Transform3D(-0.7493915, 0, -0.030203491, 0, 0.75, 0, 0.030203491, 0, -0.7493915, 115.028885, 0.5080447, 4.093129)
+
+[node name="Core Values" parent="." instance=ExtResource("26_p5tkm")]
+visible = false
+script = ExtResource("27_q6ubo")
+
+[node name="Calc" parent="." instance=ExtResource("25_8h7fl")]
+visible = false
+
+[node name="questcom" parent="." instance=ExtResource("29_mw2c4")]
+visible = false
+
+[node name="TextureRect" parent="questcom/Panel" index="0"]
+texture = ExtResource("30_wsiw3")
+
+[node name="Label2" parent="questcom/Panel" index="1"]
+text = "You’ve conquered the CBM Challenge!"
+
+[node name="Label" parent="questcom/Panel" index="2"]
+text = "CBM Quest Complete"
+
+[node name="TextureRect" parent="questcom/View Program" index="0"]
+texture = ExtResource("30_wsiw3")
+
+[node name="Label" parent="questcom/View Program" index="2"]
+text = "CBM Program Offerd"
+
+[node name="RichTextLabel" parent="questcom/View Program" index="3"]
+text = "Master in Business Administration
+
+Bachelor of Science in Accountancy
+
+Bachelor of Science in Business Administration
+
+    Financial Management
+
+Bachelor of Science in Office Administration
+
+Bachelor of Science in Entrepreneurship
+
+
+Bachelor of Science in Economics
+"
+
+[connection signal="pressed" from="PlayerTemplate/CanvasLayer/Talk" to="PlayerTemplate/CanvasLayer/Talk" method="_on_pressed"]
+[connection signal="pressed" from="PlayerTemplate/CanvasLayer/Collect2" to="PlayerTemplate/CanvasLayer/Collect2" method="_on_pressed"]
+
+[editable path="parsu"]
+[editable path="parsu/Sketchfab_Scene"]
+[editable path="parsu/Sketchfab_Scene2"]
+[editable path="PlayerTemplate"]
+[editable path="PlayerTemplate/Camroot"]
+[editable path="PlayerTemplate/Character"]
+[editable path="PlayerTemplate/CanvasLayer/Mini Map"]
+[editable path="PlayerTemplate/CanvasLayer/Virtual Joystick"]
+[editable path="car"]
+[editable path="car/doge-body"]
+[editable path="CBMNPC"]
+[editable path="Sketchfab_Scene2"]
+[editable path="Sketchfab_Scene3"]
+[editable path="Sketchfab_Scene4"]
+[editable path="Core Values"]
+[editable path="questcom"]

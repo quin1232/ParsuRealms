@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcgp1lm2n2oet"]
+
+[ext_resource type="Texture2D" uid="uid://5wpjr02ssb7u" path="res://assets/book.png" id="1_qbt2i"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="2_y0scy"]
+[ext_resource type="Texture2D" uid="uid://dsc5q7l2cbbkq" path="res://assets/parsu_Image_63.png" id="3_y0scy"]
+
+[node name="Misson Vission" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.56078434)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15104167
+anchor_top = 0.10555556
+anchor_right = 0.85097504
+anchor_bottom = 0.9907407
+texture = ExtResource("1_qbt2i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5119535
+anchor_top = 0.36192468
+anchor_right = 0.89070976
+anchor_bottom = 0.42782426
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y0scy")
+theme_override_font_sizes/font_size = 46
+text = "Mission"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10120011
+anchor_top = 0.5784519
+anchor_right = 0.4799564
+anchor_bottom = 0.70083684
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y0scy")
+theme_override_font_sizes/font_size = 50
+text = "ParSU Mission"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5350212
+anchor_top = 0.46025103
+anchor_right = 0.8802921
+anchor_bottom = 0.62761503
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_y0scy")
+theme_override_font_sizes/normal_font_size = 25
+text = "A university of science and technology advancing geology and bio-resource science to promote sustainable and resilient communities."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 353.0
+offset_right = 824.0
+offset_bottom = 648.0
+texture_normal = ExtResource("3_y0scy")
+ignore_texture_size = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1360.0
+offset_top = 919.0
+offset_right = 1505.0
+offset_bottom = 975.0
+text = "Close"

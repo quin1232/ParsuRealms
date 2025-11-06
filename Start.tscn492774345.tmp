@@ -1,0 +1,83 @@
+[gd_scene load_steps=10 format=3 uid="uid://chi3lj43tgge8"]
+
+[ext_resource type="PackedScene" uid="uid://dw427lpvc2dhi" path="res://parsu.tscn" id="1_gx2gx"]
+[ext_resource type="Script" uid="uid://4pisb5bo2cjg" path="res://start.gd" id="1_xhal0"]
+[ext_resource type="PackedScene" uid="uid://bpee1eb1cfvs7" path="res://MainMenu.tscn" id="2_xhal0"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ua5m8"]
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_eypwc"]
+sky_material = SubResource("PanoramaSkyMaterial_ua5m8")
+
+[sub_resource type="Environment" id="Environment_kapdx"]
+background_mode = 2
+sky = SubResource("Sky_eypwc")
+fog_enabled = true
+fog_density = 0.009
+fog_aerial_perspective = 0.305
+volumetric_fog_density = 0.0
+
+[sub_resource type="Animation" id="Animation_b54qk"]
+resource_name = "OPENING"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(47.0488, 12.6076, -18.4691), Vector3(33.1676, 4.2497, -18.4691)]
+}
+
+[sub_resource type="Animation" id="Animation_5tfw5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(33.168, 4.25, -18.469)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_46pen"]
+_data = {
+&"OPENING": SubResource("Animation_b54qk"),
+&"RESET": SubResource("Animation_5tfw5")
+}
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_xhal0")
+
+[node name="parsu" parent="." instance=ExtResource("1_gx2gx")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 33.168, 4.25, -18.469)
+
+[node name="DayNightCycle" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="DayNightCycle"]
+environment = SubResource("Environment_kapdx")
+
+[node name="Sun" type="DirectionalLight3D" parent="DayNightCycle"]
+transform = Transform3D(-0.416925, -0.518423, 0.7466, 0.856301, 0.0514453, 0.513908, -0.304831, 0.853575, 0.422477, -26.8499, 0, 0)
+light_energy = 0.7
+shadow_enabled = true
+sky_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_46pen")
+}
+
+[node name="MainMenu" parent="." instance=ExtResource("2_xhal0")]
+visible = false

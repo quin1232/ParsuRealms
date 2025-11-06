@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3gpdhki1ahk3"]
+
+[ext_resource type="PackedScene" uid="uid://cd2cx1c2rs4fr" path="res://assets/car_battery.glb" id="1_tln80"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nmiln"]
+size = Vector3(3.2699432, 2.0460205, 2.0328674)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_tln80")]
+transform = Transform3D(0.205, 0, 0, 0, 0.205, 0, 0, 0, 0.205, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/Collada visual scene group/pCube1/defaultMaterial" index="0"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 3.5527137e-15, 0, -3.5527137e-15, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Collada visual scene group/pCube1/defaultMaterial/StaticBody3D" index="0"]
+transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, -3.5527137e-15, 0, 3.5527137e-15, 1.0000001, 0.024467463, -0.012268327, 0.039360825)
+shape = SubResource("BoxShape3D_nmiln")

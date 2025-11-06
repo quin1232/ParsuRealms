@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=3 uid="uid://rxfbx0xbi1wv"]
+
+[ext_resource type="Script" uid="uid://b45u5a67mfnyx" path="res://Scene/select_colleges.gd" id="1_afcfd"]
+[ext_resource type="Texture2D" uid="uid://btiaorgnpwqq1" path="res://UI/COLLEGES/COED(3).png" id="2_ckwel"]
+[ext_resource type="Script" uid="uid://deq3nplmh8ife" path="res://Scene/colleges.gd" id="3_xd54f"]
+[ext_resource type="Texture2D" uid="uid://bo1jjwfu27q3q" path="res://UI/Select Colleges.png" id="9_nugud"]
+[ext_resource type="PackedScene" uid="uid://dru404jjhn52a" path="res://assets/parsu.tscn" id="10_6hfgo"]
+
+[node name="Select Colleges" type="Node3D"]
+script = ExtResource("1_afcfd")
+metadata/_edit_vertical_guides_ = [961.0]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_right = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.0009259259
+anchor_right = 1.0030293
+anchor_bottom = 1.021719
+offset_right = -5.8164063
+offset_bottom = -24.456543
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0030293, 1.022645)
+color = Color(0, 0, 0, 0.331)
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3806178
+anchor_top = 0.24084243
+anchor_right = 0.62645113
+anchor_bottom = 0.87192214
+theme_override_constants/separation = 26
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton2" type="TextureButton" parent="Control/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(472, 115)
+layout_mode = 2
+texture_normal = ExtResource("2_ckwel")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_xd54f")
+scene_index = 5
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.13100001
+anchor_right = 0.5
+anchor_bottom = 0.13100001
+offset_left = -504.0
+offset_top = -50.48001
+offset_right = 26286.043
+offset_bottom = 744.81104
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.03979083, 0.1269975)
+texture = ExtResource("9_nugud")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="parsu" parent="." instance=ExtResource("10_6hfgo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.9457092, 2.224823, 0.7034912)
+
+[node name="Sky3D" parent="parsu" index="0"]
+current_time = 7.822
+
+[node name="SunLight" parent="parsu/Sky3D" index="0"]
+transform = Transform3D(0, -0.47726274, 0.8787607, 0.58876085, 0.7103087, 0.3857749, -0.8083073, 0.5173799, 0.2809936, 0.87876064, 0.38577494, 0.28099364)
+light_color = Color(0.995431, 0.8910292, 0.83871406, 1)
+
+[node name="MoonLight" parent="parsu/Sky3D" index="1"]
+transform = Transform3D(0, -0.6905753, 0.7232605, -0.15711953, 0.7142773, 0.6819981, -0.9875796, -0.11363835, -0.108502865, 0.7232605, 0.6819981, -0.108502746)
+
+[node name="Skydome" parent="parsu/Sky3D" index="2"]
+sun_altitude = -67.30811282090056
+sun_azimuth = -107.73221858417583
+moon_azimuth = -81.46813998604685
+deep_space_euler = Vector3(1.2915425, 3.1415925, 1.4920646)
+
+[node name="TimeOfDay" parent="parsu/Sky3D" index="3"]
+total_hours = 7.822
+
+[node name="DAY TO GO" parent="parsu/Root Node" index="27"]
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="parsu"]
+transform = Transform3D(-0.00223906, 0.222649, 0.974896, 0.00537089, 0.974887, -0.222635, -0.999983, 0.00473757, -0.00337866, 23.0224, 4.54149, -18.4467)
+
+[editable path="parsu"]

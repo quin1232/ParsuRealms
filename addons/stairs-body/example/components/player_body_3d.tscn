@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://bkh244ybrnt3j"]
+
+[ext_resource type="Script" path="res://addons/stairs-body/stairs_character_body_3d.gd" id="1_wnggy"]
+[ext_resource type="Script" path="res://addons/stairs-body/example/components/character_components/movement_physics.gd" id="3_8n4cr"]
+[ext_resource type="Script" path="res://addons/stairs-body/example/components/character_components/gravity_physics.gd" id="4_e3sdg"]
+[ext_resource type="Script" path="res://addons/stairs-body/example/components/character_components/jump_physics.gd" id="5_66h3l"]
+[ext_resource type="Script" path="res://addons/stairs-body/example/components/character_components/camera_smoother.gd" id="7_lt17t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t7df6"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bs6ld"]
+
+[node name="PlayerCharacter" type="CharacterBody3D" node_paths=PackedStringArray("PLAYER_COLLIDER")]
+floor_stop_on_slope = false
+floor_snap_length = 0.5
+script = ExtResource("1_wnggy")
+PLAYER_COLLIDER = NodePath("PlayerCollision")
+
+[node name="PlayerPhysicsNodes" type="Node" parent="."]
+
+[node name="MovementPhysics" type="Node" parent="PlayerPhysicsNodes" node_paths=PackedStringArray("character")]
+script = ExtResource("3_8n4cr")
+character = NodePath("../..")
+
+[node name="GravityPhysics" type="Node" parent="PlayerPhysicsNodes" node_paths=PackedStringArray("character")]
+script = ExtResource("4_e3sdg")
+character = NodePath("../..")
+
+[node name="JumpPhysics" type="Node" parent="PlayerPhysicsNodes" node_paths=PackedStringArray("character")]
+script = ExtResource("5_66h3l")
+character = NodePath("../..")
+JUMP_VELOCITY = 6.0
+
+[node name="Camera" type="Node" parent="PlayerPhysicsNodes" node_paths=PackedStringArray("character", "CAMERA_NECK", "CAMERA_HEAD", "PLAYER_CAMERA")]
+script = ExtResource("7_lt17t")
+character = NodePath("../..")
+CAMERA_NECK = NodePath("../../CameraNeck")
+CAMERA_HEAD = NodePath("../../CameraNeck/CameraHead")
+PLAYER_CAMERA = NodePath("../../CameraNeck/CameraHead/PlayerCamera")
+MOUSE_SENSITIVITY = 0.2
+
+[node name="PlayerCollision" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_t7df6")
+
+[node name="PlayerMesh" type="MeshInstance3D" parent="."]
+layers = 2
+mesh = SubResource("CapsuleMesh_bs6ld")
+
+[node name="CameraNeck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="CameraHead" type="Node3D" parent="CameraNeck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+top_level = true
+
+[node name="PlayerCamera" type="Camera3D" parent="CameraNeck/CameraHead"]
+cull_mask = 1048573
+current = true
+fov = 90.0

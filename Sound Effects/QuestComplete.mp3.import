@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hra1mxnd6dis"
+path="res://.godot/imported/QuestComplete.mp3-7b49cd0b5ca8b56d7ac9a6ff7e549012.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/QuestComplete.mp3"
+dest_files=["res://.godot/imported/QuestComplete.mp3-7b49cd0b5ca8b56d7ac9a6ff7e549012.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

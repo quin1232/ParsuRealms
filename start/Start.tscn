@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://chi3lj43tgge8"]
+
+[ext_resource type="PackedScene" uid="uid://dru404jjhn52a" path="res://assets/parsu.tscn" id="1_gx2gx"]
+[ext_resource type="Script" uid="uid://4pisb5bo2cjg" path="res://start/start.gd" id="1_xhal0"]
+[ext_resource type="PackedScene" uid="uid://bpee1eb1cfvs7" path="res://start/main menu/MainMenu.tscn" id="2_xhal0"]
+
+[sub_resource type="Animation" id="Animation_b54qk"]
+resource_name = "OPENING"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-18.2502, 9.6945, -47.3163), Vector3(-18.25, 3.30722, -32.9882)]
+}
+
+[sub_resource type="Animation" id="Animation_5tfw5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(33.168, 4.25, -18.469)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_46pen"]
+_data = {
+&"OPENING": SubResource("Animation_b54qk"),
+&"RESET": SubResource("Animation_5tfw5")
+}
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_xhal0")
+metadata/_edit_vertical_guides_ = [960.0]
+
+[node name="parsu" parent="." instance=ExtResource("1_gx2gx")]
+
+[node name="Sky3D" parent="parsu" index="0"]
+current_time = 7.76
+
+[node name="SunLight" parent="parsu/Sky3D" index="0"]
+transform = Transform3D(0, -0.4638396, 0.8859192, 0.59732074, 0.71050936, 0.3720005, -0.80200243, 0.5291779, 0.27706102, 0.88591915, 0.37200052, 0.27706105)
+light_color = Color(0.99488, 0.8778884, 0.8192646, 1)
+
+[node name="MoonLight" parent="parsu/Sky3D" index="1"]
+transform = Transform3D(0, -0.69118285, 0.7226799, -0.16248173, 0.71307665, 0.6819981, -0.9867116, -0.11742228, -0.112304576, 0.7226799, 0.6819981, -0.11230446)
+
+[node name="Skydome" parent="parsu/Sky3D" index="2"]
+sun_altitude = -68.16092341028447
+sun_azimuth = -107.36642780325931
+moon_azimuth = -81.16685351163721
+deep_space_euler = Vector3(1.29154, 3.14159, 1.50834)
+
+[node name="TimeOfDay" parent="parsu/Sky3D" index="3"]
+total_hours = 7.76
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.996637, 0, 0.0819385, 0, 1, 0, -0.0819385, 0, -0.996637, 33.168, 4.25, -18.469)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_46pen")
+}
+
+[node name="MainMenu" parent="." instance=ExtResource("2_xhal0")]
+
+[node name="login" parent="MainMenu" index="2"]
+anchor_left = 0.33229166
+anchor_top = 0.33055556
+anchor_right = 0.6609375
+anchor_bottom = 0.9583333
+pivot_offset = Vector2(318, -8)
+
+[node name="VBoxContainer" parent="MainMenu/login" index="0"]
+anchor_left = 0.18117432
+anchor_top = 0.21533923
+anchor_right = 0.8421744
+anchor_bottom = 0.9207645
+offset_left = 0.67900085
+offset_right = -44.020325
+offset_bottom = -70.339966
+pivot_offset = Vector2(4.272827, 2.5847168)
+
+[node name="MarginContainer" parent="MainMenu/login/VBoxContainer" index="0"]
+visible = false
+
+[node name="Label" parent="MainMenu/login/VBoxContainer/VBoxContainer2/TextureButton2" index="0"]
+anchor_left = 0.39245576
+anchor_top = 0.29211566
+anchor_right = 0.6021332
+anchor_bottom = 0.7587823
+text = "LOGIN"
+horizontal_alignment = 1
+
+[node name="Label2" parent="MainMenu/login/VBoxContainer/VBoxContainer2/TextureButton3" index="0"]
+anchor_left = 0.3396524
+anchor_top = 0.24152021
+anchor_right = 0.6595449
+anchor_bottom = 0.7081869
+offset_right = 1.5258789e-05
+text = "REGISTER"
+horizontal_alignment = 1
+
+[node name="Label" parent="MainMenu/login/VBoxContainer/VBoxContainer2/guest" index="0"]
+anchor_left = 0.2292453
+anchor_top = 0.2802113
+anchor_right = 0.76956785
+anchor_bottom = 0.7468779
+offset_right = 0.0
+text = "LOGIN AS GUEST"
+horizontal_alignment = 1
+
+[editable path="parsu"]
+[editable path="parsu/Sketchfab_Scene"]
+[editable path="parsu/Sketchfab_Scene2"]
+[editable path="MainMenu"]

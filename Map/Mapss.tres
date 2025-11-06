@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://f4wbom1wnc0x"]
+
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="1_ddbjw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp5dp"]
+bg_color = Color(0.12941177, 0.24313726, 0.35686275, 0.7254902)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.99607843, 0.79607844, 0.14117648, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[resource]
+default_font = ExtResource("1_ddbjw")
+Panel/styles/panel = SubResource("StyleBoxFlat_wp5dp")

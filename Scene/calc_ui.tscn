@@ -1,0 +1,243 @@
+[gd_scene load_steps=21 format=3 uid="uid://ddi6g4qw1lksp"]
+
+[ext_resource type="Script" uid="uid://k7lmknvkgkih" path="res://quest_complete.gd" id="1_b7phn"]
+[ext_resource type="Texture2D" uid="uid://cqtxrckddm0l6" path="res://Scene/CBM NPC/calculator_16.jpg" id="1_hd2bw"]
+[ext_resource type="Texture2D" uid="uid://dkd5fsh54pl4o" path="res://Scene/CBM NPC/calculator_18.jpg" id="2_b7phn"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="2_qj6rx"]
+[ext_resource type="Texture2D" uid="uid://bv2lx6up0vr40" path="res://Scene/CBM NPC/calculator_19.jpg" id="3_qj6rx"]
+[ext_resource type="Texture2D" uid="uid://dm03whly6ihyh" path="res://Scene/CBM NPC/calculator_0.jpg" id="4_lm77v"]
+[ext_resource type="Texture2D" uid="uid://ci3cmurg54ktd" path="res://Scene/CBM NPC/calculator_2.jpg" id="5_f7lks"]
+[ext_resource type="Texture2D" uid="uid://7vasv78g6uw2" path="res://Scene/CBM NPC/calculator_3.jpg" id="6_vapq1"]
+[ext_resource type="Texture2D" uid="uid://bjkey7oatca01" path="res://Scene/CBM NPC/calculator_5.jpg" id="7_5kexa"]
+[ext_resource type="Texture2D" uid="uid://djfejffdsq01a" path="res://Scene/CBM NPC/calculator_6.jpg" id="8_0gxj4"]
+[ext_resource type="Texture2D" uid="uid://b1ar6i484xbxx" path="res://Scene/CBM NPC/calculator_7.jpg" id="9_yn550"]
+[ext_resource type="Texture2D" uid="uid://o2d2uq1p5tw6" path="res://Scene/CBM NPC/calculator_9.jpg" id="10_hfmw6"]
+[ext_resource type="Texture2D" uid="uid://beocrgjjwlfvd" path="res://Scene/CBM NPC/calculator_10.jpg" id="11_laibk"]
+[ext_resource type="Texture2D" uid="uid://m38nbbsyb6p2" path="res://Scene/CBM NPC/calculator_11.jpg" id="12_y1tne"]
+[ext_resource type="Texture2D" uid="uid://b1nbedf8kasyj" path="res://Scene/CBM NPC/0.png" id="13_7juqs"]
+[ext_resource type="Texture2D" uid="uid://ce8xdr6so3sby" path="res://Scene/CBM NPC/calculator_15.jpg" id="14_gdwf3"]
+[ext_resource type="Texture2D" uid="uid://d214x0eow8kmt" path="res://Scene/CBM NPC/calculator_20.jpg" id="15_ly8ul"]
+[ext_resource type="Texture2D" uid="uid://cyom6huajnago" path="res://Scene/CBM NPC/calculator_4.jpg" id="16_0p4st"]
+[ext_resource type="Texture2D" uid="uid://c53qbbp61magn" path="res://Scene/CBM NPC/calculator_8.jpg" id="17_isw4q"]
+[ext_resource type="Texture2D" uid="uid://d4blnxldglewy" path="res://Scene/CBM NPC/calculator_12.jpg" id="18_tgfhv"]
+
+[node name="Control" type="Control" node_paths=PackedStringArray("question_label", "expression_label", "answer_label", "btn_mc", "btn_mplus", "btn_div", "btn_mul", "btn_plus", "btn_minus", "btn_equal", "btn_dot", "btn_0", "btn_1", "btn_2", "btn_3", "btn_4", "btn_5", "btn_6", "btn_7", "btn_8", "btn_9")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b7phn")
+question_label = NodePath("Label")
+expression_label = NodePath("VBoxContainer/Label")
+answer_label = NodePath("VBoxContainer/Answer")
+btn_mc = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer5/TextureButton")
+btn_mplus = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer5/TextureButton2")
+btn_div = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer5/TextureButton3")
+btn_mul = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer2/TextureButton2")
+btn_plus = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer2/TextureButton4")
+btn_minus = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer2/TextureButton3")
+btn_equal = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer2/TextureButton")
+btn_dot = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer4/TextureButton2")
+btn_0 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer4/TextureButton")
+btn_1 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer3/TextureButton")
+btn_2 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer3/TextureButton2")
+btn_3 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer3/TextureButton3")
+btn_4 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer2/TextureButton2")
+btn_5 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer2/TextureButton3")
+btn_6 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer2/TextureButton")
+btn_7 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/TextureButton")
+btn_8 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/TextureButton2")
+btn_9 = NodePath("VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer/TextureButton3")
+
+[node name="Panel2" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.84705883)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.06979167
+anchor_top = 0.25277779
+anchor_right = 1.1552083
+anchor_bottom = 0.3759259
+offset_bottom = 3.0517578e-05
+theme_override_fonts/font = ExtResource("2_qj6rx")
+theme_override_font_sizes/font_size = 51
+text = "The cost of an item is ₱100, and I want to 
+add ₱20 as profit. What’s the selling price?"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.37083334
+anchor_top = 0.4287037
+anchor_right = 0.65208334
+anchor_bottom = 0.9138889
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02037037
+anchor_top = 0.03244275
+anchor_right = 0.9814815
+anchor_bottom = 0.32061067
+offset_bottom = 1.5258789e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.37317708
+anchor_top = 0.43888888
+anchor_right = 0.6460937
+anchor_bottom = 0.9166667
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "1+1"
+horizontal_alignment = 2
+
+[node name="Answer" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 55
+text = "=20"
+horizontal_alignment = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("1_hd2bw")
+flip_v = true
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("2_b7phn")
+flip_v = true
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+texture_normal = ExtResource("3_qj6rx")
+flip_v = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_lm77v")
+flip_v = true
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_f7lks")
+flip_v = true
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_vapq1")
+flip_v = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("7_5kexa")
+flip_v = true
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("8_0gxj4")
+flip_v = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("9_yn550")
+flip_v = true
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("10_hfmw6")
+flip_v = true
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("11_laibk")
+flip_v = true
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture_normal = ExtResource("12_y1tne")
+flip_v = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer/HBoxContainer5/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("13_7juqs")
+stretch_mode = 4
+flip_v = true
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer4"]
+visible = false
+custom_minimum_size = Vector2(0, -500)
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture_normal = ExtResource("14_gdwf3")
+flip_v = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("15_ly8ul")
+
+[node name="TextureButton4" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("16_0p4st")
+
+[node name="TextureButton3" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("17_isw4q")
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/HBoxContainer5/VBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("18_tgfhv")
