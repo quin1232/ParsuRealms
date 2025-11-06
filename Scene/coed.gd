@@ -22,7 +22,10 @@ func _ready() -> void:
 		Dialogic.VAR.CollectComplete = false
 		Dialogic.VAR.Quest1complete = false
 		Dialogic.VAR.Quest2complete = false
+
 	FadeLayer.fade_in()
+	if Global.CEDfinish == true:
+		return
 	Dialogic.start("COED")
 	player.set_physics_process(false)
 	Dialogic.timeline_ended.connect(ended)
