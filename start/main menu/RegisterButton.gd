@@ -2,20 +2,23 @@ extends TextureButton
 
 @export var email_input: LineEdit
 @export var password_input : LineEdit
-@export var confirm_password_input : LineEdit
+@export var username_input : LineEdit
 @export var loginPanel: Panel
 @export var regester_message: Label
 
 func _ready() -> void:
 	self.pressed.connect(_on_register_pressed)
+	# Limit username input to 10 characters
+	if username_input:
+		username_input.max_length = 10
 
 func _on_register_pressed() -> void:
 	var email = email_input.text.strip_edges()
 	var password = password_input.text
-	var confirm_password = confirm_password_input.text
+	var username = username_input.text
 	
 	# Validation
-	if email.is_empty() or password.is_empty() or confirm_password.is_empty():
+	if email.is_empty() or password.is_empty() or username.is_empty():
 		_show_message("Please fill all fields")
 		return
 
@@ -26,16 +29,13 @@ func _on_register_pressed() -> void:
 		_show_message("Invalid email address")
 		return
 
-	if password != confirm_password:
-		_show_message("Passwords do not match")
-		return
+
 
 	if password.length() < 6:
 		_show_message("Password must be at least 6 characters")
 		return
 	
-	# Extract username from email (before @)
-	var username = email.split("@")[0]
+
 
 	# No pre-check for email existence; rely on signup error
 
@@ -65,7 +65,7 @@ func _on_register_pressed() -> void:
 		# Clear fields
 		email_input.text = ""
 		password_input.text = ""
-		confirm_password_input.text = ""
+		username_input.text = ""
 		await get_tree().create_timer(5.0).timeout
 		self.get_parent().hide()
 		loginPanel.show()
@@ -91,7 +91,7 @@ func _on_register_pressed() -> void:
 			if regester_message:
 				regester_message.add_theme_color_override("font_color", Color(1.0, 0.4078, 0.3372)) # HEX #ff6856
 		password_input.text = ""
-		confirm_password_input.text = ""
+		username_input.text = ""
 
 func _show_message(message: String):
 	print(message)

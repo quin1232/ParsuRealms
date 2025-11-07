@@ -185,7 +185,7 @@ layer = 2
 anchors_preset = -1
 anchor_left = 0.049479168
 anchor_top = 0.06574074
-anchor_right = 0.26302084
+anchor_right = 0.22083335
 anchor_bottom = 0.12962963
 offset_right = -3.0517578e-05
 theme = ExtResource("3_2q318")
@@ -195,7 +195,7 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = -1
 anchor_left = 0.06431515
 anchor_top = 0.19139215
-anchor_right = 0.24429382
+anchor_right = 0.24556515
 anchor_bottom = 0.27564132
 offset_left = -9.485085
 offset_top = 2.2964783
@@ -385,19 +385,15 @@ expand_mode = 2
 stretch_mode = 4
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="CanvasLayer/TextureRect"]
+[node name="playername" type="Label" parent="CanvasLayer/TextureRect"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.91372806
-anchor_top = 0.36722764
-anchor_right = 3.1084187
-anchor_bottom = 0.8187097
-offset_left = -13.805168
-offset_top = -123.8485
-offset_right = -11.512848
-offset_bottom = -123.848465
+anchor_left = 0.81993
+anchor_top = -0.8652902
+anchor_right = 2.6635218
+anchor_bottom = -0.4753736
 theme_override_fonts/font = ExtResource("14_ehio4")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 30
 text = "Player name"
 metadata/_edit_use_anchors_ = true
 

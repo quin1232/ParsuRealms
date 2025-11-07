@@ -3,8 +3,8 @@ extends Node
 
 
 # Supabase Configuration loaded from Config.gd
-const SUPABASE_URL = "https://iklrakwakfculjkpstio.supabase.co"
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlrbHJha3dha2ZjdWxqa3BzdGlvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI0MzExNzcsImV4cCI6MjA3ODAwNzE3N30.czkL7aO7fh_5CZdhyfAsMarO7QtIaIveGbop5yUIX-s"
+const SUPABASE_URL = "https://blfsxyphkeuoddnepbvw.supabase.co"
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJsZnN4eXBoa2V1b2RkbmVwYnZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI1MDY2MDUsImV4cCI6MjA3ODA4MjYwNX0.-VH1FhhUlwGCbx28KVe6gRlJeJ79ppM60yY9S0aaufQ"
 
 # API Endpoints
 const AUTH_SIGNUP_URL = "/auth/v1/signup"
@@ -170,8 +170,9 @@ func _validate_credentials(email: String, password: String, username: String = "
 		return false
 	if password.length() < 6:
 		return false
-	if username != "" and username.length() < 3:
-		return false
+	if username != "":
+		if username.length() < 3 or username.length() > 10:
+			return false
 	return true
 
 # Simple email validation
