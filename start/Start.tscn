@@ -86,57 +86,59 @@ anchor_bottom = 0.9583333
 pivot_offset = Vector2(318, -8)
 
 [node name="VBoxContainer" parent="MainMenu/login" index="0"]
-anchor_left = 0.18117432
-anchor_top = 0.21533923
-anchor_right = 0.8421744
-anchor_bottom = 0.9207645
-offset_left = 0.67900085
-offset_right = -44.020325
-offset_bottom = -70.339966
+anchor_left = 0.18666619
+anchor_top = 0.22399817
+anchor_right = 0.80633545
+anchor_bottom = 0.46713978
+offset_left = 0.21363068
+offset_top = 0.12924194
+offset_right = -18.405945
+offset_bottom = -7.720764
 pivot_offset = Vector2(4.272827, 2.5847168)
 
-[node name="MarginContainer" parent="MainMenu/login/VBoxContainer" index="0"]
+[node name="Errordisplaymessage" parent="MainMenu/login/VBoxContainer" index="1"]
+text = ""
+
+[node name="VBoxContainer2" parent="MainMenu/login" index="1"]
+anchor_left = 0.32488114
+anchor_top = 0.5545723
+anchor_right = 0.64976233
+anchor_bottom = 0.8495575
+offset_left = 0.0
+offset_top = 0.0
+offset_right = -3.0517578e-05
+offset_bottom = 0.0
+
+[node name="TextureButton2" parent="MainMenu/login/VBoxContainer2" index="0" node_paths=PackedStringArray("email_input", "password_input", "error_label")]
+script = ExtResource("4_83rma")
+email_input = NodePath("../../VBoxContainer/LineEdit")
+password_input = NodePath("../../VBoxContainer/LineEdit2")
+error_label = NodePath("../../VBoxContainer/Errordisplaymessage")
+
+[node name="login2" parent="MainMenu" index="3"]
 visible = false
 
-[node name="TextureButton2" parent="MainMenu/login/VBoxContainer/VBoxContainer2" index="0" node_paths=PackedStringArray("email_input", "password_input")]
-script = ExtResource("4_83rma")
-email_input = NodePath("../../LineEdit")
-password_input = NodePath("../../LineEdit2")
+[node name="Label" parent="MainMenu/login2/lohin" index="0"]
+anchor_left = 0.29390216
+anchor_top = 0.2655601
+anchor_right = 0.6958449
+anchor_bottom = 0.72253764
 
-[node name="Label" parent="MainMenu/login/VBoxContainer/VBoxContainer2/TextureButton2" index="0"]
-anchor_left = 0.39245576
-anchor_top = 0.29211566
-anchor_right = 0.6021332
-anchor_bottom = 0.7587823
-text = "LOGIN"
-horizontal_alignment = 1
-
-[node name="Label2" parent="MainMenu/login/VBoxContainer/VBoxContainer2/TextureButton3" index="0"]
-anchor_left = 0.3396524
-anchor_top = 0.24152021
-anchor_right = 0.6595449
-anchor_bottom = 0.7081869
-offset_right = 1.5258789e-05
-text = "REGISTER"
-horizontal_alignment = 1
-
-[node name="Label" parent="MainMenu/login/VBoxContainer/VBoxContainer2/guest" index="0"]
-anchor_left = 0.2292453
-anchor_top = 0.2802113
-anchor_right = 0.76956785
-anchor_bottom = 0.7468779
-offset_right = 0.0
-text = "LOGIN AS GUEST"
-horizontal_alignment = 1
-
-[node name="rig" parent="MainMenu/login2" index="2" node_paths=PackedStringArray("email_input", "password_input", "confirm_password_input", "loginPanel")]
+[node name="rig" parent="MainMenu/login2" index="2" node_paths=PackedStringArray("email_input", "password_input", "confirm_password_input", "loginPanel", "regester_message")]
 script = ExtResource("5_u8o0p")
 email_input = NodePath("../VBoxContainer2/LineEdit")
 password_input = NodePath("../VBoxContainer2/LineEdit2")
 confirm_password_input = NodePath("../VBoxContainer2/LineEdit3")
 loginPanel = NodePath("../../login")
+regester_message = NodePath("../VBoxContainer2/regester_message")
 
-[connection signal="pressed" from="MainMenu/login/VBoxContainer/VBoxContainer2/TextureButton2" to="MainMenu/login/VBoxContainer/VBoxContainer2/TextureButton2" method="_on_login_pressed"]
+[node name="Label2" parent="MainMenu/login2/rig" index="0"]
+anchor_left = 0.2350547
+anchor_top = 0.2606025
+anchor_right = 0.76320004
+anchor_bottom = 0.6657631
+
+[connection signal="pressed" from="MainMenu/login/VBoxContainer2/TextureButton2" to="MainMenu/login/VBoxContainer2/TextureButton2" method="_on_login_pressed"]
 
 [editable path="parsu"]
 [editable path="parsu/Sketchfab_Scene"]

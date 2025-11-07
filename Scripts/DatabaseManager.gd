@@ -1,9 +1,10 @@
 extends Node
 
+
+
 # Supabase Configuration loaded from Config.gd
-const Config = preload("res://Scripts/Config.gd")
-const SUPABASE_URL = Config.SUPABASE_URL
-const SUPABASE_KEY = Config.SUPABASE_KEY
+const SUPABASE_URL = "https://iklrakwakfculjkpstio.supabase.co"
+const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlrbHJha3dha2ZjdWxqa3BzdGlvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI0MzExNzcsImV4cCI6MjA3ODAwNzE3N30.czkL7aO7fh_5CZdhyfAsMarO7QtIaIveGbop5yUIX-s"
 
 # API Endpoints
 const AUTH_SIGNUP_URL = "/auth/v1/signup"

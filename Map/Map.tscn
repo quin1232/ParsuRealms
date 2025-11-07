@@ -769,7 +769,6 @@ visible = false
 script = null
 
 [node name="OpeningClouds" type="Sprite2D" parent="CanvasLayer2"]
-visible = false
 z_index = 10
 z_as_relative = false
 position = Vector2(83, 561)
@@ -777,7 +776,6 @@ scale = Vector2(1.22839, 1.7486122)
 texture = SubResource("CompressedTexture2D_s8uph")
 
 [node name="OpeningClouds2" type="Sprite2D" parent="CanvasLayer2"]
-visible = false
 z_index = 10
 position = Vector2(1636, 486)
 scale = Vector2(1.27318, 1.7812506)

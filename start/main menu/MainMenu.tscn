@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bpee1eb1cfvs7"]
+[gd_scene load_steps=18 format=3 uid="uid://bpee1eb1cfvs7"]
 
 [ext_resource type="Script" uid="uid://d3xb8rkg6u3va" path="res://start/main menu/start.gd" id="1_crsv3"]
 [ext_resource type="Shader" uid="uid://cxb733jawm8pg" path="res://shaders/logoparsurealms.gdshader" id="2_2lmab"]
@@ -43,6 +43,8 @@ corner_detail = 5
 
 [sub_resource type="Theme" id="Theme_yyse5"]
 Panel/styles/panel = SubResource("StyleBoxFlat_7p0sg")
+
+[sub_resource type="Theme" id="Theme_hkhi8"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -97,31 +99,27 @@ texture = ExtResource("5_1bim0")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.33697918
-anchor_top = 0.06666667
+anchor_top = 0.29814816
 anchor_right = 0.665625
 anchor_bottom = 0.92685187
-pivot_offset = Vector2(1410, 508)
+pivot_offset = Vector2(301, 1)
 theme = SubResource("Theme_yyse5")
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="login"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.15607607
-anchor_top = 0.21257487
-anchor_right = 0.8368653
-anchor_bottom = 0.6566527
-offset_right = -57.18628
-offset_bottom = -48.54828
-scale = Vector2(1.12, 1.12)
+anchor_left = 0.19492869
+anchor_top = 0.21502212
+anchor_right = 0.8145979
+anchor_bottom = 0.6062291
+offset_right = -18.619568
+offset_bottom = -12.648987
+scale = Vector2(1.05, 1.05)
 theme = ExtResource("6_aeeeo")
 theme_override_constants/separation = 14
 alignment = 1
 metadata/_edit_use_anchors_ = true
-
-[node name="MarginContainer" type="MarginContainer" parent="login/VBoxContainer"]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
 
 [node name="Label" type="Label" parent="login/VBoxContainer"]
 layout_mode = 2
@@ -130,11 +128,18 @@ theme_override_font_sizes/font_size = 31
 text = "LOGIN"
 horizontal_alignment = 1
 
+[node name="Errordisplaymessage" type="Label" parent="login/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.40724555, 0.33865184, 1)
+theme_override_fonts/font = ExtResource("5_i71yj")
+text = "cdcddcdcdcdc"
+horizontal_alignment = 1
+
 [node name="LineEdit" type="LineEdit" parent="login/VBoxContainer"]
 clip_contents = true
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.172833, 0.17283255, 0.17283264, 1)
+theme_override_colors/font_color = Color(0.072842576, 0.07284265, 0.072842605, 1)
 theme_override_colors/font_selected_color = Color(0.13682577, 0.13682574, 0.13682571, 1)
 theme_override_colors/font_placeholder_color = Color(0.35531357, 0.35531357, 0.3553135, 1)
 theme_override_colors/caret_color = Color(0.19793698, 0.19793728, 0.1979377, 1)
@@ -146,17 +151,29 @@ metadata/_edit_use_anchors_ = true
 [node name="LineEdit2" type="LineEdit" parent="login/VBoxContainer"]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.0687985, 0.0687982, 0.06879826, 1)
+theme_override_colors/font_selected_color = Color(0.06879827, 0.06879828, 0.06879828, 1)
 theme_override_colors/font_placeholder_color = Color(0.35686275, 0.35686275, 0.35686275, 1)
+theme_override_colors/caret_color = Color(0.1148966, 0.11489683, 0.11489714, 1)
 theme_override_fonts/font = ExtResource("5_i71yj")
 placeholder_text = "Password"
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="login/VBoxContainer"]
-layout_mode = 2
+[node name="VBoxContainer2" type="VBoxContainer" parent="login"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18782249
+anchor_top = -0.3412107
+anchor_right = -0.08557845
+anchor_bottom = -0.3412107
+offset_left = 98.48401
+offset_top = 628.68207
+offset_right = 470.484
+offset_bottom = 828.68207
 theme_override_constants/separation = 10
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton2" type="TextureButton" parent="login/VBoxContainer/VBoxContainer2"]
+[node name="TextureButton2" type="TextureButton" parent="login/VBoxContainer2"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 texture_normal = ExtResource("8_fse7g")
@@ -164,19 +181,19 @@ ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="login/VBoxContainer/VBoxContainer2/TextureButton2"]
+[node name="Label" type="Label" parent="login/VBoxContainer2/TextureButton2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.430866
-anchor_top = 0.19818328
-anchor_right = 0.6055972
-anchor_bottom = 0.66485
+anchor_left = 0.3316584
+anchor_top = 0.2500001
+anchor_right = 0.65829164
+anchor_bottom = 0.7166668
 theme_override_fonts/font = ExtResource("5_i71yj")
 theme_override_font_sizes/font_size = 22
 text = "Login"
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton3" type="TextureButton" parent="login/VBoxContainer/VBoxContainer2"]
+[node name="TextureButton3" type="TextureButton" parent="login/VBoxContainer2"]
 custom_minimum_size = Vector2(6.825, 60)
 layout_mode = 2
 texture_normal = ExtResource("9_jh33o")
@@ -185,19 +202,19 @@ stretch_mode = 0
 script = ExtResource("9_hkhi8")
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="login/VBoxContainer/VBoxContainer2/TextureButton3"]
+[node name="Label2" type="Label" parent="login/VBoxContainer2/TextureButton3"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.39006338
-anchor_top = 0.1922307
-anchor_right = 0.6588806
-anchor_bottom = 0.6588974
+anchor_left = 0.24623112
+anchor_top = 0.23333381
+anchor_right = 0.7487437
+anchor_bottom = 0.7000005
 theme_override_fonts/font = ExtResource("5_i71yj")
 theme_override_font_sizes/font_size = 22
 text = "Register"
 metadata/_edit_use_anchors_ = true
 
-[node name="guest" type="TextureButton" parent="login/VBoxContainer/VBoxContainer2"]
+[node name="guest" type="TextureButton" parent="login/VBoxContainer2"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 texture_normal = ExtResource("9_ertl8")
@@ -205,13 +222,13 @@ ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="login/VBoxContainer/VBoxContainer2/guest"]
+[node name="Label" type="Label" parent="login/VBoxContainer2/guest"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.28205642
-anchor_top = 0.2904456
-anchor_right = 0.7471102
-anchor_bottom = 0.75711226
+anchor_left = 0.06532671
+anchor_top = 0.28333294
+anchor_right = 0.93467337
+anchor_bottom = 0.74999964
 offset_right = 1.5258789e-05
 theme_override_fonts/font = ExtResource("5_i71yj")
 theme_override_font_sizes/font_size = 22
@@ -235,7 +252,8 @@ anchors_preset = -1
 anchor_left = 0.14626391
 anchor_top = 0.2462203
 anchor_right = 0.8187599
-anchor_bottom = 0.70302373
+anchor_bottom = 0.73974085
+offset_bottom = -34.0
 theme = ExtResource("6_aeeeo")
 theme_override_constants/separation = 14
 alignment = 1
@@ -252,11 +270,21 @@ theme_override_font_sizes/font_size = 26
 text = "REGISTER"
 horizontal_alignment = 1
 
+[node name="regester_message" type="Label" parent="login2/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.24524, 0.18784568, 1)
+theme_override_fonts/font = ExtResource("5_i71yj")
+horizontal_alignment = 1
+
 [node name="LineEdit" type="LineEdit" parent="login2/VBoxContainer2"]
 clip_contents = true
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
+theme = SubResource("Theme_hkhi8")
+theme_override_colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+theme_override_colors/font_selected_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 theme_override_colors/font_placeholder_color = Color(0.35531357, 0.35531357, 0.3553135, 1)
+theme_override_colors/caret_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 theme_override_fonts/font = ExtResource("5_i71yj")
 placeholder_text = "Email"
 virtual_keyboard_type = 5
@@ -265,7 +293,10 @@ metadata/_edit_use_anchors_ = true
 [node name="LineEdit2" type="LineEdit" parent="login2/VBoxContainer2"]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+theme_override_colors/font_selected_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 theme_override_colors/font_placeholder_color = Color(0.35686275, 0.35686275, 0.35686275, 1)
+theme_override_colors/caret_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 theme_override_fonts/font = ExtResource("5_i71yj")
 placeholder_text = "Password"
 metadata/_edit_use_anchors_ = true
@@ -273,7 +304,10 @@ metadata/_edit_use_anchors_ = true
 [node name="LineEdit3" type="LineEdit" parent="login2/VBoxContainer2"]
 custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+theme_override_colors/font_selected_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 theme_override_colors/font_placeholder_color = Color(0.35686275, 0.35686275, 0.35686275, 1)
+theme_override_colors/caret_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
 theme_override_fonts/font = ExtResource("5_i71yj")
 placeholder_text = "Confim Password"
 metadata/_edit_use_anchors_ = true
@@ -282,10 +316,10 @@ metadata/_edit_use_anchors_ = true
 custom_minimum_size = Vector2(0.86, 0)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.3674615
-anchor_top = 0.8280006
-anchor_right = 0.6263901
-anchor_bottom = 0.8941693
+anchor_left = 0.36724958
+anchor_top = 0.85205185
+anchor_right = 0.62617815
+anchor_bottom = 0.91822046
 texture_normal = ExtResource("8_fse7g")
 ignore_texture_size = true
 stretch_mode = 0
@@ -295,10 +329,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="login2/lohin"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.3349755
-anchor_top = 0.285149
-anchor_right = 0.7369182
-anchor_bottom = 0.7287142
+anchor_left = 0.29472062
+anchor_top = 0.27745092
+anchor_right = 0.6966633
+anchor_bottom = 0.73442847
 theme_override_fonts/font = ExtResource("5_i71yj")
 theme_override_font_sizes/font_size = 22
 text = "Login"
@@ -307,10 +341,10 @@ metadata/_edit_use_anchors_ = true
 [node name="rig" type="TextureButton" parent="login2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.34577796
-anchor_top = 0.7408101
-anchor_right = 0.6467983
-anchor_bottom = 0.8154412
+anchor_left = 0.34499207
+anchor_top = 0.76673865
+anchor_right = 0.6460124
+anchor_bottom = 0.84136975
 texture_normal = ExtResource("7_1bim0")
 ignore_texture_size = true
 stretch_mode = 0
@@ -319,10 +353,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Label2" type="Label" parent="login2/rig"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.29237285
-anchor_top = 0.294952
-anchor_right = 0.79661024
-anchor_bottom = 0.6882215
+anchor_left = 0.23766546
+anchor_top = 0.27493033
+anchor_right = 0.7658108
+anchor_bottom = 0.6800909
 theme_override_fonts/font = ExtResource("5_i71yj")
 theme_override_font_sizes/font_size = 22
 text = "Register"

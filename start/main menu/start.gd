@@ -1,7 +1,7 @@
 extends Control
 
 @onready var next_scene_path: String = "res://Map/Map.tscn"
-@onready var note_label: TextureButton = $login/VBoxContainer/VBoxContainer2/guest
+@onready var note_label: TextureButton = $login/VBoxContainer2/guest
 
 var _transitioning := false
 var _tree: SceneTree  # cache the tree early so it’s never null later
