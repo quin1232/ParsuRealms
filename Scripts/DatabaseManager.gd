@@ -51,18 +51,60 @@ func signup(email: String, password: String, username: String) -> Dictionary:
 	var status_code = response[1]
 	var response_body = JSON.parse_string(response[3].get_string_from_utf8())
 	
-	# Debug output
-	print("Signup Status Code: ", status_code)
-	print("Signup Response Body: ", response_body)
+	# Debug output - DETAILED
+	print("=== SIGNUP DEBUG ===")
+	print("Status Code: ", status_code)
+	print("Raw Response: ", response[3].get_string_from_utf8())
+	print("Parsed Body: ", response_body)
+	if response_body and typeof(response_body) == TYPE_DICTIONARY:
+		print("Body Keys: ", response_body.keys())
+		if "error" in response_body:
+			print("Error field: ", response_body["error"])
+		if "message" in response_body:
+			print("Message field: ", response_body["message"])
+		if "error_description" in response_body:
+			print("Error Description: ", response_body["error_description"])
+	print("===================")
 	
 	if status_code == 200 or status_code == 201:
+		# Check if this is a duplicate registration attempt
+		# Supabase returns 200 even for duplicates if email is unconfirmed
+		# Key indicator: look for very recent created_at matching confirmation_sent_at
+		if response_body and "id" in response_body:
+			# Try to detect if this is a re-send by checking the response
+			# New users have matching created_at and confirmation_sent_at (within milliseconds)
+			# Re-registrations might have been created earlier
+			
+			# Alternative check: Use a simple heuristic
+			# If identities array is empty, user hasn't confirmed email yet
+			# This could mean it's a new signup OR a duplicate unconfirmed signup
+			# We can't reliably distinguish, but we'll show a helpful message
+			
+			# For now, just return success and let them know to check email
+			pass
+		
 		return {"success": true, "data": response_body}
 	else:
 		var error_message = "Registration failed"
-		if response_body and "error_description" in response_body:
-			error_message = response_body["error_description"]
-		elif response_body and "msg" in response_body:
-			error_message = response_body["msg"]
+		if response_body:
+			# Check multiple possible error fields from Supabase
+			if "error_description" in response_body:
+				error_message = response_body["error_description"]
+			elif "message" in response_body:
+				error_message = response_body["message"]
+			elif "msg" in response_body:
+				error_message = response_body["msg"]
+			elif "error" in response_body:
+				var error_val = response_body["error"]
+				if typeof(error_val) == TYPE_STRING:
+					error_message = error_val
+				elif typeof(error_val) == TYPE_DICTIONARY and "message" in error_val:
+					error_message = error_val["message"]
+				else:
+					error_message = str(error_val)
+		
+		# Log the full error for debugging
+		print("Signup Error Message: ", error_message)
 		return {"success": false, "error": error_message}
 
 # Login an existing user

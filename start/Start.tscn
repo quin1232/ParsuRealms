@@ -79,6 +79,7 @@ libraries = {
 [node name="MainMenu" parent="." instance=ExtResource("2_xhal0")]
 
 [node name="login" parent="MainMenu" index="2"]
+visible = false
 anchor_left = 0.33229166
 anchor_top = 0.33055556
 anchor_right = 0.6609375
@@ -114,9 +115,6 @@ script = ExtResource("4_83rma")
 email_input = NodePath("../../VBoxContainer/LineEdit")
 password_input = NodePath("../../VBoxContainer/LineEdit2")
 error_label = NodePath("../../VBoxContainer/Errordisplaymessage")
-
-[node name="login2" parent="MainMenu" index="3"]
-visible = false
 
 [node name="Label" parent="MainMenu/login2/lohin" index="0"]
 anchor_left = 0.29390216

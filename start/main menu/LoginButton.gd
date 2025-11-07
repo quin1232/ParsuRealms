@@ -84,8 +84,9 @@ func _show_message(message: String, is_error: bool = false, clear_error: bool = 
 			error_label.visible = true
 			if is_error:
 				error_label.add_theme_color_override("font_color", Color(1.0, 0.4078, 0.3372)) # HEX #ff6856
+				await get_tree().create_timer(2.0).timeout
+				error_label.text = ""
 			else:
 				error_label.add_theme_color_override("font_color", Color(0, 0.7, 0)) # Green
 				await get_tree().create_timer(2.0).timeout
 				error_label.text = ""
-				error_label.visible = false 

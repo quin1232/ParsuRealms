@@ -49,9 +49,19 @@ func _on_register_pressed() -> void:
 	self.disabled = false
 
 	if result["success"]:
-		_show_message("Registration successful! \nCheck your inbox to confirm your account.")
-		if regester_message:
-			regester_message.add_theme_color_override("font_color", Color(0, 0.7, 0)) # Green
+		var user_data = result.get("data", {})
+		var identities = user_data.get("identities", [])
+		
+		# Check if email needs confirmation (identities will be empty until confirmed)
+		if identities is Array and identities.size() == 0:
+			_show_message("This email is already registered.\nPlease login or use a different email.")
+			if regester_message:
+				regester_message.add_theme_color_override("font_color", Color(0.95, 0.7, 0)) # Orange/yellow
+		else:
+			_show_message("Registration successful!\nCheck your inbox to confirm your account.")
+			if regester_message:
+				regester_message.add_theme_color_override("font_color", Color(0, 0.7, 0)) # Green
+		
 		# Clear fields
 		email_input.text = ""
 		password_input.text = ""
@@ -63,8 +73,17 @@ func _on_register_pressed() -> void:
 	else:
 		var error = result.get("error", "Unknown error")
 		var error_lower = error.to_lower()
-		if error_lower.find("already registered") != -1 or error_lower.find("already exists") != -1 or error_lower.find("email exists") != -1:
-			_show_message("Email is already registered.")
+		
+		# Check for various "email already exists" error patterns from Supabase
+		if (error_lower.find("already registered") != -1 or 
+			error_lower.find("already exists") != -1 or 
+			error_lower.find("already been registered") != -1 or
+			error_lower.find("email address has already") != -1 or
+			error_lower.find("user with this email") != -1 or
+			error_lower.find("email exists") != -1 or
+			error_lower.find("user already registered") != -1 or
+			error_lower.find("duplicate") != -1):
+			_show_message("This email is already registered.\nPlease login or use a different email.")
 			if regester_message:
 				regester_message.add_theme_color_override("font_color", Color(1.0, 0.4078, 0.3372)) # HEX #ff6856
 		else:
