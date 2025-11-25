@@ -96,7 +96,6 @@ offset_bottom = 1285.0
 texture = ExtResource("5_1bim0")
 
 [node name="login" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.33697918
@@ -237,6 +236,7 @@ text = "Login as Guest"
 metadata/_edit_use_anchors_ = true
 
 [node name="login2" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3375

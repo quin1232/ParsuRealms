@@ -5,7 +5,7 @@ extends Control
 @export var win_panel: Control # Assign your win panel node in the editor
 @export var start_btn: TextureButton # Assign your start button node in the editor
 
-@export var taps_to_fill: int = 5 # Number of taps to reach 100
+@export var taps_to_fill: int = 20 # Number of taps to reach 100
 @export var decay_interval: float = 0.5 # Seconds between decreases
 @export var decrease_amount: float = 10.0 # Amount to decrease per tick (set in editor)
 

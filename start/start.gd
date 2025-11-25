@@ -14,7 +14,11 @@ func _ready() -> void:
 func _on_animation_finished(anim_name: String) -> void:
 	if anim_name == "OPENING":
 		fade_in_ui()
-		$MainMenu/login.show()
+		var login = $MainMenu/login
+		login.show()
+		login.scale = Vector2(0.5, 0.5)
+		var tween = create_tween()
+		tween.tween_property(login, "scale", Vector2(1, 1), 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 func fade_in_ui() -> void:
 	ui.visible = true

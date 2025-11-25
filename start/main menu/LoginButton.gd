@@ -1,4 +1,18 @@
 extends TextureButton
+var _press_tween: Tween
+
+func _pressed_animation():
+	if _press_tween:
+		_press_tween.kill()
+	self.scale = Vector2(1, 1)
+	# Set pivot to center for proper scaling
+	if has_method("set_pivot_offset"):
+		set_pivot_offset(Vector2(size.x / 2, size.y / 2))
+	elif "pivot_offset" in self:
+		self.pivot_offset = Vector2(size.x / 2, size.y / 2)
+	_press_tween = create_tween()
+	_press_tween.tween_property(self, "scale", Vector2(0.85, 0.85), 0.08).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	_press_tween.tween_property(self, "scale", Vector2(1, 1), 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 
 @export var email_input: LineEdit
@@ -8,6 +22,7 @@ extends TextureButton
 
 func _on_login_pressed() -> void:
 	print("press")
+	_pressed_animation()
 	var email = email_input.text.strip_edges()
 	var password = password_input.text
 
@@ -42,6 +57,11 @@ func _on_login_pressed() -> void:
 
 	self.disabled = false
 
+	# Check for connection errors
+	if not result:
+		_show_message("No internet connection. Please check your network.", true)
+		return
+	
 	if result["success"]:
 		_show_message("Login successful!", false)
 		# Store username if available
@@ -55,6 +75,17 @@ func _on_login_pressed() -> void:
 		Global.is_guest = false
 
 		print("Welcome, " + username + "!")
+		
+		# Load player's quest progress from database
+		_show_message("Loading quest progress...", false, false)
+		var load_success = await Global.load_quest_progress_from_db()
+		if load_success == false:
+			# Quest progress failed to load but continue anyway
+			print("Warning: Could not load quest progress (offline or connection issue)")
+			_show_message("Offline mode - progress not loaded", false, false)
+			await get_tree().create_timer(1.5).timeout
+		else:
+			print("Quest progress loaded: ", Global.finishQuest, " quests completed")
 
 		# Change scene or continue game
 		await get_tree().create_timer(1.0).timeout

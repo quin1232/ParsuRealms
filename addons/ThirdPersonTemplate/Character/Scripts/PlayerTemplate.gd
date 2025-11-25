@@ -6,7 +6,6 @@ func _set_physics_process(enable: bool) -> void:
 	if not enable and walking_sound_playing:
 		walking_audio.stop()
 		walking_sound_playing = false
-		print("DEBUG: Walking sound stopped (_set_physics_process)")
 
 # ───────── AnimationTree / State Machine ─────────
 @onready var animation_tree: AnimationTree = $AnimationTree
@@ -23,7 +22,7 @@ func _set_physics_process(enable: bool) -> void:
 @export var gravity: float = 9.8
 @export var jump_force: float = 6.0
 @export var walk_speed: float = 2.5
-@export var run_speed: float = 20.5
+@export var run_speed: float = 15.5
 @export var angular_acceleration: float = 10.0
 @export var acceleration: float = 15.0
 @export var jump_windup: float = 0.25  # jump wind-up before lift
@@ -83,11 +82,7 @@ func _ready() -> void:
 	animation_tree.root_motion_track = NodePath("")  # disables root motion extraction
 	playback.start("Idle")
 
-	# Debug: Check walking_audio node assignment
-	if walking_audio:
-		print("DEBUG: walking_audio node found")
-	else:
-		print("DEBUG: walking_audio node NOT found")
+	Input.set_use_accumulated_input(true) # Enable multi-touch for all buttons
 
 func _physics_process(delta: float) -> void:
 	var was_grounded := _smoothed_grounded()
@@ -130,21 +125,17 @@ func _physics_process(delta: float) -> void:
 			if not walking_sound_playing:
 				walking_audio.play()
 				walking_sound_playing = true
-				print("DEBUG: Walking sound started")
 
 			# Continuously update pitch while walking/running
 			if is_running:
 				walking_audio.pitch_scale = 1.7
-				print("DEBUG: Running sound (pitch increased)")
 			else:
 				walking_audio.pitch_scale = 1.0
-				print("DEBUG: Walking sound (normal pitch)")
 		else:
 			# If not on floor, stop sound
 			if walking_sound_playing:
 				walking_audio.stop()
 				walking_sound_playing = false
-				print("DEBUG: Walking sound stopped (air)")
 				walking_audio.pitch_scale = 1.0
 	else:
 		is_walking = false

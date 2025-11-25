@@ -1,4 +1,18 @@
 extends TextureButton
+var _press_tween: Tween
+
+func _pressed_animation():
+	if _press_tween:
+		_press_tween.kill()
+	self.scale = Vector2(1, 1)
+	# Set pivot to center for proper scaling
+	if has_method("set_pivot_offset"):
+		set_pivot_offset(Vector2(size.x / 2, size.y / 2))
+	elif "pivot_offset" in self:
+		self.pivot_offset = Vector2(size.x / 2, size.y / 2)
+	_press_tween = create_tween()
+	_press_tween.tween_property(self, "scale", Vector2(0.85, 0.85), 0.08).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	_press_tween.tween_property(self, "scale", Vector2(1, 1), 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 @export var email_input: LineEdit
 @export var password_input : LineEdit
@@ -13,6 +27,7 @@ func _ready() -> void:
 		username_input.max_length = 10
 
 func _on_register_pressed() -> void:
+	_pressed_animation()
 	var email = email_input.text.strip_edges()
 	var password = password_input.text
 	var username = username_input.text
@@ -48,6 +63,13 @@ func _on_register_pressed() -> void:
 
 	self.disabled = false
 
+	# Check for connection errors
+	if not result:
+		_show_message("No internet connection. Please check your network.")
+		if regester_message:
+			regester_message.add_theme_color_override("font_color", Color(1.0, 0.4078, 0.3372))
+		return
+	
 	if result["success"]:
 		var user_data = result.get("data", {})
 		var identities = user_data.get("identities", [])
@@ -74,14 +96,21 @@ func _on_register_pressed() -> void:
 		var error = result.get("error", "Unknown error")
 		var error_lower = error.to_lower()
 		
+		# Check for connection/network errors first
+		if (error_lower.find("internet") != -1 or 
+			error_lower.find("connection") != -1 or
+			error_lower.find("network") != -1):
+			_show_message("No internet connection. Please check your network.")
+			if regester_message:
+				regester_message.add_theme_color_override("font_color", Color(1.0, 0.4078, 0.3372))
 		# Check for various "email already exists" error patterns from Supabase
-		if (error_lower.find("already registered") != -1 or 
+		elif (error_lower.find("already registered") != -1 or 
 			error_lower.find("already exists") != -1 or 
-			error_lower.find("already been registered") != -1 or
-			error_lower.find("email address has already") != -1 or
-			error_lower.find("user with this email") != -1 or
-			error_lower.find("email exists") != -1 or
-			error_lower.find("user already registered") != -1 or
+			error_lower.find("already been registered") != -1 or 
+			error_lower.find("email address has already") != -1 or 
+			error_lower.find("user with this email") != -1 or 
+			error_lower.find("email exists") != -1 or 
+			error_lower.find("user already registered") != -1 or 
 			error_lower.find("duplicate") != -1):
 			_show_message("This email is already registered.\nPlease login or use a different email.")
 			if regester_message:

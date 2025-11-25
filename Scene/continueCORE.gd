@@ -8,3 +8,5 @@ func _on_pressed() -> void:
 	$"../../../PlayerTemplate/SoundEffecs/QuestComplete".play()
 	$"../../../questcom".show()
 	$"../..".hide()
+	# Save quest completion to database
+	await Global.complete_quest("CBM")

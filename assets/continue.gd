@@ -9,4 +9,5 @@ func _on_pressed() -> void:
 	$"..".hide()
 	$"../../Questcomplete".show()
 	$"../../PlayerTemplate/Quest".hide()
-	Global.CEDfinish = true
+	# Save quest completion to database
+	await Global.complete_quest("CED")

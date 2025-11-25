@@ -2,7 +2,7 @@ extends VehicleBody3D
 
 @export var STEER_SPEED: float = 1.5
 @export var STEER_LIMIT: float = 0.6
-@export var engine_force_value: float = 35.0
+@export var engine_force_value: float = 50.0
 
 # If GAS makes you go backward, flip this to -1.0
 @export var FORWARD_SIGN: float = 1.0
@@ -33,6 +33,8 @@ func _ready() -> void:
 		push_warning("Gas button not found at Control/gas (or exported path).")
 	if not _btn_reverse:
 		push_warning("Reverse button not found at Control/reverse (or exported path).")
+	# Enable accumulated input for multi-touch support
+	Input.set_use_accumulated_input(true)
 
 func _physics_process(delta: float) -> void:
 	# Forward is -Z in Godot
@@ -66,12 +68,15 @@ func _physics_process(delta: float) -> void:
 	engine_force = 0.0
 	var base_force := engine_force_value * FORWARD_SIGN
 
+
 	if want_gas:
+
 		if abs_speed < 20.0 and abs_speed != 0.0:
 			engine_force = clamp(base_force * -3.0 / abs_speed, -300.0, 300.0)
 		else:
 			engine_force = base_force
-	elif want_rev:
+
+	if want_rev:
 		if abs_speed < 30.0 and abs_speed != 0.0:
 			engine_force = clamp(-base_force * -10.0 / abs_speed, -300.0, 300.0)
 		else:

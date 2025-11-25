@@ -14,6 +14,7 @@ func _on_pressed() -> void:
 	$"../prev".show()
 	$"../continue".show()
 	hide()
-	Global.CEDfinish = true
+	# Save quest completion to database
+	await Global.complete_quest("CED")
 	
 	

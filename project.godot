@@ -13,7 +13,7 @@ config_version=5
 config/name="ParSU Realms"
 run/main_scene="uid://chi3lj43tgge8"
 config/features=PackedStringArray("4.5", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://coq224jcr2ykb"
 
 [autoload]
 
@@ -22,6 +22,7 @@ Global="*res://Global/Global.gd"
 GlobalTracking="*res://Global/GlobalTracking.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Database="*res://Global/Database.gd"
+AppConfig="*res://addons/maaacks_options_menus/base/scenes/autoloads/app_config.tscn"
 
 [dialogic]
 
@@ -92,7 +93,7 @@ variables={
 layout/style_list=["res://New_File.tres"]
 layout/default_style="res://New_File.tres"
 extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.03
+text/letter_speed=0.001
 text/initial_text_reveal_skippable=false
 text/text_reveal_skip_delay=0.01
 text/advance_delay=0.1
@@ -139,10 +140,12 @@ save/autosave=false
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/sky_3d/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/maaacks_options_menus/plugin.cfg", "res://addons/sky_3d/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg")
 
 [filesystem]
 
@@ -209,7 +212,20 @@ Interact={
 
 pointing/emulate_touch_from_mouse=true
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/maaacks_options_menus/base/translations/menus_translations.en.translation", "res://addons/maaacks_options_menus/base/translations/menus_translations.fr.translation")
+
+[maaacks_options_menus]
+
+disable_update_check=false
+disable_install_wizard=true
+
 [rendering]
 
+textures/canvas_textures/default_texture_filter=2
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/directional_shadow/size=2048
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+2d/snapping/use_gpu_pixel_snap=true

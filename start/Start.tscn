@@ -49,7 +49,7 @@ metadata/_edit_vertical_guides_ = [960.0]
 
 [node name="parsu" parent="." instance=ExtResource("1_gx2gx")]
 
-[node name="Sky3D" parent="parsu" index="0"]
+[node name="Sky3D" parent="parsu" index="3"]
 current_time = 7.76
 
 [node name="SunLight" parent="parsu/Sky3D" index="0"]
@@ -79,6 +79,7 @@ libraries = {
 [node name="MainMenu" parent="." instance=ExtResource("2_xhal0")]
 
 [node name="login" parent="MainMenu" index="2"]
+visible = false
 anchor_left = 0.33229166
 anchor_top = 0.33055556
 anchor_right = 0.6609375
@@ -99,6 +100,12 @@ pivot_offset = Vector2(4.272827, 2.5847168)
 [node name="Errordisplaymessage" parent="MainMenu/login/VBoxContainer" index="1"]
 text = ""
 
+[node name="LineEdit" parent="MainMenu/login/VBoxContainer" index="2"]
+theme_override_font_sizes/font_size = 20
+
+[node name="LineEdit2" parent="MainMenu/login/VBoxContainer" index="3"]
+theme_override_font_sizes/font_size = 20
+
 [node name="VBoxContainer2" parent="MainMenu/login" index="1"]
 anchor_left = 0.32488114
 anchor_top = 0.5545723
@@ -115,14 +122,50 @@ email_input = NodePath("../../VBoxContainer/LineEdit")
 password_input = NodePath("../../VBoxContainer/LineEdit2")
 error_label = NodePath("../../VBoxContainer/Errordisplaymessage")
 
-[node name="login2" parent="MainMenu" index="3"]
-visible = false
+[node name="Label" parent="MainMenu/login/VBoxContainer2/TextureButton2" index="0"]
+anchor_left = 0.009755986
+anchor_top = 0.06666676
+anchor_right = 0.99024373
+anchor_bottom = 1.0000001
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" parent="MainMenu/login/VBoxContainer2/TextureButton3" index="0"]
+anchor_left = 0.0048781605
+anchor_top = -0.01666619
+anchor_right = 1.0000001
+anchor_bottom = 1.0000005
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" parent="MainMenu/login/VBoxContainer2/guest" index="0"]
+anchor_left = 0.0097561395
+anchor_top = 0.03333295
+anchor_right = 0.99512196
+anchor_bottom = 0.98333293
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Username" parent="MainMenu/login2/VBoxContainer2" index="3"]
+theme_override_font_sizes/font_size = 20
+
+[node name="LineEdit" parent="MainMenu/login2/VBoxContainer2" index="4"]
+theme_override_font_sizes/font_size = 20
+
+[node name="LineEdit2" parent="MainMenu/login2/VBoxContainer2" index="5"]
+theme_override_font_sizes/font_size = 20
 
 [node name="Label" parent="MainMenu/login2/lohin" index="0"]
-anchor_left = 0.29390216
-anchor_top = 0.2655601
-anchor_right = 0.6958449
-anchor_bottom = 0.72253764
+anchor_left = 0.006139967
+anchor_top = 0.04896213
+anchor_right = 1.0008222
+anchor_bottom = 0.9955585
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="rig" parent="MainMenu/login2" index="2" node_paths=PackedStringArray("email_input", "password_input", "username_input", "loginPanel", "regester_message")]
 script = ExtResource("5_u8o0p")
@@ -133,10 +176,13 @@ loginPanel = NodePath("../../login")
 regester_message = NodePath("../VBoxContainer2/regester_message")
 
 [node name="Label2" parent="MainMenu/login2/rig" index="0"]
-anchor_left = 0.2350547
-anchor_top = 0.2606025
-anchor_right = 0.76320004
-anchor_bottom = 0.6657631
+anchor_left = 0.052814577
+anchor_top = 0.057880003
+anchor_right = 0.9348173
+anchor_bottom = 0.9405513
+theme_override_font_sizes/font_size = 25
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="MainMenu/login/VBoxContainer2/TextureButton2" to="MainMenu/login/VBoxContainer2/TextureButton2" method="_on_login_pressed"]
 

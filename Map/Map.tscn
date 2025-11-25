@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://b2bk143ow36up"]
+[gd_scene load_steps=53 format=3 uid="uid://b2bk143ow36up"]
 
 [ext_resource type="Texture2D" uid="uid://bneebhynyaw78" path="res://Map/bg.png" id="1_17lxq"]
 [ext_resource type="Script" uid="uid://clnatbb1mhnvt" path="res://Map/map.gd" id="1_b3jsu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bsky5qfh1xhkg" path="res://Map/parallax_layer.gd" id="2_2623n"]
 [ext_resource type="Theme" uid="uid://f4wbom1wnc0x" path="res://Map/Mapss.tres" id="3_2q318"]
 [ext_resource type="Texture2D" uid="uid://dm7okfka41wim" path="res://Map/cloud1.png" id="4_qtvud"]
+[ext_resource type="Script" uid="uid://bp6ss03tdjhqs" path="res://Map/finish_quest.gd" id="5_pgkju"]
 [ext_resource type="Texture2D" uid="uid://do4i4l8u815co" path="res://UI/COLLEGES/reward/mu.png" id="5_tlvak"]
 [ext_resource type="Texture2D" uid="uid://bffwd0o7sfh5e" path="res://UI/COLLEGES/reward/vis.png" id="6_4r87e"]
 [ext_resource type="Texture2D" uid="uid://bpkp4heam54r0" path="res://Map/NewMap/MapA finnnnaaall.png" id="6_riqoh"]
@@ -21,11 +22,12 @@
 [ext_resource type="Texture2D" uid="uid://cr7a56nh4w8lv" path="res://assets/com.png" id="12_c31by"]
 [ext_resource type="PackedScene" uid="uid://c51hwenkuwn78" path="res://Scene/select_colleges.tscn" id="12_riqoh"]
 [ext_resource type="Script" uid="uid://hqr4p8vs8js1" path="res://Map/history.gd" id="12_tlvak"]
-[ext_resource type="Texture2D" uid="uid://cqui0d8s3fuyl" path="res://UI/COLLEGES/reward/SETTINGS(1).png" id="13_oaqmq"]
 [ext_resource type="Texture2D" uid="uid://cmxcecdgv6po0" path="res://Map/NewMap/GoaL.png" id="14_4r87e"]
 [ext_resource type="Script" uid="uid://dq52tv88t7jw4" path="res://Map/achivement.gd" id="14_7m04m"]
 [ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="14_ehio4"]
 [ext_resource type="Texture2D" uid="uid://btvja3s560oqo" path="res://UI/COLLEGES/reward/reward.png" id="14_elbhq"]
+[ext_resource type="Texture2D" uid="uid://bsvcpcrn5bt3c" path="res://UI/SETTINGS.png" id="16_j2jjv"]
+[ext_resource type="Script" uid="uid://01meawlngf17" path="res://Map/settings.gd" id="17_j2jjv"]
 [ext_resource type="Texture2D" uid="uid://b6as4va7052hi" path="res://Map/NewMap/SanjoseL.png" id="24_u7bh7"]
 [ext_resource type="Texture2D" uid="uid://bqxwkhw2lyfb8" path="res://Map/NewMap/SangayL.png" id="25_c31by"]
 [ext_resource type="PackedScene" uid="uid://cmci7und5xf51" path="res://assets/historybook.tscn" id="27_4r87e"]
@@ -37,6 +39,7 @@
 [ext_resource type="AudioStream" uid="uid://cuiktxi0bho6n" path="res://Sound Effects/Select2.mp3" id="31_oaqmq"]
 [ext_resource type="PackedScene" uid="uid://xh7778rta1co" path="res://Scene/core_values.tscn" id="31_xecfs"]
 [ext_resource type="PackedScene" uid="uid://byjgf1voeuayr" path="res://Scene/Vission.tscn" id="32_xecfs"]
+[ext_resource type="PackedScene" uid="uid://bdvdf5v87mmrr" path="res://addons/maaacks_options_menus/examples/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="34_q2727"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ehio4"]
 load_path = "res://.godot/imported/Tinambakbanner.png-d64fc4de463f51de4d4b4c06f75b57d2.ctex"
@@ -168,9 +171,9 @@ anchor_left = -0.22821502
 anchor_top = -0.18772915
 anchor_right = 1.1861995
 anchor_bottom = 1.1172174
-offset_left = 10.0
+offset_left = 11.0
 offset_top = 25.0
-offset_right = 10.0
+offset_right = 11.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -183,40 +186,43 @@ layer = 2
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.049479168
-anchor_top = 0.06574074
-anchor_right = 0.22083335
-anchor_bottom = 0.12962963
-offset_right = -3.0517578e-05
+anchor_left = 0.135
+anchor_top = 0.098000005
+anchor_right = 0.135
+anchor_bottom = 0.098000005
+offset_left = -164.20001
+offset_top = -34.840004
+offset_right = 164.79999
+offset_bottom = 34.159996
 theme = ExtResource("3_2q318")
 metadata/_edit_use_anchors_ = true
 
 [node name="Questpan" type="Panel" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.06431515
-anchor_top = 0.19139215
-anchor_right = 0.24556515
-anchor_bottom = 0.27564132
-offset_left = -9.485085
-offset_top = 2.2964783
-offset_right = -9.485077
-offset_bottom = 2.2964783
+anchor_left = 0.141
+anchor_top = 0.23600002
+anchor_right = 0.141
+anchor_bottom = 0.23600002
+offset_left = -173.72
+offset_top = -45.88002
+offset_right = 174.28
+offset_bottom = 45.109085
 theme = ExtResource("3_2q318")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/Questpan"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.12585022
-anchor_top = 0.092105225
-anchor_right = 0.92942154
-anchor_bottom = 0.51315784
+anchor_left = 0.13793106
+anchor_top = 0.09891297
+anchor_right = 0.9415024
+anchor_bottom = 0.5199656
 theme_override_fonts/font = ExtResource("14_ehio4")
 theme_override_font_sizes/font_size = 30
 text = "Quest Complete"
 metadata/_edit_use_anchors_ = true
 
-[node name="Label2" type="Label" parent="CanvasLayer/Questpan"]
+[node name="finishQuest" type="Label" parent="CanvasLayer/Questpan"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.40072197
@@ -226,6 +232,7 @@ anchor_bottom = 0.9736842
 theme_override_fonts/font = ExtResource("14_ehio4")
 theme_override_font_sizes/font_size = 30
 text = "0/3"
+script = ExtResource("5_pgkju")
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel3" type="Panel" parent="CanvasLayer"]
@@ -247,36 +254,39 @@ theme = ExtResource("3_2q318")
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel3"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.9280007
-anchor_top = 0.047684047
-anchor_right = 1.0019337
-anchor_bottom = 1.0337265
-offset_left = 0.37506104
-offset_top = 608.39996
-offset_right = 158.61389
-offset_bottom = 779.9534
+anchor_left = 0.49300003
+anchor_top = 0.005764987
+anchor_right = 0.5
+anchor_bottom = 0.005764987
+offset_left = 77.35876
+offset_top = 646.4283
+offset_right = 274.401
+offset_bottom = 1475.1825
+grow_horizontal = 2
+grow_vertical = 2
 rotation = 3.1415927
 scale = Vector2(0.78, 0.78)
 theme_override_constants/separation = 45
 alignment = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="hym" type="TextureButton" parent="CanvasLayer/Panel3/VBoxContainer"]
 custom_minimum_size = Vector2(61, 120)
 layout_mode = 2
 texture_normal = ExtResource("5_tlvak")
+stretch_mode = 3
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/hym"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.12896426
+anchor_left = -0.007248946
 anchor_top = 1.0090115
-anchor_right = 0.9548026
-anchor_bottom = 1.8840116
+anchor_right = 0.97912604
+anchor_bottom = 1.617345
 theme_override_font_sizes/font_size = 28
 text = "HYM
 "
 horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="vision" type="TextureButton" parent="CanvasLayer/Panel3/VBoxContainer" node_paths=PackedStringArray("vis", "UI")]
@@ -284,6 +294,7 @@ custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 toggle_mode = true
 texture_normal = ExtResource("6_4r87e")
+stretch_mode = 3
 script = ExtResource("7_4e4q7")
 vis = NodePath("../../../../CanvasLayer2/Vission2")
 UI = NodePath("../../..")
@@ -291,19 +302,22 @@ UI = NodePath("../../..")
 [node name="Label2" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/vision"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.11926036
+anchor_left = -0.0070565157
 anchor_top = 0.93337065
-anchor_right = 0.9680976
-anchor_bottom = 1.6083707
+anchor_right = 0.9875564
+anchor_bottom = 1.541704
 theme_override_font_sizes/font_size = 28
-text = "VISSION
+text = "VISION
 "
 horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="mission" type="TextureButton" parent="CanvasLayer/Panel3/VBoxContainer" node_paths=PackedStringArray("mis", "UI")]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 texture_normal = ExtResource("7_u7bh7")
+stretch_mode = 3
 script = ExtResource("8_riqoh")
 mis = NodePath("../../../../CanvasLayer2/Misson")
 UI = NodePath("../../..")
@@ -311,9 +325,9 @@ UI = NodePath("../../..")
 [node name="Label3" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/mission"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.02236135
+anchor_left = 0.0024256634
 anchor_top = 0.96862715
-anchor_right = 1.0223613
+anchor_right = 1.0066919
 anchor_bottom = 1.6436272
 theme_override_font_sizes/font_size = 28
 text = "MISSION
@@ -326,7 +340,7 @@ custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 texture_normal = ExtResource("8_8x48j")
 ignore_texture_size = true
-stretch_mode = 0
+stretch_mode = 3
 script = ExtResource("10_c31by")
 values = NodePath("../../../../CanvasLayer2/Core Values")
 UI = NodePath("../../..")
@@ -334,9 +348,9 @@ UI = NodePath("../../..")
 [node name="Label4" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/values"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.022362363
+anchor_left = -0.0035375056
 anchor_top = 0.98251635
-anchor_right = 1.0223624
+anchor_right = 0.9899866
 anchor_bottom = 1.6575164
 theme_override_font_sizes/font_size = 28
 text = "VALUES
@@ -357,15 +371,16 @@ UI = NodePath("../../..")
 [node name="Label5" type="Label" parent="CanvasLayer/Panel3/VBoxContainer/history"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05098477
+anchor_left = -0.0053019766
 anchor_top = 0.9109347
-anchor_right = 1.0149087
-anchor_bottom = 1.5859348
+anchor_right = 0.99882615
+anchor_bottom = 1.519268
 offset_right = 1.5258789e-05
 theme_override_font_sizes/font_size = 28
 text = "HISTORY
 "
 horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel3/VBoxContainer"]
@@ -373,38 +388,30 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.0125
-anchor_top = 0.17870371
-anchor_right = 0.08745559
-anchor_bottom = 0.29962224
-offset_right = -36.515686
-offset_bottom = -33.135284
+anchor_left = 0.049000002
+anchor_top = 0.238
+anchor_right = 0.049000002
+anchor_bottom = 0.238
+offset_left = -72.08
+offset_top = -67.04001
+offset_right = 35.319046
+offset_bottom = 30.416718
 scale = Vector2(1.34, 1.34)
 texture = ExtResource("11_tlvak")
 expand_mode = 2
-stretch_mode = 4
-metadata/_edit_use_anchors_ = true
-
-[node name="playername" type="Label" parent="CanvasLayer/TextureRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.81993
-anchor_top = -0.8652902
-anchor_right = 2.6635218
-anchor_bottom = -0.4753736
-theme_override_fonts/font = ExtResource("14_ehio4")
-theme_override_font_sizes/font_size = 30
-text = "Player name"
+stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="player" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_left = 0.0036458324
-anchor_top = 0.021296294
-anchor_right = 0.08427604
-anchor_bottom = 0.14687963
-offset_right = -41.809998
-offset_bottom = -36.630005
+anchor_left = 0.051000003
+anchor_top = 0.08400001
+anchor_right = 0.051000003
+anchor_bottom = 0.08400001
+offset_left = -76.920006
+offset_top = -69.72001
+offset_right = 36.079994
+offset_bottom = 29.279991
 scale = Vector2(1.37, 1.37)
 texture = ExtResource("12_4r87e")
 expand_mode = 2
@@ -412,7 +419,21 @@ stretch_mode = 5
 flip_h = true
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+[node name="playername" type="Label" parent="CanvasLayer/player"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6847102
+anchor_top = 0.435007
+anchor_right = 2.5283022
+anchor_bottom = 0.8249236
+theme_override_fonts/font = ExtResource("14_ehio4")
+theme_override_font_sizes/font_size = 30
+text = "Guest"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="settings" type="TextureButton" parent="CanvasLayer" node_paths=PackedStringArray("panel")]
 anchors_preset = -1
 anchor_left = 0.9
 anchor_top = 0.05648148
@@ -423,9 +444,11 @@ offset_top = -5.000004
 offset_right = -39.0
 offset_bottom = -37.659958
 scale = Vector2(1.34, 1.34)
-texture = ExtResource("13_oaqmq")
-expand_mode = 2
+texture_normal = ExtResource("16_j2jjv")
+ignore_texture_size = true
 stretch_mode = 4
+script = ExtResource("17_j2jjv")
+panel = NodePath("../../CanvasLayer2/MasterOptionsMenu")
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect4" type="TextureButton" parent="CanvasLayer" node_paths=PackedStringArray("achiveBox", "achivePanel")]
@@ -765,6 +788,7 @@ visible = false
 script = null
 
 [node name="OpeningClouds" type="Sprite2D" parent="CanvasLayer2"]
+visible = false
 z_index = 10
 z_as_relative = false
 position = Vector2(83, 561)
@@ -772,6 +796,7 @@ scale = Vector2(1.22839, 1.7486122)
 texture = SubResource("CompressedTexture2D_s8uph")
 
 [node name="OpeningClouds2" type="Sprite2D" parent="CanvasLayer2"]
+visible = false
 z_index = 10
 position = Vector2(1636, 486)
 scale = Vector2(1.27318, 1.7812506)
@@ -790,6 +815,15 @@ script = null
 
 [node name="Vission2" parent="CanvasLayer2" instance=ExtResource("32_xecfs")]
 visible = false
+
+[node name="MasterOptionsMenu" parent="CanvasLayer2" instance=ExtResource("34_q2727")]
+visible = false
+anchors_preset = -1
+anchor_left = 0.1109375
+anchor_top = 0.047222223
+anchor_right = 0.8890625
+anchor_bottom = 0.8888889
+metadata/_edit_use_anchors_ = true
 
 [node name="SoundEffects" type="Node" parent="."]
 
@@ -813,6 +847,7 @@ volume_db = 13.903
 [connection signal="pressed" from="CanvasLayer/Panel3/VBoxContainer/mission" to="CanvasLayer/Panel3/VBoxContainer/mission" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel3/VBoxContainer/values" to="CanvasLayer/Panel3/VBoxContainer/values" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel3/VBoxContainer/history" to="CanvasLayer/Panel3/VBoxContainer/history" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings" to="CanvasLayer/settings" method="_on_pressed"]
 [connection signal="pressed" from="CanvasLayer/TextureRect4" to="CanvasLayer/TextureRect4" method="_on_pressed"]
 [connection signal="input_event" from="Map/Area2D" to="Map/TInambac" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Map/Area2D2" to="Map/Goa" method="_on_area_2d_input_event"]

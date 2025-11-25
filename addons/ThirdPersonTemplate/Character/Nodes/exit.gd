@@ -16,6 +16,7 @@ func _on_pressed() -> void:
 	car.current = false
 	$"../../../car/Control".hide()
 	$"../Mini Map".setprevCam("p")
+	$"../../SoundEffecs/caridle".stop()
 	# Move player to spawn position
 	if spawn and player:
 		player.global_position = spawn.global_transform.origin

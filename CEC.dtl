@@ -7,7 +7,6 @@ if {IsArrowClick} == true:
 	Head inside and look for Engr. Quin.
 label Arrived
 if {IsArrived} == true:
-	if {} == true:
 	You arrived at the Engineering Building.
 label TalktoEngr
 if {TalktoEngr} == true:

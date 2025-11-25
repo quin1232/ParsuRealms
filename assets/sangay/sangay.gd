@@ -5,6 +5,7 @@ extends Node3D
 # spawn guard so we don't create multiple copies accidentally
 var _book_spawned: bool = false
 func _ready() -> void:
+	$PlayerTemplate/SoundEffecs/Backgroundmusic.play()
 	if Global.SANGAYfinish == true:
 		Dialogic.VAR.Completequest = true
 		Dialogic.VAR.CollectComplete = true
@@ -27,6 +28,7 @@ func _on_dialogic_signal(value: String) -> void:
 		$PlayerTemplate/Quest.visible = true
 	elif value == "sangayquestcom":
 		_spawn_book_rigid_body()
+		$PlayerTemplate/CanvasLayer.show()
 		
 		
 func ended():

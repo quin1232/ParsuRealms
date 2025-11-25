@@ -28,7 +28,7 @@ func _on_pressed() -> void:
 			$"../../../Core Values".show()
 			$"..".hide()
 		elif Dialogic.VAR.vision == true:
-			$"../../../Misson Vission".show()
+			$"../../../Vission".show()
 			$"..".hide()
 		visible = false
 		disabled = true

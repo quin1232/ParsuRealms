@@ -8,3 +8,5 @@ func _on_pressed() -> void:
 	$"../../Node/questc".play()
 	$"../../completequest".show()
 	$"..".hide()
+	# Save quest completion to database
+	await Global.complete_quest("SANGAY")

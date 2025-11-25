@@ -2,6 +2,19 @@ extends Control
 
 @onready var next_scene_path: String = "res://Map/Map.tscn"
 @onready var note_label: TextureButton = $login/VBoxContainer2/guest
+var _guest_press_tween: Tween
+
+func _guest_pressed_animation():
+	if _guest_press_tween:
+		_guest_press_tween.kill()
+	note_label.scale = Vector2(1, 1)
+	if note_label.has_method("set_pivot_offset"):
+		note_label.set_pivot_offset(Vector2(note_label.size.x / 2, note_label.size.y / 2))
+	elif "pivot_offset" in note_label:
+		note_label.pivot_offset = Vector2(note_label.size.x / 2, note_label.size.y / 2)
+	_guest_press_tween = create_tween()
+	_guest_press_tween.tween_property(note_label, "scale", Vector2(0.85, 0.85), 0.08).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	_guest_press_tween.tween_property(note_label, "scale", Vector2(1, 1), 0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 var _transitioning := false
 var _tree: SceneTree  # cache the tree early so it’s never null later
@@ -13,7 +26,12 @@ func _ready() -> void:
 	FadeLayer.fade_in()
 	
 	# This tells the button to call 'fade_and_change_scene' when pressed.
-	note_label.pressed.connect(fade_and_change_scene)
+	note_label.pressed.connect(_on_guest_pressed)
+
+func _on_guest_pressed():
+	_guest_pressed_animation()
+	await get_tree().create_timer(0.2).timeout
+	fade_and_change_scene()
 
 
 func fade_and_change_scene() -> void:

@@ -93,7 +93,7 @@ func _on_choice_pressed(choice_idx: int) -> void:
 	# correct branch
 	if choice_idx == correct_idx:
 		feedback.text = "Correct!"
-		Dialogic.start("sangay", "correct")
+		Dialogic.start("sangay", "Correct")
 		await get_tree().create_timer(1.0).timeout
 		current_index += 1
 		self.visible = true
@@ -104,7 +104,6 @@ func _on_choice_pressed(choice_idx: int) -> void:
 		on_incorrect_answer(choice_idx, correct_idx)
 
 func on_incorrect_answer(choice_idx: int, correct_idx: int) -> void:
-	feedback.text = "Wrong."
 	Dialogic.start("sangay", "Wrong")
 	$"../FishingMinigame".show()
 	$"../FishingMinigame".restart()
@@ -118,6 +117,6 @@ func on_quiz_complete() -> void:
 	quiz_completed = true
 	hide()
 	$"../PlayerTemplate/CanvasLayer".hide()
-	Dialogic.start("sangay", "complete")
+	Dialogic.start("sangay", "Complete")
 	$"../Glow/fishing".hide()
 	$"../Glow/fishing/CollisionShape3D".disabled = true

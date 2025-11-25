@@ -63,7 +63,8 @@ func _on_dialogic_signal(value: String) -> void:
 	elif value == "questpanel":
 		Questpanel.visible = true
 	elif value == "CECCompleteQ":
-		Global.CECfinish = true
+		# Save quest completion to database
+		await Global.complete_quest("CEC")
 		$questcom.visible = true
 		$questcom/Node/QuestComplete.play()
 		$PlayerTemplate/CanvasLayer.hide()

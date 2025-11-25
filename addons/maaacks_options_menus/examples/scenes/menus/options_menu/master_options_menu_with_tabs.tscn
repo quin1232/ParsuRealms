@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdvdf5v87mmrr"]
+
+[ext_resource type="PackedScene" uid="uid://hmx6o472ropw" path="res://addons/maaacks_options_menus/base/scenes/menus/options_menu/master_options_menu_with_tabs.tscn" id="1_u1u8e"]
+[ext_resource type="FontFile" uid="uid://iqjq5q40vav0" path="res://Fonts/zh-cn.ttf" id="2_g8hr0"]
+[ext_resource type="PackedScene" uid="uid://dmgla7rq1g2cc" path="res://addons/maaacks_options_menus/examples/scenes/menus/options_menu/audio/audio_options_menu.tscn" id="3_vs2ne"]
+[ext_resource type="PackedScene" uid="uid://cck3omvlkhpix" path="res://addons/maaacks_options_menus/examples/scenes/menus/options_menu/video/video_options_menu_with_extras.tscn" id="4_v3ewd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4xt82"]
+bg_color = Color(0.12941177, 0.24313726, 0.35686275, 0.9372549)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.99607843, 0.79607844, 0.14117648, 1)
+
+[node name="MasterOptionsMenu" instance=ExtResource("1_u1u8e")]
+theme_override_fonts/font = ExtResource("2_g8hr0")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/panel = SubResource("StyleBoxFlat_4xt82")
+current_tab = 0
+
+[node name="Audio" parent="." index="1" instance=ExtResource("3_vs2ne")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Video" parent="." index="2" instance=ExtResource("4_v3ewd")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1

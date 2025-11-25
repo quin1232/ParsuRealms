@@ -97,3 +97,5 @@ func _on_pressed() -> void:
 	$"../Mini Map".setprevCam("p")
 	FadeLayer.fade_in()
 	$"../exit".hide()
+	$"../../SoundEffecs/carstart".play()
+	$"../../SoundEffecs/caridle".play()

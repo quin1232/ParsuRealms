@@ -4,34 +4,34 @@ Locate the College of Business and Management.
 label arrow
 if {IsArrowClick} == true:
 	Look for Jasmine, a student at the CBM building.
-	label CBMArrived
-	if {CBMArrived} == true:
-		if :
-		You arrived at the CBM Building.
-		label TalktoJasmine
-		if {TalktoJasmine} == true:
-			Jasmine: Oh hey! You must be visiting from another college, right?
-			Jasmine: I’m working on our business project, but I lost my calculator and my ledger somewhere around here.
-			Jasmine: Without them, I can’t finish our cost computation!
-			Jasmine: Could you please help me find them? I think I left them here at the CBM Building.
-			Jasmine: And the other item... I might have misplaced it in the Entrep Lab.
-			[signal arg="questpanel"]
-			
+label CBMArrived
+if {CBMArrived} == true:
+	if :
+	You arrived at the CBM Building.
+	label TalktoJasmine
+	if {TalktoJasmine} == true:
+		Jasmine: Oh hey! You must be visiting from another college, right?
+		Jasmine: I’m working on our business project, but I lost my calculator and my ledger somewhere around here.
+		Jasmine: Without them, I can’t finish our cost computation!
+		Jasmine: Could you please help me find them? I think I left them here at the CBM Building.
+		Jasmine: And the other item... I might have misplaced it in the Entrep Lab.
+		[signal arg="questpanel"]
+		
+		if {bool} == true:
+			label FoundCalculator
+			You found Jasmine’s calculator.
 			if {bool} == true:
-				label FoundCalculator
-				You found Jasmine’s calculator.
-				if {bool} == true:
-					label CalculatorFound
-					You obtain Jasmine’s calculator.
-					Go to Entrep Building and look for ledger.
-			
+				label CalculatorFound
+				You obtain Jasmine’s calculator.
+				Go to Entrep Building and look for ledger.
+		
+		if {bool} == true:
+			label FoundLedger
+			You found Jasmine’s Ledger.
 			if {bool} == true:
-				label FoundLedger
-				You found Jasmine’s Ledger.
-				if {bool} == true:
-					label LedgerFound
-					You obtain Jasmine’s Ledger.
-					Go to CBM building and find the calculator.
+				label LedgerFound
+				You obtain Jasmine’s Ledger.
+				Go to CBM building and find the calculator.
 
 if {CollectComplete} == true:
 	label CollectComplete

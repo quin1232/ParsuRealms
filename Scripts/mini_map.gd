@@ -56,7 +56,7 @@ func _gui_input(event: InputEvent) -> void:
 		
 		# --- Dialogic Trigger Logic (Consolidated) ---
 		var college_id = GlobalTracking.get_selected_college()
-		if college_id == 1 or college_id == 0:
+		if college_id == 1 or college_id == 0 or college_id == 4:
 			if has_triggered_once:
 				return # ✅ Prevent multiple clicks
 			
@@ -68,6 +68,8 @@ func _gui_input(event: InputEvent) -> void:
 				dialog_name = "CEC"
 			elif college_id == 0:
 				dialog_name = "COED"
+			elif college_id == 4:
+				dialog_name = "CBM"
 			
 			Dialogic.start(dialog_name, "arrow")
 			player.set_physics_process(false)
