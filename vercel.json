@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/admin-dashboard/$1" }
+  ],
+  "public": "admin-dashboard"
+}
